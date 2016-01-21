@@ -8,13 +8,12 @@ contain various iterations of that.
 ## DB Model
 
 - Users
-    - name
-    - email
+    - (you can use, unmodified, the default django user class)
 - Annotations
     - uuid
     - basically [GAF2.0](http://geneontology.org/page/go-annotation-file-format-20)
     - FK: Users
-- Challenge
+- Challenges
     - uuid
     - FK: Users
     - FK: Annotations

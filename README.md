@@ -9,6 +9,9 @@ contain various iterations of that.
 
 - Users
     - (you can use, unmodified, the default django user class)
+- Teams
+    - team name
+    - M2M on users
 - Annotations
     - uuid
     - basically [GAF2.0](http://geneontology.org/page/go-annotation-file-format-20)
@@ -27,3 +30,5 @@ contain various iterations of that.
             - go term
         - unacceptable (flags)
         - corrected through challenges
+
+GOA for obtaining existing GAF (https://www.ebi.ac.uk/GOA/downloads)

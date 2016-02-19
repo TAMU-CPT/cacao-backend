@@ -23,12 +23,14 @@ contain various iterations of that.
     - entry type (private, challenge, public)
     - datetime
     - challenge reason
-    - points/assement:
-        - flagged
-            - protein, publication, qualifier, go term, evidence, with/from, notes, unique/original
-        - requires changes:
-            - go term
-        - unacceptable (flags)
-        - corrected through challenges
+
+- Assessment
+    - FK: Annotations (null=True, blank=True)
+    - FK: Challenges (null=True, blank=True)
+    - flagged (can be flagged for multiple reasons, such as the following)
+        - protein, publication, qualifier, go term, evidence, with/from, notes, unique/original
+    - requires changes (basically allow selection of any of the GAF fields to mark as requiring changes):
+        - go term
+    - unacceptable (boolean)
 
 GOA for obtaining existing GAF (https://www.ebi.ac.uk/GOA/downloads)

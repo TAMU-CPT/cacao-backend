@@ -46,7 +46,7 @@ class GAF(models.Model):
 
 class Annotation(models.Model):
     uuid = UUIDField(auto=True)
-    gaf = models.ForeignKey(GAF)
+    gaf = models.OneToOneField(GAF)
     user = models.ForeignKey(User)
     date = models.DateTimeField(auto_now_add=True)
 
@@ -54,6 +54,8 @@ class Challenge(models.Model):
     uuid = UUIDField(auto=True)
     user = models.ForeignKey(User)
     annotation = models.ForeignKey(Annotation)
+    user = models.OneToOneField(User)
+    gaf = models.OneToOneField(GAF)
     entry_type = models.IntegerField(choices=ENTRY_TYPES, default=0)
     date = models.DateTimeField(auto_now_add=True)
     reason = models.TextField()

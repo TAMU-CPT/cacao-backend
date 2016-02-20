@@ -61,8 +61,8 @@ class Challenge(models.Model):
     reason = models.TextField()
 
 class Assessment(models.Model):
-    annotation = models.ForeignKey(Annotation)
-    challenge = models.ForeignKey(Challenge)
+    annotation = models.ForeignKey(Annotation, null=True, blank=True)
+    challenge = models.ForeignKey(Challenge, null=True, blank=True)
     flagged = MultiSelectField(choices=FLAGGED, max_choices=6, default=0, blank=True)
     notes = models.TextField()
     date = models.DateTimeField(auto_now_add=True)

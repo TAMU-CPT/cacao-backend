@@ -25,7 +25,7 @@ class GAF(models.Model):
     db = models.CharField(max_length=64)
     db_object_id = models.CharField(max_length=64)
     db_object_symbol = models.CharField(max_length=64)
-    Qualifier = models.CharField(max_length=64)
+    qualifier = models.CharField(max_length=64)
     go_id = models.CharField(max_length=64)
     db_reference = models.CharField(max_length=64)
     evidence_code = models.CharField(max_length=64)
@@ -48,7 +48,6 @@ class Annotation(models.Model):
 
 class Challenge(models.Model):
     uuid = UUIDField(auto=True)
-    user = models.ForeignKey(User)
     annotation = models.ForeignKey(Annotation)
     user = models.OneToOneField(User)
     gaf = models.OneToOneField(GAF)

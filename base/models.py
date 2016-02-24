@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from multiselectfield import MultiSelectField
 from uuidfield import UUIDField
 
@@ -20,10 +20,6 @@ FLAGGED = (
     (4, 'Evidence'),
     (5, 'Originality'),
 )
-
-class Team(models.Model):
-    name = models.CharField(max_length=128)
-    users = models.ManyToManyField(User)
 
 class GAF(models.Model):
     db = models.CharField(max_length=64)

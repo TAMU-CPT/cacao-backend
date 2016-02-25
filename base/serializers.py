@@ -5,12 +5,12 @@ from base.models import GAF, Annotation, Challenge, Assessment
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ('username', 'email', 'groups')
+        fields = ('id', 'username', 'email', 'groups')
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Group
-        fields = ('name')
+        fields = ('id', 'name')
 
 class GAFSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

@@ -1,5 +1,7 @@
 # CACAO Lite
 
+[![Build Status](https://travis-ci.org/elenimijalis/cacao-lite.svg)](https://travis-ci.org/elenimijalis/cacao-lite)
+
 MediaWiki + php API is a *lot* of cruft for a relatively simple DB model. CACAO
 could be reduced significantly to a dead simple API and webapp. This repo will
 contain various iterations of that.

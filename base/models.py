@@ -35,7 +35,7 @@ class GAF(models.Model):
     db_object_synonym = models.CharField(max_length=64)
     db_object_type = models.CharField(max_length=64)
     taxon = models.CharField(max_length=64)
-    date = models.DateTimeField()
+    date = models.DateField()
     assigned_by = models.CharField(max_length=64)
     annotation_extension = models.CharField(max_length=64)
     gene_product_id = models.CharField(max_length=64)

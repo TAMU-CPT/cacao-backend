@@ -13,9 +13,11 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('id', 'name')
 
 class GAFSerializer(serializers.HyperlinkedModelSerializer):
+    owner = serializers.ReadOnlyField(source='owner.username')
     class Meta:
         model = GAF
-        fields = ('db',
+        fields = ('owner',
+                  'db',
                   'db_object_id',
                   'db_object_symbol',
                   'qualifier',

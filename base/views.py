@@ -1,12 +1,14 @@
 # from django.shortcuts import render
 from django.contrib.auth.models import User, Group
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from base.serializers import UserSerializer, GroupSerializer, GAFSerializer, AnnotationSerializer, ChallengeSerializer, AssessmentSerializer
 from base.models import GAF, Annotation, Challenge, Assessment
+from permissions import UserPermissions
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all().order_by('-username')
     serializer_class = UserSerializer
+    permission_classes = (UserPermissions,)
 
 class GroupViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()
@@ -15,6 +17,7 @@ class GroupViewSet(viewsets.ModelViewSet):
 class GAFViewSet(viewsets.ModelViewSet):
     queryset = GAF.objects.all()
     serializer_class = GAFSerializer
+    permission_classes = (UserPermissions,)
 
 class ChallengeViewSet(viewsets.ModelViewSet):
     queryset = Challenge.objects.all().order_by('-date')

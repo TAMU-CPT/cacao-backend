@@ -22,6 +22,7 @@ FLAGGED = (
 )
 
 class GAF(models.Model):
+    owner = models.ForeignKey('auth.User', default=None, null=True, blank=True)
     db = models.CharField(max_length=64)
     db_object_id = models.CharField(max_length=64)
     db_object_symbol = models.CharField(max_length=64)

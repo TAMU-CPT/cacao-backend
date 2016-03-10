@@ -18,6 +18,7 @@ class ApiPermissionsTestCase(TestCase):
         self.client = APIClient()
         self.client.login(username='jane', password='password')
         self.gaf_obj = {
+            'owner': self.superuser.username,
             'db': 'a',
             'db_object_id': 'a',
             'db_object_symbol': 'a',
@@ -54,6 +55,9 @@ class ApiPermissionsTestCase(TestCase):
         self.assertEqual(GAF.objects.count(), 0)
         response = self.client.post('/gafs/', self.gaf_obj)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        for gaf in GAF.objects.all():
+            gaf.owner = self.superuser
+            gaf.save()
         self.assertEqual(GAF.objects.count(), 1)
         response = self.client.delete('/gafs/1/', data=self.gaf_obj)
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
@@ -68,5 +72,5 @@ class ApiPermissionsTestCase(TestCase):
 
         self.client.login(username='alice', password='password')
         response = self.client.delete('/gafs/1/', data=self.gaf_obj)
-        self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
         self.assertEqual(GAF.objects.count(), 1)

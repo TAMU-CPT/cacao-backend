@@ -14,7 +14,7 @@ class ApiPermissionsTestCase(TestCase):
 
     def setUp(self):
         self.superuser = User.objects.create_superuser('jane', 'j.doe@tamu.edu', 'password')
-        self.regularuser = User.objects.create_superuser('alice', 'a.doe@tamu.edu', 'password')
+        self.regularuser = User.objects.create_user('alice', 'a.doe@tamu.edu', 'password')
         self.client = APIClient()
         self.client.login(username='jane', password='password')
         self.gaf_obj = {

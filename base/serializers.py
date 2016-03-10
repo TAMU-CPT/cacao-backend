@@ -35,6 +35,12 @@ class GAFSerializer(serializers.HyperlinkedModelSerializer):
                   'annotation_extension',
                   'gene_product_id')
 
+    def create(self, validated_data):
+        gaf = GAF(**validated_data)
+        gaf.owner = self.context['request'].user
+        gaf.save()
+        return gaf
+
 class AnnotationSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Annotation

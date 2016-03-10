@@ -42,14 +42,28 @@ class GAFSerializer(serializers.HyperlinkedModelSerializer):
         return gaf
 
 class AnnotationSerializer(serializers.HyperlinkedModelSerializer):
+    owner = serializers.ReadOnlyField(source='owner.username')
     class Meta:
         model = Annotation
         fields = ('uuid', 'gaf', 'user', 'date')
 
+    def create(self, validated_data):
+        annotation = Annotation(**validated_data)
+        annotation.owner = self.context['request'].user
+        annotation.save()
+        return annotation
+
 class ChallengeSerializer(serializers.HyperlinkedModelSerializer):
+    owner = serializers.ReadOnlyField(source='owner.username')
     class Meta:
         model = Challenge
         fields = ('uuid', 'user', 'annotation', 'gaf', 'entry_type', 'date', 'reason')
+
+    def create(self, validated_data):
+        challenge = Challenge(**validated_data)
+        challenge.owner = self.context['request'].user
+        challenge.save()
+        return challenge
 
 class AssessmentSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

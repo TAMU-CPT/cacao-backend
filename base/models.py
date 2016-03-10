@@ -22,7 +22,7 @@ FLAGGED = (
 )
 
 class GAF(models.Model):
-    owner = models.ForeignKey('auth.User', default=None, null=True, blank=True)
+    owner = models.ForeignKey('auth.User')
     db = models.CharField(max_length=64)
     db_object_id = models.CharField(max_length=64)
     db_object_symbol = models.CharField(max_length=64)
@@ -42,15 +42,15 @@ class GAF(models.Model):
     gene_product_id = models.CharField(max_length=64)
 
 class Annotation(models.Model):
+    owner = models.ForeignKey('auth.User')
     uuid = UUIDField(auto=True)
     gaf = models.OneToOneField(GAF)
-    user = models.ForeignKey(User)
     date = models.DateTimeField(auto_now_add=True)
 
 class Challenge(models.Model):
+    owner = models.ForeignKey('auth.User')
     uuid = UUIDField(auto=True)
     annotation = models.ForeignKey(Annotation)
-    user = models.OneToOneField(User)
     gaf = models.OneToOneField(GAF)
     entry_type = models.IntegerField(choices=ENTRY_TYPES, default=0)
     date = models.DateTimeField(auto_now_add=True)

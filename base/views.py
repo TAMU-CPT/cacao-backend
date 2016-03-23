@@ -18,15 +18,24 @@ class GAFViewSet(viewsets.ModelViewSet):
     serializer_class = GAFSerializer
     permission_classes = (OwnerOrAdmin,)
 
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
+
 class ChallengeViewSet(viewsets.ModelViewSet):
     queryset = Challenge.objects.all().order_by('-date')
     serializer_class = ChallengeSerializer
     permission_classes = (OwnerOrAdmin,)
 
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
+
 class AnnotationViewSet(viewsets.ModelViewSet):
     queryset = Annotation.objects.all().order_by('-date')
     serializer_class = AnnotationSerializer
     permission_classes = (OwnerOrAdmin,)
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
 
 class AssessmentViewSet(viewsets.ModelViewSet):
     queryset = Assessment.objects.all().order_by('-date')

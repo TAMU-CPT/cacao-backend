@@ -2,3 +2,4 @@ django==1.9.2
 django-uuidfield
 django-multiselectfield
 djangorestframework
+django-cors-headers

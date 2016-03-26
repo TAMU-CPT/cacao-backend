@@ -60,7 +60,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = ('0.0.0.0:10000')
+CORS_ORIGIN_WHITELIST = ('127.0.0.1:10000')
 
 ROOT_URLCONF = 'cacao.urls'
 

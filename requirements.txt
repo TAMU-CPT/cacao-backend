@@ -3,3 +3,4 @@ django-uuidfield
 django-multiselectfield
 djangorestframework
 django-cors-headers
+djangorestframework-jwt

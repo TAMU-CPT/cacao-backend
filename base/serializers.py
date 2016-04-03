@@ -2,12 +2,32 @@ from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from base.models import GAF, Annotation, Challenge, Assessment
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
+    group = serializers.SerializerMethodField()
     class Meta:
         model = User
-        fields = ('id', 'username', 'email', 'groups')
+        fields = ('id', 'username', 'email', 'group')
+
+    def get_group(self, obj):
+        for group in obj.groups.all():
+            yield BasicGroupSerializer(group).data
+
+class GrouplessUserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = User
+        fields = ('id', 'username')
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
+    users = serializers.SerializerMethodField()
+    class Meta:
+        model = Group
+        fields = ('id', 'name', 'users')
+
+    def get_users(self, obj):
+        for user in obj.user_set.all():
+            yield GrouplessUserSerializer(user).data
+
+class BasicGroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
         fields = ('id', 'name')

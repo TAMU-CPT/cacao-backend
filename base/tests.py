@@ -39,7 +39,7 @@ class ApiPermissionsTestCase(TestCase):
 
     def test_GetUsers(self):
         response = self.client.get('/users/')
-        self.assertEqual(response.content, '{"count":2,"next":null,"previous":null,"results":[{"id":1,"username":"jane","email":"j.doe@tamu.edu","groups":[]},{"id":2,"username":"alice","email":"a.doe@tamu.edu","groups":[]}]}')
+        self.assertEqual(response.content, '{"count":2,"next":null,"previous":null,"results":[{"id":1,"username":"jane","email":"j.doe@tamu.edu","group":[]},{"id":2,"username":"alice","email":"a.doe@tamu.edu","groups":[]}]}')
 
     def test_GafCreation(self):
         self.client.login(username='jane', password='password')

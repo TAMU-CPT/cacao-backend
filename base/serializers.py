@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from base.models import GAF, Annotation, Challenge, Assessment
+import hashlib
 
 class UserSerializer(serializers.ModelSerializer):
     group = serializers.SerializerMethodField()
@@ -13,9 +14,13 @@ class UserSerializer(serializers.ModelSerializer):
             yield BasicGroupSerializer(group).data
 
 class GrouplessUserSerializer(serializers.HyperlinkedModelSerializer):
+    email = serializers.SerializerMethodField()
     class Meta:
         model = User
-        fields = ('id', 'username')
+        fields = ('id', 'username', 'email')
+
+    def get_email(self, obj):
+        return hashlib.md5(obj.email.lower()).hexdigest()
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     users = serializers.SerializerMethodField()

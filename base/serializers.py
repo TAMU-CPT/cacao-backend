@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from base.models import GAF, Annotation, Challenge, Assessment
+from base.models import GAF, Annotation, Challenge, Assessment, Paper
 import hashlib
 
 class UserSerializer(serializers.ModelSerializer):
@@ -76,3 +76,8 @@ class AssessmentSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Assessment
         fields = ('annotation', 'challenge', 'flagged', 'notes', 'date')
+
+class PaperSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Paper
+        fields = ('pmid', 'author', 'pub_year', 'title', 'journal', 'volume', 'pages', 'abstract', 'keywords', 'pmc')

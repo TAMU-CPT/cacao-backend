@@ -62,3 +62,15 @@ class Assessment(models.Model):
     flagged = MultiSelectField(choices=FLAGGED, max_choices=6, default=0, blank=True)
     notes = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
+
+class Paper(models.Model):
+    pmid = models.IntegerField(blank=True, null=True)
+    author = models.TextField()
+    pub_year = models.IntegerField(blank=True, null=True)
+    title = models.TextField()
+    journal = models.CharField(max_length=64)
+    volume = models.IntegerField()
+    pages = models.CharField(max_length=64)
+    abstract = models.TextField()
+    keywords = models.TextField()
+    pmc = models.IntegerField(null=True)

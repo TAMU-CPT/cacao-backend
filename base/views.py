@@ -104,7 +104,7 @@ class PaperViewSet(viewsets.ModelViewSet):
                 handle.close()
                 paper.save()
             except:
-                return JsonResponse(status=404, data={'status':'false','message':'PMID:%s not found' % pk})
+                return JsonResponse(status=404, data={'success':'false','message':'PMID:%s not found' % pk})
 
         serializer = PaperSerializer(paper)
         return Response(serializer.data)

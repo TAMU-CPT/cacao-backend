@@ -88,6 +88,12 @@ class PaperViewSet(viewsets.ModelViewSet):
                 if attr['PMC']:
                     attr['PMC'] = re.sub("[^0-9]", "", attr['PMC'])
 
+                if attr['TI']:
+                    attr['TI'] = attr['TI'].strip('.')
+
+                if attr['DP']:
+                    attr['DP'] = attr['DP'][:4]
+
                 paper = Paper(
                     pmid=pk,
                     author=attr.get('AU', None),

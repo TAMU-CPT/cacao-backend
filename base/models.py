@@ -70,7 +70,7 @@ class Paper(models.Model):
     title = models.TextField()
     journal = models.CharField(max_length=64)
     volume = models.IntegerField()
-    pages = models.CharField(max_length=64)
+    pages = models.CharField(max_length=64, null=True)
     abstract = models.TextField()
     keywords = models.TextField()
     pmc = models.IntegerField(null=True)

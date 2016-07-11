@@ -90,14 +90,14 @@ class PaperViewSet(viewsets.ModelViewSet):
 
                 paper = Paper(
                     pmid=pk,
-                    author=attr['AU'],
-                    pub_year=attr['DP'],
-                    title=attr['TI'],
-                    journal=attr['TA'],
-                    volume=attr['VI'],
+                    author=attr.get('AU', None),
+                    pub_year=attr.get('DP', None),
+                    title=attr.get('TI', None),
+                    journal=attr.get('TA', None),
+                    volume=attr.get('VI', None),
                     pages=attr.get('PG', None),
-                    abstract=attr['AB'],
-                    keywords=attr['MH'],
+                    abstract=attr.get('AB', None),
+                    keywords=attr.get('MH', None),
                     pmc=attr.get('PMC', None)
                 )
 

@@ -8,7 +8,6 @@ router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'gafs', views.GAFViewSet)
 router.register(r'challenges', views.ChallengeViewSet)
-router.register(r'annotations', views.AnnotationViewSet)
 router.register(r'assessments', views.AssessmentViewSet)
 router.register(r'papers', views.PaperViewSet)
 

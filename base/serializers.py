@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from base.models import GAF, Annotation, Challenge, Assessment, Paper
+from base.models import GAF, Challenge, Assessment, Paper
 import hashlib
 
 class UserSerializer(serializers.ModelSerializer):
@@ -42,6 +42,7 @@ class GAFSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = GAF
         fields = ('owner',
+                  'uuid',
                   'db',
                   'db_object_id',
                   'db_object_symbol',
@@ -60,22 +61,16 @@ class GAFSerializer(serializers.HyperlinkedModelSerializer):
                   'annotation_extension',
                   'gene_product_id')
 
-class AnnotationSerializer(serializers.HyperlinkedModelSerializer):
-    owner = serializers.ReadOnlyField(source='owner.username')
-    class Meta:
-        model = Annotation
-        fields = ('owner', 'uuid', 'gaf', 'date')
-
 class ChallengeSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     class Meta:
         model = Challenge
-        fields = ('owner', 'uuid', 'annotation', 'gaf', 'entry_type', 'date', 'reason')
+        fields = ('owner', 'uuid', 'gaf', 'entry_type', 'date', 'reason')
 
 class AssessmentSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Assessment
-        fields = ('annotation', 'challenge', 'flagged', 'notes', 'date')
+        fields = ('gaf', 'challenge', 'flagged', 'notes', 'date')
 
 class PaperSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

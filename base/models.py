@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import User
 from multiselectfield import MultiSelectField
 from uuidfield import UUIDField
 
@@ -22,7 +22,8 @@ FLAGGED = (
 )
 
 class GAF(models.Model):
-    owner = models.ForeignKey('auth.User')
+    owner = models.ForeignKey(User, null=True)
+    uuid = UUIDField(auto=True)
     db = models.CharField(max_length=64)
     db_object_id = models.CharField(max_length=64)
     db_object_symbol = models.CharField(max_length=64)
@@ -38,26 +39,19 @@ class GAF(models.Model):
     taxon = models.CharField(max_length=64)
     date = models.DateField(auto_now_add=True)
     assigned_by = models.CharField(max_length=64)
-    annotation_extension = models.CharField(default = '', blank=True, max_length=64)
-    gene_product_id = models.CharField(default = '', blank=True, max_length=64)
-
-class Annotation(models.Model):
-    owner = models.ForeignKey('auth.User')
-    uuid = UUIDField(auto=True)
-    gaf = models.OneToOneField(GAF)
-    date = models.DateTimeField(auto_now_add=True)
+    annotation_extension = models.CharField(default = '', blank=True, null=True, max_length=64)
+    gene_product_id = models.CharField(default = '', blank=True, null=True, max_length=64)
 
 class Challenge(models.Model):
     owner = models.ForeignKey('auth.User')
     uuid = UUIDField(auto=True)
-    annotation = models.ForeignKey(Annotation)
-    gaf = models.OneToOneField(GAF)
+    gaf = models.ForeignKey(GAF)
     entry_type = models.IntegerField(choices=ENTRY_TYPES, default=0)
     date = models.DateTimeField(auto_now_add=True)
     reason = models.TextField()
 
 class Assessment(models.Model):
-    annotation = models.ForeignKey(Annotation, null=True, blank=True)
+    gaf = models.ForeignKey(GAF, null=True, blank=True)
     challenge = models.ForeignKey(Challenge, null=True, blank=True)
     flagged = MultiSelectField(choices=FLAGGED, max_choices=6, default=0, blank=True)
     notes = models.TextField()

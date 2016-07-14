@@ -1,8 +1,8 @@
 # from django.shortcuts import render
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets, permissions
-from base.serializers import UserSerializer, GroupSerializer, GAFSerializer, AnnotationSerializer, ChallengeSerializer, AssessmentSerializer, PaperSerializer
-from base.models import GAF, Annotation, Challenge, Assessment, Paper
+from base.serializers import UserSerializer, GroupSerializer, GAFSerializer, ChallengeSerializer, AssessmentSerializer, PaperSerializer
+from base.models import GAF, Challenge, Assessment, Paper
 from permissions import OwnerOrAdmin
 from rest_framework.response import Response
 from django.http import JsonResponse
@@ -30,14 +30,6 @@ class GAFViewSet(viewsets.ModelViewSet):
 class ChallengeViewSet(viewsets.ModelViewSet):
     queryset = Challenge.objects.all().order_by('-date')
     serializer_class = ChallengeSerializer
-    permission_classes = (OwnerOrAdmin,)
-
-    def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)
-
-class AnnotationViewSet(viewsets.ModelViewSet):
-    queryset = Annotation.objects.all().order_by('-date')
-    serializer_class = AnnotationSerializer
     permission_classes = (OwnerOrAdmin,)
 
     def perform_create(self, serializer):

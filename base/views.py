@@ -1,6 +1,6 @@
 # from django.shortcuts import render
 from django.contrib.auth.models import User, Group
-from rest_framework import viewsets, permissions
+from rest_framework import viewsets, permissions, filters
 from base.serializers import UserSerializer, GroupSerializer, GAFSerializer, ChallengeSerializer, AssessmentSerializer, PaperSerializer
 from base.models import GAF, Challenge, Assessment, Paper
 from permissions import OwnerOrAdmin
@@ -23,6 +23,8 @@ class GAFViewSet(viewsets.ModelViewSet):
     queryset = GAF.objects.all()
     serializer_class = GAFSerializer
     permission_classes = (OwnerOrAdmin,)
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = ('db_object_id',)
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
@@ -106,3 +108,12 @@ class PaperViewSet(viewsets.ModelViewSet):
 
         serializer = PaperSerializer(paper)
         return Response(serializer.data)
+
+# class PrevAnnotatedGAFList(generics.ListAPIView):
+    # serializer_class = GAFSerializer
+
+    # def get_queryset(self):
+        # queryset = GAF.objects.all()
+        # db_object_id = self.request.query_params.get('db_object_id', None)
+        # if db_object_id is not None:
+            # queryset = queryset.filter()

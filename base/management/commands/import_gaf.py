@@ -18,15 +18,16 @@ class Command(BaseCommand):
             'aspect', 'db_object_name', 'db_object_synonym', 'db_object_type',
             'taxon', 'date', 'assigned_by', 'annotation_extension', 'gene_product_id'
         ]
-        with open('gaf.txt') as handle:
-            for line in handle:
-                if not line.startswith('!'):
-                    gaf_data = dict(zip(gaf_keys, line.strip().split('\t')))
-                    d = datetime.datetime.strptime(gaf_data['date'], '%Y%m%d')
-                    gaf_data['date'] = d.strftime('%Y-%m-%d')
-                    gaf_data['db'] = 'UniProtKB'
-                    gaf = GAF(**gaf_data)
-                    try:
-                        gaf.save()
-                    except Exception, e:
-                        raise CommandError(e)
+
+        for line in options['gaf_file']:
+            if not line.startswith('!'):
+                gaf_data = dict(zip(gaf_keys, line.strip().split('\t')))
+                print gaf_data
+                d = datetime.datetime.strptime(gaf_data['date'], '%Y%m%d')
+                gaf_data['date'] = d.strftime('%Y-%m-%d')
+                gaf_data['db'] = 'UniProtKB'
+                gaf = GAF(**gaf_data)
+                try:
+                    gaf.save()
+                except Exception, e:
+                    raise CommandError(e)

@@ -43,7 +43,7 @@ class GAF(models.Model):
     gene_product_id = models.CharField(default = '', blank=True, null=True, max_length=64)
 
     class Meta:
-        unique_together = ('db', 'db_object_id', 'go_id', 'db_reference', 'evidence_code')
+        unique_together = ('db', 'db_object_id', 'go_id', 'db_reference', 'evidence_code', 'taxon')
 
 class Challenge(models.Model):
     owner = models.ForeignKey('auth.User')

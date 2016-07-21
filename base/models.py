@@ -21,8 +21,16 @@ FLAGGED = (
     (5, 'Originality'),
 )
 
+REVIEW_STATE = (
+    (0, 'External'),
+    (1, 'Unreviewed'),
+    (2, 'Accepted'),
+    (3, 'Rejected'),
+)
+
 class GAF(models.Model):
     owner = models.ForeignKey(User, null=True)
+    review_state = models.IntegerField(choices=REVIEW_STATE, default=0)
     uuid = UUIDField(auto=True)
     db = models.CharField(max_length=64)
     db_object_id = models.CharField(max_length=64)

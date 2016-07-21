@@ -42,6 +42,7 @@ class GAFSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = GAF
         fields = ('owner',
+                  'review_state',
                   'uuid',
                   'db',
                   'db_object_id',

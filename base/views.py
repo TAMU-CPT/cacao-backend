@@ -24,7 +24,7 @@ class GAFViewSet(viewsets.ModelViewSet):
     serializer_class = GAFSerializer
     permission_classes = (OwnerOrAdmin,)
     filter_backends = (filters.DjangoFilterBackend,)
-    filter_fields = ('db_object_id',)
+    filter_fields = ('db_object_id', 'go_id',)
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
@@ -108,12 +108,3 @@ class PaperViewSet(viewsets.ModelViewSet):
 
         serializer = PaperSerializer(paper)
         return Response(serializer.data)
-
-# class PrevAnnotatedGAFList(generics.ListAPIView):
-    # serializer_class = GAFSerializer
-
-    # def get_queryset(self):
-        # queryset = GAF.objects.all()
-        # db_object_id = self.request.query_params.get('db_object_id', None)
-        # if db_object_id is not None:
-            # queryset = queryset.filter()

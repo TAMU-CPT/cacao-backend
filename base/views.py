@@ -30,6 +30,9 @@ class GAFViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
 
+    def put(self, request):
+        return self.update(request)
+
 class ChallengeViewSet(viewsets.ModelViewSet):
     queryset = Challenge.objects.all().order_by('-date')
     serializer_class = ChallengeSerializer

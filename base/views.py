@@ -24,7 +24,7 @@ class GAFViewSet(viewsets.ModelViewSet):
     serializer_class = GAFSerializer
     permission_classes = (OwnerOrAdmin,)
     filter_backends = (filters.DjangoFilterBackend,)
-    filter_fields = ('db_object_id', 'go_id',)
+    filter_fields = ('db_object_id', 'go_id', 'review_state',)
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)

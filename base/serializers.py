@@ -60,7 +60,8 @@ class GAFSerializer(serializers.HyperlinkedModelSerializer):
                   'date',
                   'assigned_by',
                   'annotation_extension',
-                  'gene_product_id')
+                  'gene_product_id',
+                  'notes')
 
 class ChallengeSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')

@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
 from multiselectfield import MultiSelectField
-from uuidfield import UUIDField
+import uuid
 
 
 ENTRY_TYPES = (
@@ -29,9 +29,9 @@ REVIEW_STATE = (
 )
 
 class GAF(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     owner = models.ForeignKey(User, null=True)
     review_state = models.IntegerField(choices=REVIEW_STATE, default=0)
-    uuid = UUIDField(auto=True)
     db = models.CharField(max_length=64)
     db_object_id = models.CharField(max_length=64)
     db_object_symbol = models.CharField(max_length=64)
@@ -54,14 +54,15 @@ class GAF(models.Model):
         unique_together = ('db', 'db_object_id', 'go_id', 'db_reference', 'evidence_code', 'taxon')
 
 class Challenge(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     owner = models.ForeignKey('auth.User')
-    uuid = UUIDField(auto=True)
     gaf = models.ForeignKey(GAF)
     entry_type = models.IntegerField(choices=ENTRY_TYPES, default=0)
     date = models.DateTimeField(auto_now_add=True)
     reason = models.TextField()
 
 class Assessment(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     gaf = models.ForeignKey(GAF, null=True, blank=True)
     challenge = models.ForeignKey(Challenge, null=True, blank=True)
     flagged = MultiSelectField(choices=FLAGGED, max_choices=6, default=0, blank=True)

@@ -43,7 +43,7 @@ class GAFSerializer(serializers.HyperlinkedModelSerializer):
         model = GAF
         fields = ('owner',
                   'review_state',
-                  'uuid',
+                  'id',
                   'db',
                   'db_object_id',
                   'db_object_symbol',
@@ -66,12 +66,12 @@ class ChallengeSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     class Meta:
         model = Challenge
-        fields = ('owner', 'uuid', 'gaf', 'entry_type', 'date', 'reason')
+        fields = ('owner', 'id', 'gaf', 'entry_type', 'date', 'reason')
 
 class AssessmentSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Assessment
-        fields = ('gaf', 'challenge', 'flagged', 'notes', 'date')
+        fields = ('gaf', 'id', 'challenge', 'flagged', 'notes', 'date')
 
 class PaperSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

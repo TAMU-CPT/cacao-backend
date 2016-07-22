@@ -55,7 +55,7 @@ class ApiPermissionsTestCase(TestCase):
         response = self.client.post('/gafs/', self.gaf_obj)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(GAF.objects.count(), 1)
-        response = self.client.delete('/gafs/1/', data=self.gaf_obj)
+        response = self.client.delete('/gafs/' + GAF.objects.all()[0].id.hex + '/', data=self.gaf_obj)
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         self.assertEqual(GAF.objects.count(), 0)
 
@@ -67,6 +67,6 @@ class ApiPermissionsTestCase(TestCase):
         self.assertEqual(GAF.objects.count(), 1)
 
         self.client.login(username='alice', password='password')
-        response = self.client.delete('/gafs/1/', data=self.gaf_obj)
+        response = self.client.delete('/gafs/' + GAF.objects.all()[0].id.hex + '/', data=self.gaf_obj)
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
         self.assertEqual(GAF.objects.count(), 1)

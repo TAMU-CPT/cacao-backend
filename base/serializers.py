@@ -38,7 +38,8 @@ class BasicGroupSerializer(serializers.ModelSerializer):
         fields = ('id', 'name')
 
 class GAFSerializer(serializers.HyperlinkedModelSerializer):
-    owner = serializers.ReadOnlyField(source='owner.username')
+    # owner = serializers.ReadOnlyField(source='owner.username')
+    owner = serializers.SerializerMethodField()
     class Meta:
         model = GAF
         fields = ('owner',
@@ -62,6 +63,9 @@ class GAFSerializer(serializers.HyperlinkedModelSerializer):
                   'annotation_extension',
                   'gene_product_id',
                   'notes')
+
+    def get_owner(self, obj):
+        return GrouplessUserSerializer(obj.owner).data
 
 class ChallengeSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')

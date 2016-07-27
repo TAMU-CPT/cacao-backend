@@ -12,15 +12,6 @@ ENTRY_TYPES = (
     (2, 'Challenge'),
 )
 
-FLAGGED = (
-    (0, 'Protein'),
-    (1, 'Publication'),
-    (2, 'Qualifier'),
-    (3, 'Go term'),
-    (4, 'Evidence'),
-    (5, 'Originality'),
-)
-
 REVIEW_STATE = (
     (0, 'External'),
     (1, 'Unreviewed'),
@@ -66,7 +57,7 @@ class Assessment(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     gaf = models.ForeignKey(GAF, null=True, blank=True)
     challenge = models.ForeignKey(Challenge, null=True, blank=True)
-    flagged = MultiSelectField(choices=FLAGGED, max_choices=6, blank=True)
+    flagged = models.TextField(blank=True, null=True)
     notes = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
 

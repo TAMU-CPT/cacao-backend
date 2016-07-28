@@ -5,6 +5,7 @@ from base.serializers import UserSerializer, GroupSerializer, GAFSerializer, Cha
 from base.models import GAF, Challenge, Assessment, Paper
 from permissions import OwnerOrAdmin
 from rest_framework.response import Response
+import django_filters
 from django.http import JsonResponse
 from Bio import Entrez
 import re
@@ -19,12 +20,21 @@ class GroupViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
 
+
+class GAFFilter(filters.FilterSet):
+    team = django_filters.CharFilter(name="owner__groups")
+
+    class Meta:
+        model = GAF
+        fields = ('db_object_id', 'go_id', 'review_state', 'db_reference', 'team')
+
 class GAFViewSet(viewsets.ModelViewSet):
     queryset = GAF.objects.all()
     serializer_class = GAFSerializer
     permission_classes = (OwnerOrAdmin,)
     filter_backends = (filters.DjangoFilterBackend, filters.OrderingFilter)
-    filter_fields = ('db_object_id', 'go_id', 'review_state', 'db_reference')
+    filter_class = GAFFilter
+    # filter_fields = ('db_object_id', 'go_id', 'review_state', 'db_reference', 'owner__group__id')
     ordering = ('date')
 
     def perform_create(self, serializer):

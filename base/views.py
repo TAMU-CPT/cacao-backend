@@ -26,7 +26,7 @@ class GAFFilter(filters.FilterSet):
 
     class Meta:
         model = GAF
-        fields = ('id', 'db_object_id', 'go_id', 'review_state', 'db_reference', 'team')
+        fields = ('id', 'db_object_id', 'go_id', 'review_state', 'db_reference', 'team', 'owner')
 
 class GAFViewSet(viewsets.ModelViewSet):
     queryset = GAF.objects.all()

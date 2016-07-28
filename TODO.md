@@ -1,0 +1,4 @@
+- Activity stream https://github.com/justquick/django-activity-stream
+- Notifications https://github.com/benjaoming/django-nyt Use cases are something like:
+    - As a user I wish to be notified of my annotations being accepted / challenged.
+    - As an admin I may wish to receive daily mails of how many new annotations were made.

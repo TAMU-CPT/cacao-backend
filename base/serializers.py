@@ -39,7 +39,8 @@ class BasicGroupSerializer(serializers.ModelSerializer):
 
 class GAFSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.SerializerMethodField()
-    challenge = serializers.HyperlinkedRelatedField(allow_null=True, read_only=True, view_name="challenge")
+    challenge = serializers.SerializerMethodField()
+    #serializers.HyperlinkedRelatedField(allow_null=True, read_only=True, view_name="challenge")
 
     class Meta:
         model = GAF
@@ -69,11 +70,21 @@ class GAFSerializer(serializers.HyperlinkedModelSerializer):
     def get_owner(self, obj):
         return GrouplessUserSerializer(obj.owner).data
 
+    def get_challenge(self, obj):
+        for chal in obj.challenge.all():
+            yield GAFlessChallengeSerializer(chal).data
+
 class ChallengeSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     class Meta:
         model = Challenge
         fields = ('owner', 'id', 'gaf', 'entry_type', 'date', 'reason')
+
+class GAFlessChallengeSerializer(serializers.HyperlinkedModelSerializer):
+    owner = serializers.ReadOnlyField(source='owner.username')
+    class Meta:
+        model = Challenge
+        fields = ('owner', 'id', 'entry_type', 'date', 'reason')
 
 class AssessmentSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

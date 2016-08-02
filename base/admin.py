@@ -5,7 +5,7 @@ class GAFAdmin(admin.ModelAdmin):
     list_display = ('id', 'owner', 'db', 'qualifier', 'review_state', 'go_id', 'db_reference', 'date')
 
 class ChallengeAdmin(admin.ModelAdmin):
-    list_display = ('id', 'owner', 'gaf', 'date')
+    list_display = ('id', 'owner', 'challenge_gaf', 'original_gaf', 'date')
 
 class AssessmentAdmin(admin.ModelAdmin):
     list_display = ('id', 'gaf', 'challenge', 'date')

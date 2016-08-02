@@ -37,10 +37,18 @@ class BasicGroupSerializer(serializers.ModelSerializer):
         model = Group
         fields = ('id', 'name')
 
+class ChallengeSerializer(serializers.HyperlinkedModelSerializer):
+    owner = serializers.ReadOnlyField(source='owner.username')
+    class Meta:
+        model = Challenge
+        fields = ('owner', 'id', 'challenge_gaf', 'original_gaf', 'entry_type', 'date', 'reason')
+
 class GAFSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.SerializerMethodField()
-    challenge = serializers.SerializerMethodField()
-    #serializers.HyperlinkedRelatedField(allow_null=True, read_only=True, view_name="challenge")
+    challenge_gaf=ChallengeSerializer(many=True, read_only=True, allow_null=True)
+    original_gaf=ChallengeSerializer(many=True, read_only=True, allow_null=True)
+    # challenge_gaf = serializers.HyperlinkedRelatedField(many=True, allow_null=True, read_only=True, view_name="challenge-detail")
+    # original_gaf = serializers.HyperlinkedRelatedField(many=True, allow_null=True, read_only=True, view_name="challenge-detail")
 
     class Meta:
         model = GAF
@@ -65,26 +73,11 @@ class GAFSerializer(serializers.HyperlinkedModelSerializer):
                   'annotation_extension',
                   'gene_product_id',
                   'notes',
-                  'challenge')
+                  'challenge_gaf',
+                  'original_gaf')
 
     def get_owner(self, obj):
         return GrouplessUserSerializer(obj.owner).data
-
-    def get_challenge(self, obj):
-        for chal in obj.challenge.all():
-            yield GAFlessChallengeSerializer(chal).data
-
-class ChallengeSerializer(serializers.HyperlinkedModelSerializer):
-    owner = serializers.ReadOnlyField(source='owner.username')
-    class Meta:
-        model = Challenge
-        fields = ('owner', 'id', 'gaf', 'entry_type', 'date', 'reason')
-
-class GAFlessChallengeSerializer(serializers.HyperlinkedModelSerializer):
-    owner = serializers.ReadOnlyField(source='owner.username')
-    class Meta:
-        model = Challenge
-        fields = ('owner', 'id', 'entry_type', 'date', 'reason')
 
 class AssessmentSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

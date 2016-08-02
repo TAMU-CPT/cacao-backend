@@ -50,7 +50,8 @@ class GAF(models.Model):
 class Challenge(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     owner = models.ForeignKey('auth.User')
-    gaf = models.ForeignKey(GAF, related_name="challenge")
+    challenge_gaf = models.ForeignKey(GAF, related_name="challenge_gaf")
+    original_gaf = models.ForeignKey(GAF, related_name="original_gaf")
     entry_type = models.IntegerField(choices=ENTRY_TYPES, default=0)
     date = models.DateTimeField(auto_now_add=True)
     reason = models.TextField()

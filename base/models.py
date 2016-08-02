@@ -2,7 +2,6 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.contrib.auth.models import User
-from multiselectfield import MultiSelectField
 import uuid
 
 
@@ -45,6 +44,9 @@ class GAF(models.Model):
     class Meta:
         unique_together = ('db', 'db_object_id', 'go_id', 'db_reference', 'evidence_code', 'taxon')
 
+    def __str__(self):
+        return str(self.id)
+
 class Challenge(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     owner = models.ForeignKey('auth.User')
@@ -53,6 +55,9 @@ class Challenge(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     reason = models.TextField()
 
+    def __str__(self):
+        return str(self.id)
+
 class Assessment(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     gaf = models.ForeignKey(GAF, null=True, blank=True)
@@ -60,6 +65,9 @@ class Assessment(models.Model):
     flagged = models.TextField(blank=True, null=True)
     notes = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.id)
 
 class Paper(models.Model):
     pmid = models.IntegerField(null=True)
@@ -72,3 +80,6 @@ class Paper(models.Model):
     abstract = models.TextField(null=True)
     keywords = models.TextField(null=True)
     pmc = models.IntegerField(null=True)
+
+    def __str__(self):
+        return 'PMID:%s' % self.pmid

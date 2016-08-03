@@ -42,6 +42,7 @@ class AssessmentSerializer(serializers.HyperlinkedModelSerializer):
         model = Assessment
         fields = ('gaf', 'id', 'challenge', 'flagged', 'notes', 'date')
 
+
 class ChallengeSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     assessment=AssessmentSerializer(read_only=True, allow_null=True)
@@ -49,9 +50,15 @@ class ChallengeSerializer(serializers.HyperlinkedModelSerializer):
         model = Challenge
         fields = ('owner', 'id', 'challenge_gaf', 'original_gaf', 'entry_type', 'date', 'reason', 'assessment')
 
+class AssessmentlessChallengeSerializer(serializers.HyperlinkedModelSerializer):
+    owner = serializers.ReadOnlyField(source='owner.username')
+    class Meta:
+        model = Challenge
+        fields = ('owner', 'id', 'challenge_gaf', 'original_gaf', 'entry_type', 'date', 'reason')
+
 class GAFSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.SerializerMethodField()
-    challenge_gaf=ChallengeSerializer(read_only=True, allow_null=True)
+    challenge_gaf=AssessmentlessChallengeSerializer(read_only=True, allow_null=True)
     original_gaf=ChallengeSerializer(many=True, read_only=True, allow_null=True)
     assessment=AssessmentSerializer(read_only=True, allow_null=True)
 

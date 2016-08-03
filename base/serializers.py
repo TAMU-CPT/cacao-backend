@@ -45,10 +45,8 @@ class ChallengeSerializer(serializers.HyperlinkedModelSerializer):
 
 class GAFSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.SerializerMethodField()
-    challenge_gaf=ChallengeSerializer(many=True, read_only=True, allow_null=True)
+    challenge_gaf=ChallengeSerializer(read_only=True, allow_null=True)
     original_gaf=ChallengeSerializer(many=True, read_only=True, allow_null=True)
-    # challenge_gaf = serializers.HyperlinkedRelatedField(many=True, allow_null=True, read_only=True, view_name="challenge-detail")
-    # original_gaf = serializers.HyperlinkedRelatedField(many=True, allow_null=True, read_only=True, view_name="challenge-detail")
 
     class Meta:
         model = GAF

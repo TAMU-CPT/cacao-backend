@@ -37,16 +37,23 @@ class BasicGroupSerializer(serializers.ModelSerializer):
         model = Group
         fields = ('id', 'name')
 
+class AssessmentSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Assessment
+        fields = ('gaf', 'id', 'challenge', 'flagged', 'notes', 'date')
+
 class ChallengeSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
+    assessment=AssessmentSerializer(read_only=True, allow_null=True)
     class Meta:
         model = Challenge
-        fields = ('owner', 'id', 'challenge_gaf', 'original_gaf', 'entry_type', 'date', 'reason')
+        fields = ('owner', 'id', 'challenge_gaf', 'original_gaf', 'entry_type', 'date', 'reason', 'assessment')
 
 class GAFSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.SerializerMethodField()
     challenge_gaf=ChallengeSerializer(read_only=True, allow_null=True)
     original_gaf=ChallengeSerializer(many=True, read_only=True, allow_null=True)
+    assessment=AssessmentSerializer(read_only=True, allow_null=True)
 
     class Meta:
         model = GAF
@@ -72,15 +79,12 @@ class GAFSerializer(serializers.HyperlinkedModelSerializer):
                   'gene_product_id',
                   'notes',
                   'challenge_gaf',
-                  'original_gaf')
+                  'original_gaf',
+                  'assessment',
+                  'superseded')
 
     def get_owner(self, obj):
         return GrouplessUserSerializer(obj.owner).data
-
-class AssessmentSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Assessment
-        fields = ('gaf', 'id', 'challenge', 'flagged', 'notes', 'date')
 
 class PaperSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

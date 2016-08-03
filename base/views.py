@@ -46,6 +46,8 @@ class ChallengeViewSet(viewsets.ModelViewSet):
     queryset = Challenge.objects.all().order_by('-date')
     serializer_class = ChallengeSerializer
     permission_classes = (OwnerOrAdmin,)
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = ('id',)
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)

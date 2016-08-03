@@ -40,6 +40,7 @@ class GAF(models.Model):
     annotation_extension = models.CharField(default = '', blank=True, null=True, max_length=64)
     gene_product_id = models.CharField(default = '', blank=True, null=True, max_length=64)
     notes = models.TextField(default='')
+    superseded = models.ForeignKey('GAF', null=True, blank=True)
 
     class Meta:
         unique_together = ('db', 'db_object_id', 'go_id', 'db_reference', 'evidence_code', 'taxon')
@@ -61,8 +62,8 @@ class Challenge(models.Model):
 
 class Assessment(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    gaf = models.ForeignKey(GAF, null=True, blank=True)
-    challenge = models.ForeignKey(Challenge, null=True, blank=True)
+    gaf = models.OneToOneField(GAF, null=True, blank=True)
+    challenge = models.OneToOneField(Challenge, null=True, blank=True)
     flagged = models.TextField(blank=True, null=True)
     notes = models.TextField()
     date = models.DateTimeField(auto_now_add=True)

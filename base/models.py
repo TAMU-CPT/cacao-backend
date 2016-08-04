@@ -62,6 +62,7 @@ class Challenge(models.Model):
 
 class Assessment(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    owner = models.ForeignKey('auth.User')
     gaf = models.OneToOneField(GAF, null=True, blank=True)
     challenge = models.OneToOneField(Challenge, null=True, blank=True)
     flagged = models.TextField(blank=True, null=True)

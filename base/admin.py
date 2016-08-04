@@ -8,7 +8,7 @@ class ChallengeAdmin(admin.ModelAdmin):
     list_display = ('id', 'owner', 'challenge_gaf', 'original_gaf', 'date')
 
 class AssessmentAdmin(admin.ModelAdmin):
-    list_display = ('id', 'gaf', 'challenge', 'date')
+    list_display = ('id', 'owner', 'gaf', 'challenge', 'date')
 
 class PaperAdmin(admin.ModelAdmin):
     list_display = ('pmid', 'pub_year', 'title', 'pmc')

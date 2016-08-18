@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import timezone
 import uuid
 
 
@@ -35,7 +36,7 @@ class GAF(models.Model):
     db_object_synonym = models.CharField(default = '', blank=True, max_length=64)
     db_object_type = models.CharField(max_length=64)
     taxon = models.CharField(max_length=64)
-    date = models.DateField(auto_now_add=True)
+    date = models.DateTimeField(default=timezone.now)
     assigned_by = models.CharField(max_length=64)
     annotation_extension = models.CharField(default = '', blank=True, null=True, max_length=64)
     gene_product_id = models.CharField(default = '', blank=True, null=True, max_length=64)
@@ -50,7 +51,6 @@ class GAF(models.Model):
 
 class Challenge(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    owner = models.ForeignKey('auth.User')
     original_gaf = models.ForeignKey(GAF, related_name="original_gaf")
     challenge_gaf = models.OneToOneField(GAF, related_name="challenge_gaf", null=True, blank=True)
     entry_type = models.IntegerField(choices=ENTRY_TYPES, default=0)

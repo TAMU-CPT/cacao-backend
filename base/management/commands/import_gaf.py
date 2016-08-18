@@ -22,9 +22,8 @@ class Command(BaseCommand):
         for line in options['gaf_file']:
             if not line.startswith('!'):
                 gaf_data = dict(zip(gaf_keys, line.strip().split('\t')))
+                gaf_data['date'] = datetime.datetime.strptime(gaf_data['date'], '%Y%m%d')
                 print gaf_data
-                d = datetime.datetime.strptime(gaf_data['date'], '%Y%m%d')
-                gaf_data['date'] = d.strftime('%Y-%m-%d')
                 gaf_data['db'] = 'UniProtKB'
                 gaf = GAF(**gaf_data)
                 try:

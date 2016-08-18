@@ -43,7 +43,7 @@ class GAFViewSet(viewsets.ModelViewSet):
         return self.update(request)
 
 class ChallengeViewSet(viewsets.ModelViewSet):
-    queryset = Challenge.objects.all().order_by('-date')
+    queryset = Challenge.objects.all().order_by('date')
     serializer_class = ChallengeSerializer
     permission_classes = (OwnerOrAdmin,)
     filter_backends = (filters.DjangoFilterBackend,)
@@ -53,7 +53,7 @@ class ChallengeViewSet(viewsets.ModelViewSet):
         serializer.save(owner=self.request.user)
 
 class AssessmentViewSet(viewsets.ModelViewSet):
-    queryset = Assessment.objects.all().order_by('-date')
+    queryset = Assessment.objects.all().order_by('date')
     serializer_class = AssessmentSerializer
     permission_classses = (permissions.IsAdminUser,)
 

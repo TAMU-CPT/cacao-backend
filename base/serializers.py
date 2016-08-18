@@ -54,7 +54,7 @@ class ChallengeSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('owner', 'id', 'challenge_gaf', 'original_gaf', 'entry_type', 'date', 'reason', 'assessment')
 
     def get_owner(self, obj):
-        return GrouplessUserSerializer(obj.owner).data
+        return GrouplessUserSerializer(obj.challenge_gaf.owner).data
 
 class AssessmentlessChallengeSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.SerializerMethodField()
@@ -63,7 +63,7 @@ class AssessmentlessChallengeSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('owner', 'id', 'challenge_gaf', 'original_gaf', 'entry_type', 'date', 'reason')
 
     def get_owner(self, obj):
-        return GrouplessUserSerializer(obj.owner).data
+        return GrouplessUserSerializer(obj.challenge_gaf.owner).data
 
 class GAFSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.SerializerMethodField()

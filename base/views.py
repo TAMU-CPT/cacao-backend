@@ -49,9 +49,6 @@ class ChallengeViewSet(viewsets.ModelViewSet):
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = ('id',)
 
-    def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)
-
 class AssessmentViewSet(viewsets.ModelViewSet):
     queryset = Assessment.objects.all().order_by('date')
     serializer_class = AssessmentSerializer

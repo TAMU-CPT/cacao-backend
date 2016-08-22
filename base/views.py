@@ -1,6 +1,6 @@
 # from django.shortcuts import render
+from rest_framework.decorators import api_view
 from django.contrib.auth.models import User, Group
-from django.contrib.messages import add_message
 from rest_framework import viewsets, permissions, filters
 from base.serializers import UserSerializer, GroupSerializer, GAFSerializer, ChallengeSerializer, AssessmentSerializer, PaperSerializer
 from base.models import GAF, Challenge, Assessment, Paper
@@ -127,3 +127,13 @@ class PaperViewSet(viewsets.ModelViewSet):
 
         serializer = PaperSerializer(paper)
         return Response(serializer.data)
+
+@api_view(['POST'])
+def mark_all_read(request):
+    """
+    Mark all messages as read (i.e. delete from inbox) for current logged in user
+    """
+    from stored_messages.settings import stored_messages_settings
+    backend = stored_messages_settings.STORAGE_BACKEND()
+    backend.inbox_purge(request.user)
+    return Response({"message": "All messages read"})

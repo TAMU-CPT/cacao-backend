@@ -19,4 +19,5 @@ urlpatterns = [
     url(r'^api-token-refresh/', 'rest_framework_jwt.views.refresh_jwt_token'),
     url(r'^api-token-verify/', 'rest_framework_jwt.views.verify_jwt_token'),
     url(r'^api/', include('stored_messages.urls')),
+    url(r'^mark_all_read/$', views.mark_all_read, name='mark_all_read'),
 ]

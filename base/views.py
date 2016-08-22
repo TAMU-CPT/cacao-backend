@@ -1,5 +1,6 @@
 # from django.shortcuts import render
 from django.contrib.auth.models import User, Group
+from django.contrib.messages import add_message
 from rest_framework import viewsets, permissions, filters
 from base.serializers import UserSerializer, GroupSerializer, GAFSerializer, ChallengeSerializer, AssessmentSerializer, PaperSerializer
 from base.models import GAF, Challenge, Assessment, Paper
@@ -9,6 +10,7 @@ import django_filters
 from django.http import JsonResponse
 from Bio import Entrez
 import re
+import stored_messages
 
 Entrez.email = "cpt@tamu.edu"
 
@@ -38,6 +40,8 @@ class GAFViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+        stored_messages.api.add_message_for([self.request.user], stored_messages.STORED_INFO, 'yay you did it')
+        # add_message(self.request._request, stored_messages.STORED_INFO, 'You created a gaf')
 
     def put(self, request):
         return self.update(request)

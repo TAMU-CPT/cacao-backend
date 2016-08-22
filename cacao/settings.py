@@ -40,9 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'multiselectfield',
     'base',
+    'stored_messages',
     'rest_framework',
     'corsheaders',
 ]
+
+MESSAGE_STORAGE = 'stored_messages.storage.PersistentStorage'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (

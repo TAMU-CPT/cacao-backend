@@ -13,6 +13,9 @@ ADD . /app
 RUN chown -R django /app
 # Port to expose
 EXPOSE 8000
-# Copy entrypoint script into the image
+
+ENV DJANGO_SETTINGS_MODULE=cacao.production \
+	ALLOWED_HOSTS=localhost:10000
+
 USER django
 ENTRYPOINT ["/app/docker/docker-entrypoint.sh"]

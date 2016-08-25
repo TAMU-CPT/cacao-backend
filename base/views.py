@@ -19,10 +19,14 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     filter_backends = (filters.DjangoFilterBackend, filters.OrderingFilter)
     ordering_fields = ('username', 'email')
+    ordering = ('username')
 
 class GroupViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+    filter_backends = (filters.DjangoFilterBackend, filters.OrderingFilter)
+    ordering_fields = ('name', 'id')
+    ordering = ('name')
 
 
 class GAFFilter(filters.FilterSet):

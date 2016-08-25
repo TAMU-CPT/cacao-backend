@@ -31,10 +31,11 @@ class GroupViewSet(viewsets.ModelViewSet):
 
 class GAFFilter(filters.FilterSet):
     team = django_filters.CharFilter(name="owner__groups")
+    owner_name = django_filters.CharFilter(name="owner__username")
 
     class Meta:
         model = GAF
-        fields = ('id', 'db_object_id', 'go_id', 'review_state', 'db_reference', 'team', 'owner')
+        fields = ('review_state', 'id', 'db_object_id', 'go_id', 'review_state', 'db_reference', 'team', 'owner', 'owner_name')
 
 class GAFViewSet(viewsets.ModelViewSet):
     queryset = GAF.objects.all()

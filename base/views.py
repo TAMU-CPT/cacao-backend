@@ -28,14 +28,12 @@ class GroupViewSet(viewsets.ModelViewSet):
     ordering_fields = ('name', 'id')
     ordering = ('name')
 
-
 class GAFFilter(filters.FilterSet):
     team = django_filters.CharFilter(name="owner__groups")
-    owner_name = django_filters.CharFilter(name="owner__username")
 
     class Meta:
         model = GAF
-        fields = ('review_state', 'id', 'db_object_id', 'go_id', 'review_state', 'db_reference', 'team', 'owner', 'owner_name')
+        fields = ('review_state', 'id', 'db_object_id', 'go_id', 'review_state', 'db_reference', 'team', 'owner')
 
 class GAFViewSet(viewsets.ModelViewSet):
     queryset = GAF.objects.all()
@@ -43,6 +41,7 @@ class GAFViewSet(viewsets.ModelViewSet):
     permission_classes = (OwnerOrAdmin,)
     filter_backends = (filters.DjangoFilterBackend, filters.OrderingFilter)
     filter_class = GAFFilter
+    ordering_fields = ('review_state', 'id', 'owner__username', 'db_object_id', 'go_id', 'db_reference', 'db_object_name', 'evidence_code', 'date')
     ordering = ('date')
 
     def perform_create(self, serializer):

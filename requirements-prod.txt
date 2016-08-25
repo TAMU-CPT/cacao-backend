@@ -8,6 +8,7 @@ django-stored-messages==1.4.0
 django-uuidfield==0.5.0
 djangorestframework==3.4.1
 djangorestframework-jwt==1.8.0
+gunicorn==19.6.0
 psycopg2==2.6.2
 PyJWT==1.4.1
 raven==5.25.0

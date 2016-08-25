@@ -9,7 +9,7 @@ WORKDIR /app
 RUN pip --no-cache-dir install -r requirements-prod.txt && \
 	addgroup -S django && \
 	adduser -S -G django django
-ADD ../ /app
+ADD . /app
 RUN chown -R django /app
 # Port to expose
 EXPOSE 8000

@@ -15,8 +15,10 @@ import stored_messages
 Entrez.email = "cpt@tamu.edu"
 
 class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all().order_by('-username')
+    queryset = User.objects.all()
     serializer_class = UserSerializer
+    filter_backends = (filters.DjangoFilterBackend, filters.OrderingFilter)
+    ordering_fields = ('username', 'email')
 
 class GroupViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()

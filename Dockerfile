@@ -10,12 +10,15 @@ RUN pip --no-cache-dir install -r requirements-prod.txt && \
 	addgroup -S django && \
 	adduser -S -G django django
 ADD . /app
-RUN chown -R django /app
+RUN chown -R django /app && \
+	apk add bash && \
+	python manage.py collectstatic --noinput
 # Port to expose
 EXPOSE 8000
 
 ENV DJANGO_SETTINGS_MODULE=cacao.production \
-	ALLOWED_HOSTS=localhost:10000
+	ALLOWED_HOSTS="*" \
+	CORS_ORIGINS="localhost:10000"
 
 USER django
 ENTRYPOINT ["/app/docker/docker-entrypoint.sh"]

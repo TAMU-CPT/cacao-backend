@@ -20,8 +20,8 @@ services:
     links:
       - django
     ports:
-      - "80"
+        - "8000:80"
     volumes_from:
-      - django
+      - "django:ro"
     volumes:
-      - "./docker/nginx.conf:/etc/nginx/conf.d/default.conf"
+      - "./docker/nginx.conf:/etc/nginx/conf.d/default.conf:ro"

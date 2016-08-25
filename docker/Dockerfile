@@ -9,10 +9,10 @@ WORKDIR /app
 RUN pip --no-cache-dir install -r requirements-prod.txt && \
 	addgroup -S django && \
 	adduser -S -G django django
-ADD . /app
+ADD ../ /app
 RUN chown -R django /app
 # Port to expose
 EXPOSE 8000
 # Copy entrypoint script into the image
 USER django
-ENTRYPOINT ["/app/docker-entrypoint.sh"]
+ENTRYPOINT ["/app/docker/docker-entrypoint.sh"]

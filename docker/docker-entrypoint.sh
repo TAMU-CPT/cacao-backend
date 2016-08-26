@@ -36,6 +36,7 @@ try:
 except:
 	u = User.objects.filter(username='admin')[0]
 	u.set_password(password)
+	u.save()
 
 print "\n\nSeting admin password to %s\n\n" % password
 END

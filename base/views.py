@@ -28,11 +28,18 @@ class GroupViewSet(viewsets.ModelViewSet):
     ordering_fields = ('name', 'id')
     ordering = ('name')
 
+class GeneFilter(filters.FilterSet):
+    org_id = django_filters.CharFilter(name="organism__id")
+
+    class Meta:
+        model = Gene
+        fields = ('id', 'org_id')
+
 class GeneViewSet(viewsets.ModelViewSet):
     queryset = Gene.objects.all()
     serializer_class = GeneSerializer
     filter_backends = (filters.DjangoFilterBackend,)
-    filter_fields = ('id',)
+    filter_class = GeneFilter
 
 class OrganismViewSet(viewsets.ModelViewSet):
     queryset = Organism.objects.all()
@@ -57,9 +64,9 @@ class GAFViewSet(viewsets.ModelViewSet):
     ordering = ('date')
 
     def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)
+        gene = Gene.objects.get(id=self.request.data['gene']['id'])
+        serializer.save(owner=self.request.user, gene=gene)
         stored_messages.api.add_message_for([self.request.user], stored_messages.STORED_INFO, 'yay you did it')
-        # add_message(self.request._request, stored_messages.STORED_INFO, 'You created a gaf')
 
     def put(self, request):
         return self.update(request)

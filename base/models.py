@@ -86,3 +86,15 @@ class Paper(models.Model):
 
     def __str__(self):
         return 'PMID:%s' % self.pmid
+
+class Organism(models.Model):
+    common_name = models.CharField(max_length=128)
+    alternate_name = models.CharField(max_length=128)
+    taxon = models.CharField(max_length=64)
+    ebi_id = models.CharField(max_length=64)
+
+class Gene(models.Model):
+    start_strand = models.CharField(max_length=64)
+    end_strand = models.CharField(max_length=64)
+    ebi_id = models.CharField(max_length=64)
+    organism = models.ForeignKey(Organism)

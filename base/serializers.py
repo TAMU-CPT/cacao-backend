@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from base.models import GAF, Challenge, Assessment, Paper
+from base.models import GAF, Challenge, Assessment, Paper, Gene, Organism
 import hashlib
 
 class UserSerializer(serializers.ModelSerializer):
@@ -65,11 +65,23 @@ class AssessmentlessChallengeSerializer(serializers.HyperlinkedModelSerializer):
     def get_owner(self, obj):
         return GrouplessUserSerializer(obj.challenge_gaf.owner).data
 
+class OrganismSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Organism
+        fields = ('id', 'common_name', 'alternate_name', 'taxon', 'ebi_id')
+
+class GeneSerializer(serializers.ModelSerializer):
+    organism = OrganismSerializer(read_only=True)
+    class Meta:
+        model = Gene
+        fields = ('id', 'start', 'end', 'organism', 'db_object_id', 'db_object_symbol', 'db_object_name', 'db_object_synonym', 'db_object_type', 'gene_product_id')
+
 class GAFSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.SerializerMethodField()
     challenge_gaf=AssessmentlessChallengeSerializer(read_only=True, allow_null=True)
     original_gaf=ChallengeSerializer(many=True, read_only=True, allow_null=True)
     assessment=AssessmentSerializer(read_only=True, allow_null=True)
+    gene=GeneSerializer(read_only=True)
 
     class Meta:
         model = GAF
@@ -77,22 +89,16 @@ class GAFSerializer(serializers.HyperlinkedModelSerializer):
                   'review_state',
                   'id',
                   'db',
-                  'db_object_id',
-                  'db_object_symbol',
+                  'gene',
                   'qualifier',
                   'go_id',
                   'db_reference',
                   'evidence_code',
                   'with_or_from',
                   'aspect',
-                  'db_object_name',
-                  'db_object_synonym',
-                  'db_object_type',
-                  'taxon',
                   'date',
                   'assigned_by',
                   'annotation_extension',
-                  'gene_product_id',
                   'notes',
                   'challenge_gaf',
                   'original_gaf',

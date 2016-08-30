@@ -2,8 +2,8 @@
 from rest_framework.decorators import api_view
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets, permissions, filters
-from base.serializers import UserSerializer, GroupSerializer, GAFSerializer, ChallengeSerializer, AssessmentSerializer, PaperSerializer
-from base.models import GAF, Challenge, Assessment, Paper
+from base.serializers import UserSerializer, GroupSerializer, GAFSerializer, ChallengeSerializer, AssessmentSerializer, PaperSerializer, OrganismSerializer, GeneSerializer
+from base.models import GAF, Challenge, Assessment, Paper, Gene, Organism
 from permissions import OwnerOrAdmin
 from rest_framework.response import Response
 import django_filters
@@ -28,12 +28,24 @@ class GroupViewSet(viewsets.ModelViewSet):
     ordering_fields = ('name', 'id')
     ordering = ('name')
 
+class GeneViewSet(viewsets.ModelViewSet):
+    queryset = Gene.objects.all()
+    serializer_class = GeneSerializer
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = ('id',)
+
+class OrganismViewSet(viewsets.ModelViewSet):
+    queryset = Organism.objects.all()
+    serializer_class = OrganismSerializer
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = ('id',)
+
 class GAFFilter(filters.FilterSet):
     team = django_filters.CharFilter(name="owner__groups")
 
     class Meta:
         model = GAF
-        fields = ('review_state', 'id', 'db_object_id', 'go_id', 'review_state', 'db_reference', 'team', 'owner')
+        fields = ('review_state', 'id', 'gene__db_object_id', 'go_id', 'db_reference', 'team', 'owner', 'gene__organism__taxon')
 
 class GAFViewSet(viewsets.ModelViewSet):
     queryset = GAF.objects.all()
@@ -41,7 +53,7 @@ class GAFViewSet(viewsets.ModelViewSet):
     permission_classes = (OwnerOrAdmin,)
     filter_backends = (filters.DjangoFilterBackend, filters.OrderingFilter)
     filter_class = GAFFilter
-    ordering_fields = ('review_state', 'id', 'owner__username', 'db_object_id', 'go_id', 'db_reference', 'db_object_name', 'evidence_code', 'date')
+    ordering_fields = ('review_state', 'id', 'owner__username', 'gene__db_object_id', 'go_id', 'db_reference', 'gene__db_object_name', 'evidence_code', 'date')
     ordering = ('date')
 
     def perform_create(self, serializer):

@@ -19,32 +19,52 @@ REVIEW_STATE = (
     (3, 'Rejected'),
 )
 
+class Organism(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    common_name = models.CharField(max_length=128)
+    alternate_name = models.CharField(max_length=128)
+    taxon = models.CharField(max_length=64)
+    ebi_id = models.CharField(max_length=64)
+
+    def __str__(self):
+        return str(self.common_name)
+
+class Gene(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    start = models.IntegerField()
+    end = models.IntegerField()
+    strand = models.IntegerField()
+    organism = models.ForeignKey(Organism)
+    db_object_id = models.CharField(max_length=64)
+    db_object_symbol = models.CharField(max_length=64)
+    db_object_name = models.CharField(default = '', blank=True, max_length=64)
+    db_object_synonym = models.CharField(default = '', blank=True, max_length=64)
+    db_object_type = models.CharField(default='protein', max_length=64)
+    gene_product_id = models.CharField(default = '', blank=True, null=True, max_length=64)
+
+    def __str__(self):
+        return str(self.db_object_id)
+
 class GAF(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     owner = models.ForeignKey(User, null=True)
     review_state = models.IntegerField(choices=REVIEW_STATE, default=0)
     db = models.CharField(max_length=64)
-    db_object_id = models.CharField(max_length=64)
-    db_object_symbol = models.CharField(max_length=64)
+    gene = models.ForeignKey(Gene, null=True)
     qualifier = models.CharField(blank=True, max_length=64)
     go_id = models.CharField(max_length=64)
     db_reference = models.CharField(max_length=64)
     evidence_code = models.CharField(max_length=64)
     with_or_from = models.CharField(default = '', blank=True, max_length=64)
     aspect = models.CharField(max_length=64)
-    db_object_name = models.CharField(default = '', blank=True, max_length=64)
-    db_object_synonym = models.CharField(default = '', blank=True, max_length=64)
-    db_object_type = models.CharField(max_length=64)
-    taxon = models.CharField(max_length=64)
     date = models.DateTimeField(default=timezone.now)
     assigned_by = models.CharField(max_length=64)
     annotation_extension = models.CharField(default = '', blank=True, null=True, max_length=64)
-    gene_product_id = models.CharField(default = '', blank=True, null=True, max_length=64)
     notes = models.TextField(default='')
     superseded = models.ForeignKey('GAF', null=True, blank=True)
 
     class Meta:
-        unique_together = ('db', 'db_object_id', 'go_id', 'db_reference', 'evidence_code', 'taxon')
+        unique_together = ('db', 'go_id', 'db_reference', 'evidence_code')
 
     def __str__(self):
         return str(self.id)
@@ -86,18 +106,3 @@ class Paper(models.Model):
 
     def __str__(self):
         return 'PMID:%s' % self.pmid
-
-class Organism(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    common_name = models.CharField(max_length=128)
-    alternate_name = models.CharField(max_length=128)
-    taxon = models.CharField(max_length=64)
-    ebi_id = models.CharField(max_length=64)
-
-class Gene(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    start = models.IntegerField()
-    end = models.IntegerField()
-    strand = models.IntegerField()
-    ebi_id = models.CharField(max_length=64)
-    organism = models.ForeignKey(Organism)

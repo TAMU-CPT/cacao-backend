@@ -10,6 +10,8 @@ router.register(r'gafs', views.GAFViewSet)
 router.register(r'challenges', views.ChallengeViewSet)
 router.register(r'assessments', views.AssessmentViewSet)
 router.register(r'papers', views.PaperViewSet)
+router.register(r'genes', views.GeneViewSet)
+router.register(r'organisms', views.OrganismViewSet)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),

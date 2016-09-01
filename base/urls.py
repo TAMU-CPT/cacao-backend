@@ -23,4 +23,3 @@ urlpatterns = [
     url(r'^api/', include('stored_messages.urls')),
     url(r'^mark_all_read/$', views.mark_all_read, name='mark_all_read'),
 ]
-

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'multiselectfield',
     'base',
+    'jbrowse',
     'stored_messages',
     'rest_framework',
     'corsheaders',
@@ -76,7 +77,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = ('localhost:10000')
+CORS_ORIGIN_WHITELIST = ('localhost:10000', 'localhost:9000')
 
 ROOT_URLCONF = 'cacao.urls'
 

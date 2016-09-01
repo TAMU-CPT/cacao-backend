@@ -29,12 +29,16 @@ class Organism(models.Model):
     def __str__(self):
         return str(self.common_name)
 
+class RefSeq(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    organism = models.ForeignKey(Organism)
+
 class Gene(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     start = models.IntegerField()
     end = models.IntegerField()
     strand = models.IntegerField()
-    organism = models.ForeignKey(Organism)
+    refseq = models.ForeignKey(RefSeq, null=True)
     db_object_id = models.CharField(max_length=64)
     db_object_symbol = models.CharField(max_length=64)
     db_object_name = models.CharField(default = '', blank=True, max_length=64)

@@ -2,8 +2,8 @@
 from rest_framework.decorators import api_view
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets, permissions, filters
-from base.serializers import UserSerializer, GroupSerializer, GAFSerializer, ChallengeSerializer, AssessmentSerializer, PaperSerializer, OrganismSerializer, GeneSerializer
-from base.models import GAF, Challenge, Assessment, Paper, Gene, Organism
+from base.serializers import UserSerializer, GroupSerializer, GAFSerializer, ChallengeSerializer, AssessmentSerializer, PaperSerializer, OrganismSerializer, GeneSerializer, RefSeqSerializer
+from base.models import GAF, Challenge, Assessment, Paper, Gene, Organism, RefSeq
 from permissions import OwnerOrAdmin
 from rest_framework.response import Response
 import django_filters
@@ -41,6 +41,12 @@ class GeneViewSet(viewsets.ModelViewSet):
     filter_backends = (filters.DjangoFilterBackend,)
     filter_class = GeneFilter
 
+class RefSeqViewSet(viewsets.ModelViewSet):
+    queryset = RefSeq.objects.all()
+    serializer_class = RefSeqSerializer
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = ('id',)
+
 class OrganismViewSet(viewsets.ModelViewSet):
     queryset = Organism.objects.all()
     serializer_class = OrganismSerializer
@@ -52,7 +58,7 @@ class GAFFilter(filters.FilterSet):
 
     class Meta:
         model = GAF
-        fields = ('review_state', 'id', 'gene__db_object_id', 'go_id', 'db_reference', 'team', 'owner', 'gene__organism__taxon')
+        fields = ('review_state', 'id', 'gene__db_object_id', 'go_id', 'db_reference', 'team', 'owner', 'gene__refseq__organism__taxon')
 
 class GAFViewSet(viewsets.ModelViewSet):
     queryset = GAF.objects.all()

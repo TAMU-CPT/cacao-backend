@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from base.models import GAF, Challenge, Assessment, Paper, Gene, Organism
+from base.models import GAF, Challenge, Assessment, Paper, Gene, Organism, RefSeq
 import hashlib
 
 class UserSerializer(serializers.ModelSerializer):
@@ -70,11 +70,17 @@ class OrganismSerializer(serializers.ModelSerializer):
         model = Organism
         fields = ('id', 'common_name', 'alternate_name', 'taxon', 'ebi_id')
 
-class GeneSerializer(serializers.ModelSerializer):
+class RefSeqSerializer(serializers.ModelSerializer):
     organism = OrganismSerializer(read_only=True)
     class Meta:
+        model = RefSeq
+        fields = ('id', 'organism')
+
+class GeneSerializer(serializers.ModelSerializer):
+    refseq = RefSeqSerializer(read_only=True)
+    class Meta:
         model = Gene
-        fields = ('id', 'start', 'end', 'organism', 'db_object_id', 'db_object_symbol', 'db_object_name', 'db_object_synonym', 'db_object_type', 'gene_product_id')
+        fields = ('id', 'start', 'end', 'refseq', 'db_object_id', 'db_object_symbol', 'db_object_name', 'db_object_synonym', 'db_object_type', 'gene_product_id')
 
 class GAFSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.SerializerMethodField()

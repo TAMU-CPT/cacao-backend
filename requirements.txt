@@ -7,3 +7,4 @@ djangorestframework-jwt
 biopython
 django-filter
 django-stored-messages
+bcbio-gff

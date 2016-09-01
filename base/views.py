@@ -29,7 +29,7 @@ class GroupViewSet(viewsets.ModelViewSet):
     ordering = ('name')
 
 class GeneFilter(filters.FilterSet):
-    org_id = django_filters.CharFilter(name="organism__id")
+    org_id = django_filters.CharFilter(name="refseq__organism__id")
 
     class Meta:
         model = Gene

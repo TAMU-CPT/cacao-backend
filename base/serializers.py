@@ -68,7 +68,7 @@ class AssessmentlessChallengeSerializer(serializers.HyperlinkedModelSerializer):
 class OrganismSerializer(serializers.ModelSerializer):
     class Meta:
         model = Organism
-        fields = ('id', 'common_name', 'alternate_name', 'taxon', 'ebi_id')
+        fields = ('id', 'common_name', 'taxon', 'ebi_id')
 
 class RefSeqSerializer(serializers.ModelSerializer):
     organism = OrganismSerializer(read_only=True)
@@ -80,7 +80,7 @@ class GeneSerializer(serializers.ModelSerializer):
     refseq = RefSeqSerializer(read_only=True)
     class Meta:
         model = Gene
-        fields = ('id', 'start', 'end', 'refseq', 'db_object_id', 'db_object_symbol', 'db_object_name', 'db_object_synonym', 'db_object_type', 'gene_product_id')
+        fields = ('id', 'start', 'end', 'refseq', 'db_object_id', 'db_object_symbol', 'db_object_name', 'db_object_synonym', 'db_object_type', 'gene_product_id', 'alternate_name')
 
 class GAFSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.SerializerMethodField()

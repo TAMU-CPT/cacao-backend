@@ -17,7 +17,7 @@ class GeneAdmin(admin.ModelAdmin):
     list_display = ('id', 'start', 'end', 'strand', 'refseq')
 
 class OrganismAdmin(admin.ModelAdmin):
-    list_display = ('id', 'common_name', 'alternate_name', 'taxon', 'ebi_id')
+    list_display = ('id', 'common_name', 'taxon', 'ebi_id')
 
 class RefSeqAdmin(admin.ModelAdmin):
     list_display = ('id', 'organism')

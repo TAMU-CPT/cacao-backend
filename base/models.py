@@ -22,7 +22,6 @@ REVIEW_STATE = (
 class Organism(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     common_name = models.CharField(max_length=128)
-    alternate_name = models.CharField(max_length=128)
     taxon = models.CharField(max_length=64)
     ebi_id = models.CharField(max_length=64)
 
@@ -31,6 +30,8 @@ class Organism(models.Model):
 
 class RefSeq(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    name = models.CharField(max_length=64)
+    length = models.IntegerField()
     organism = models.ForeignKey(Organism)
 
 class Gene(models.Model):
@@ -41,10 +42,12 @@ class Gene(models.Model):
     refseq = models.ForeignKey(RefSeq, null=True)
     db_object_id = models.CharField(max_length=64)
     db_object_symbol = models.CharField(max_length=64)
-    db_object_name = models.CharField(default = '', blank=True, max_length=64)
-    db_object_synonym = models.CharField(default = '', blank=True, max_length=64)
-    db_object_type = models.CharField(default='protein', max_length=64)
     gene_product_id = models.CharField(default = '', blank=True, null=True, max_length=64)
+    db_object_name = models.CharField(default = '', blank=True, max_length=64)
+    db_object_type = models.CharField(default='protein', max_length=64)
+    db_object_synonym = models.CharField(default = '', blank=True, max_length=64)
+    alternate_name = models.CharField(max_length=128, blank=True, null=True)
+
 
     def __str__(self):
         return str(self.db_object_id)

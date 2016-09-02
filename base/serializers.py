@@ -74,7 +74,7 @@ class RefSeqSerializer(serializers.ModelSerializer):
     organism = OrganismSerializer(read_only=True)
     class Meta:
         model = RefSeq
-        fields = ('id', 'organism')
+        fields = ('id', 'name', 'organism')
 
 class GeneSerializer(serializers.ModelSerializer):
     refseq = RefSeqSerializer(read_only=True)

@@ -52,7 +52,7 @@ class OrganismViewSet(viewsets.ModelViewSet):
     queryset = Organism.objects.all()
     serializer_class = OrganismSerializer
     filter_backends = (filters.DjangoFilterBackend,)
-    filter_fields = ('id',)
+    filter_fields = ('id', 'common_name')
 
 class GAFFilter(filters.FilterSet):
     team = django_filters.CharFilter(name="owner__groups")

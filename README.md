@@ -33,3 +33,22 @@ contain various iterations of that.
         - protein, publication, qualifier, go term, evidence, with/from, notes, unique/original
 
 GOA for obtaining existing GAF (https://www.ebi.ac.uk/GOA/downloads)
+
+## JBrowse Integration
+
+```JSON
+{
+  "label": "my_rest_track",
+  "key": "REST Test Track",
+  "storeClass": "JBrowse/Store/SeqFeature/REST",
+  "baseUrl": "https://server_url/jbrowse/",
+  "query": {
+    "organism": "Miro"
+  },
+  "style": {
+    "color": "function(feature){ if(feature.data.state == 1){ return 'yellow'; } if(feature.data.state == 2){ return 'green';} return 'red';}"
+  },
+  "type": "JBrowse/View/Track/CanvasFeatures",
+  "trackType": "JBrowse/View/Track/CanvasFeatures"
+}
+```

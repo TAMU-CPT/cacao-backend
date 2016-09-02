@@ -33,12 +33,13 @@ class GeneFilter(filters.FilterSet):
 
     class Meta:
         model = Gene
-        fields = ('id', 'org_id')
+        fields = ('id', 'org_id', 'db_object_id')
 
 class GeneViewSet(viewsets.ModelViewSet):
     queryset = Gene.objects.all()
     serializer_class = GeneSerializer
-    filter_backends = (filters.DjangoFilterBackend,)
+    filter_backends = (filters.DjangoFilterBackend, filters.OrderingFilter)
+    ordering_fields = ('start', 'id')
     filter_class = GeneFilter
 
 class RefSeqViewSet(viewsets.ModelViewSet):

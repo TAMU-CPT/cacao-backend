@@ -52,3 +52,6 @@ GOA for obtaining existing GAF (https://www.ebi.ac.uk/GOA/downloads)
   "trackType": "JBrowse/View/Track/CanvasFeatures"
 }
 ```
+
+## License
+This software is licensed under AGPL-3.0.

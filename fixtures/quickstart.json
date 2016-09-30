@@ -1,0 +1,5808 @@
+[
+   {
+      "pk" : 1,
+      "fields" : {
+         "app_label" : "admin",
+         "model" : "logentry"
+      },
+      "model" : "contenttypes.contenttype"
+   },
+   {
+      "pk" : 2,
+      "fields" : {
+         "model" : "permission",
+         "app_label" : "auth"
+      },
+      "model" : "contenttypes.contenttype"
+   },
+   {
+      "fields" : {
+         "model" : "group",
+         "app_label" : "auth"
+      },
+      "model" : "contenttypes.contenttype",
+      "pk" : 3
+   },
+   {
+      "pk" : 4,
+      "model" : "contenttypes.contenttype",
+      "fields" : {
+         "app_label" : "auth",
+         "model" : "user"
+      }
+   },
+   {
+      "pk" : 5,
+      "fields" : {
+         "model" : "contenttype",
+         "app_label" : "contenttypes"
+      },
+      "model" : "contenttypes.contenttype"
+   },
+   {
+      "pk" : 6,
+      "fields" : {
+         "app_label" : "sessions",
+         "model" : "session"
+      },
+      "model" : "contenttypes.contenttype"
+   },
+   {
+      "pk" : 7,
+      "fields" : {
+         "model" : "organism",
+         "app_label" : "base"
+      },
+      "model" : "contenttypes.contenttype"
+   },
+   {
+      "model" : "contenttypes.contenttype",
+      "fields" : {
+         "app_label" : "base",
+         "model" : "refseq"
+      },
+      "pk" : 8
+   },
+   {
+      "fields" : {
+         "app_label" : "base",
+         "model" : "gene"
+      },
+      "model" : "contenttypes.contenttype",
+      "pk" : 9
+   },
+   {
+      "pk" : 10,
+      "model" : "contenttypes.contenttype",
+      "fields" : {
+         "model" : "gaf",
+         "app_label" : "base"
+      }
+   },
+   {
+      "pk" : 11,
+      "model" : "contenttypes.contenttype",
+      "fields" : {
+         "model" : "challenge",
+         "app_label" : "base"
+      }
+   },
+   {
+      "fields" : {
+         "app_label" : "base",
+         "model" : "assessment"
+      },
+      "model" : "contenttypes.contenttype",
+      "pk" : 12
+   },
+   {
+      "pk" : 13,
+      "model" : "contenttypes.contenttype",
+      "fields" : {
+         "app_label" : "base",
+         "model" : "paper"
+      }
+   },
+   {
+      "fields" : {
+         "model" : "message",
+         "app_label" : "stored_messages"
+      },
+      "model" : "contenttypes.contenttype",
+      "pk" : 14
+   },
+   {
+      "fields" : {
+         "model" : "messagearchive",
+         "app_label" : "stored_messages"
+      },
+      "model" : "contenttypes.contenttype",
+      "pk" : 15
+   },
+   {
+      "pk" : 16,
+      "model" : "contenttypes.contenttype",
+      "fields" : {
+         "model" : "inbox",
+         "app_label" : "stored_messages"
+      }
+   },
+   {
+      "pk" : 17,
+      "fields" : {
+         "model" : "corsmodel",
+         "app_label" : "corsheaders"
+      },
+      "model" : "contenttypes.contenttype"
+   },
+   {
+      "fields" : {
+         "session_data" : "NWM5YTkxZTgxOGNkYTkwMjI2M2JhMWM3NzVjNDVmYTczZTRkZTU1Yzp7Il9hdXRoX3VzZXJfaGFzaCI6Ijc5ZjEzNDY1MDBjZWQ2MTI1YzliYWM1MDk1Njk3ZmUzOWY2NDkxNTYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+         "expire_date" : "2016-09-29T19:59:25.017Z"
+      },
+      "model" : "sessions.session",
+      "pk" : "0n251lbw4u00u6kbrmkbljshkpch3roa"
+   },
+   {
+      "model" : "sessions.session",
+      "fields" : {
+         "session_data" : "MTAzNGI1NDJmOTk4OTIzOTAxNTMyNjcwMmZmMGY0MmM2MGMwOGI3NTp7Il9hdXRoX3VzZXJfaGFzaCI6ImI3NzIyYTM2NmNhNGE1MWJhZGU2NTBiNDE0NGQyOGE1NTNkN2FmYjgiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+         "expire_date" : "2016-10-14T19:02:22.404Z"
+      },
+      "pk" : "wa0qinc1nljslxnhds4jfowbln09cnf0"
+   },
+   {
+      "fields" : {
+         "ebi_id" : "KT001919",
+         "taxon" : "1675608",
+         "common_name" : "Miro"
+      },
+      "model" : "base.organism",
+      "pk" : "697b1ae1-a08f-409b-ad28-25f9beeb0499"
+   },
+   {
+      "model" : "base.refseq",
+      "fields" : {
+         "length" : 176055,
+         "organism" : "697b1ae1-a08f-409b-ad28-25f9beeb0499",
+         "name" : "Miro"
+      },
+      "pk" : "bb0cdd35-674b-4591-83aa-4218d439084c"
+   },
+   {
+      "pk" : "0071b3c1-89d2-4414-913c-6a454c2fd4f6",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : 1,
+         "start" : 53211,
+         "end" : 53661,
+         "db_object_symbol" : "Miro_90",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_90",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c"
+      }
+   },
+   {
+      "pk" : "00b4a1e9-b05c-4198-a8c0-543598a808d1",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_id" : "Miro_20",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_20",
+         "end" : 12126,
+         "start" : 11727
+      }
+   },
+   {
+      "pk" : "01ba4bd4-90d6-48b5-8ac8-dc9df0060693",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_24",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_24",
+         "end" : 14358,
+         "start" : 14056,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "01c7f8d1-17ec-4bae-8423-f5a7b9634af6",
+      "fields" : {
+         "alternate_name" : null,
+         "db_object_id" : "Miro_256",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_256",
+         "start" : 158527,
+         "end" : 159179
+      },
+      "model" : "base.gene"
+   },
+   {
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_46",
+         "start" : 28346,
+         "end" : 28628,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_46",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene",
+      "pk" : "04170d03-1e89-4160-a624-d88bc4fe3080"
+   },
+   {
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_70",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_70",
+         "start" : 45717,
+         "end" : 46265,
+         "strand" : 1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "0418adf9-5bc3-406a-81e5-5e7e968ee0d7"
+   },
+   {
+      "fields" : {
+         "db_object_symbol" : "Miro_31",
+         "start" : 17126,
+         "end" : 17819,
+         "strand" : -1,
+         "db_object_name" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_31",
+         "db_object_synonym" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "0682c4ce-6984-44c8-a39d-21953bcfc666"
+   },
+   {
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_268",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_268",
+         "start" : 172794,
+         "end" : 173074,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "06de4160-07f1-4076-bce8-9e760b1d1382"
+   },
+   {
+      "pk" : "07c78d37-472e-4990-ae5f-6bde558129ab",
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_49",
+         "end" : 30571,
+         "start" : 30314,
+         "db_object_id" : "Miro_49",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein"
+      }
+   },
+   {
+      "pk" : "0871dd28-96ba-4a8c-ac1b-68bc9333af53",
+      "model" : "base.gene",
+      "fields" : {
+         "start" : 38482,
+         "end" : 38723,
+         "db_object_symbol" : "Miro_61",
+         "db_object_name" : "",
+         "strand" : 1,
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_61"
+      }
+   },
+   {
+      "pk" : "09084b32-ec90-447f-8de4-c0af1b6c7f9e",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 66296,
+         "end" : 66533,
+         "db_object_symbol" : "Miro_111",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_111",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "0a92638c-9ca9-49dc-a583-38af460edc5b",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_34",
+         "start" : 18555,
+         "end" : 18822,
+         "db_object_symbol" : "Miro_34",
+         "db_object_name" : "",
+         "strand" : -1
+      }
+   },
+   {
+      "fields" : {
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_242",
+         "end" : 150684,
+         "start" : 150411,
+         "db_object_id" : "Miro_242",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene",
+      "pk" : "0aa0b024-0386-4c77-bde6-5b74197407e2"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 12410,
+         "start" : 12113,
+         "db_object_symbol" : "Miro_21",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_21",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      },
+      "pk" : "0acf1501-548c-4728-9772-163d114ef4c9"
+   },
+   {
+      "pk" : "0b064318-d09f-4295-a099-b51794ebd1c6",
+      "fields" : {
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_217",
+         "start" : 133685,
+         "end" : 134487,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_217",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_7",
+         "alternate_name" : null,
+         "end" : 7465,
+         "start" : 7289,
+         "db_object_symbol" : "Miro_7",
+         "db_object_name" : "",
+         "strand" : -1
+      },
+      "model" : "base.gene",
+      "pk" : "0b49187a-8279-48ea-aaaa-ba91614b08be"
+   },
+   {
+      "pk" : "0c4861ef-9473-4412-b042-01d37ce00389",
+      "fields" : {
+         "start" : 10437,
+         "end" : 10746,
+         "db_object_symbol" : "Miro_15",
+         "db_object_name" : "",
+         "strand" : -1,
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_15"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_168",
+         "start" : 93591,
+         "end" : 93854,
+         "db_object_symbol" : "Miro_168",
+         "db_object_name" : "",
+         "strand" : -1
+      },
+      "pk" : "0c78d3c5-88f1-4e90-8267-19146f169db6"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_129",
+         "end" : 76034,
+         "start" : 75416,
+         "db_object_id" : "Miro_129",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein"
+      },
+      "pk" : "0cc366b0-c867-4f78-a7cd-0ab6ac70aa34"
+   },
+   {
+      "pk" : "10d2a589-fba7-431b-a65c-32ae78a163db",
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_169",
+         "start" : 93914,
+         "end" : 94204,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_169",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "111cb1f4-3a9d-44d7-bb5c-84e425f80785",
+      "fields" : {
+         "alternate_name" : null,
+         "db_object_id" : "Miro_190",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_190",
+         "start" : 102566,
+         "end" : 103107
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_198",
+         "start" : 110634,
+         "end" : 112575,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_198",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "pk" : "113bdb79-831a-4346-9fec-8ae909105287"
+   },
+   {
+      "fields" : {
+         "alternate_name" : null,
+         "db_object_id" : "Miro_215",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_215",
+         "start" : 132601,
+         "end" : 133016
+      },
+      "model" : "base.gene",
+      "pk" : "12943c94-2dc1-415e-b712-af378a2e0da6"
+   },
+   {
+      "pk" : "13dd4274-595a-4842-a991-a64fa5341246",
+      "fields" : {
+         "db_object_symbol" : "Miro_243",
+         "end" : 151143,
+         "start" : 150683,
+         "strand" : 1,
+         "db_object_name" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_243",
+         "alternate_name" : null,
+         "db_object_synonym" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_96",
+         "alternate_name" : null,
+         "end" : 57203,
+         "start" : 56986,
+         "db_object_symbol" : "Miro_96",
+         "db_object_name" : "",
+         "strand" : 1
+      },
+      "pk" : "1446a250-ecb7-417d-a3bb-0f14f70ef2ed"
+   },
+   {
+      "pk" : "14f70db9-81b4-4e02-8130-a7467459b4f5",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_173",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_173",
+         "end" : 95900,
+         "start" : 95688,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_210",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_210",
+         "end" : 128186,
+         "start" : 126350,
+         "strand" : 1,
+         "db_object_name" : ""
+      },
+      "pk" : "161a6e1d-5cc2-4e70-93bd-847849e34832"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_189",
+         "alternate_name" : null,
+         "end" : 102579,
+         "start" : 101871,
+         "db_object_symbol" : "Miro_189",
+         "db_object_name" : "",
+         "strand" : -1
+      },
+      "pk" : "1659523b-c313-4b8b-824b-9c868d116ddd"
+   },
+   {
+      "pk" : "190c5972-8c8f-4942-8ed8-2f33c7a42e67",
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_72",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : 1,
+         "start" : 46552,
+         "end" : 46883,
+         "db_object_symbol" : "Miro_72"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_75",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_75",
+         "end" : 48256,
+         "start" : 47956,
+         "strand" : 1,
+         "db_object_name" : ""
+      },
+      "pk" : "1a40347c-d5fb-46ce-87be-f12125a6ba99"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_145",
+         "alternate_name" : null,
+         "end" : 83083,
+         "start" : 82478,
+         "db_object_symbol" : "Miro_145",
+         "db_object_name" : "",
+         "strand" : -1
+      },
+      "pk" : "1a61ab27-99ba-465a-bb51-3ed8fc07b2e5"
+   },
+   {
+      "pk" : "1aa4d7b3-25b1-4583-a30d-107b626000ae",
+      "fields" : {
+         "end" : 5334,
+         "start" : 4037,
+         "db_object_symbol" : "Miro_5",
+         "db_object_name" : "",
+         "strand" : -1,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_5",
+         "alternate_name" : null
+      },
+      "model" : "base.gene"
+   },
+   {
+      "fields" : {
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_197",
+         "start" : 108541,
+         "end" : 110618,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_197",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene",
+      "pk" : "1b285746-303c-427b-ac28-6b6efb2a6ddc"
+   },
+   {
+      "pk" : "1bb68ae3-9d29-43a5-830f-26243acea91a",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_117",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_117",
+         "end" : 70715,
+         "start" : 68489,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "1c0415d0-6cb9-4649-8d4c-158722029c2d",
+      "model" : "base.gene",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_220",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_220",
+         "end" : 138128,
+         "start" : 136827,
+         "strand" : 1,
+         "db_object_name" : ""
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_id" : "Miro_52",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_52",
+         "end" : 32603,
+         "start" : 32067
+      },
+      "pk" : "1d8a92e8-c300-4b96-8c4c-e7963d5e285e"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_50",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 30838,
+         "start" : 30563,
+         "db_object_symbol" : "Miro_50"
+      },
+      "pk" : "1dc30169-6bae-43b3-85e5-682908d11f35"
+   },
+   {
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_222",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_222",
+         "end" : 139028,
+         "start" : 138843,
+         "strand" : 1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "1ec76970-3f32-42f6-9d6e-7e0bef3b0048"
+   },
+   {
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_226",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : 1,
+         "start" : 141818,
+         "end" : 142142,
+         "db_object_symbol" : "Miro_226"
+      },
+      "model" : "base.gene",
+      "pk" : "1f4e046b-d4b2-434e-98a2-2351a41d10f7"
+   },
+   {
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_223",
+         "start" : 139302,
+         "end" : 139545,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_223",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene",
+      "pk" : "1f98a1bb-44aa-4251-a331-b12993944b30"
+   },
+   {
+      "pk" : "1ffbd31d-b3e0-41f6-bc2f-5842d8b12b4c",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_10",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 8487,
+         "end" : 8779,
+         "db_object_symbol" : "Miro_10"
+      }
+   },
+   {
+      "fields" : {
+         "start" : 159723,
+         "end" : 160702,
+         "db_object_symbol" : "Miro_258",
+         "db_object_name" : "",
+         "strand" : 1,
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_258"
+      },
+      "model" : "base.gene",
+      "pk" : "2027c68b-f94d-4fda-a99e-28e088c53835"
+   },
+   {
+      "pk" : "20ea63a7-d358-4aba-aeec-944f42e63ac5",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_241",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_241",
+         "end" : 150346,
+         "start" : 149812,
+         "strand" : 1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "22ea5509-4bc5-4671-9a68-52bfd17bbf9c",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_249",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_name" : "",
+         "strand" : 1,
+         "end" : 154857,
+         "start" : 154520,
+         "db_object_symbol" : "Miro_249"
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_symbol" : "Miro_272",
+         "end" : 174796,
+         "start" : 174452,
+         "strand" : -1,
+         "db_object_name" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_272",
+         "alternate_name" : null,
+         "db_object_synonym" : ""
+      },
+      "pk" : "2399ef50-299e-4df6-b824-237c1ae79b5b"
+   },
+   {
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_275",
+         "end" : 175675,
+         "start" : 175223,
+         "db_object_id" : "Miro_275",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene",
+      "pk" : "24ce4ee5-b9ba-425f-aa00-228980b4ddb9"
+   },
+   {
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_144",
+         "end" : 82479,
+         "start" : 82145,
+         "db_object_id" : "Miro_144",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene",
+      "pk" : "26b5f8a9-0e92-4daf-9e34-981a12f70c7d"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_64",
+         "alternate_name" : null,
+         "end" : 40429,
+         "start" : 39544,
+         "db_object_symbol" : "Miro_64",
+         "db_object_name" : "",
+         "strand" : 1
+      },
+      "pk" : "2740a802-c938-428e-96c0-e0cbbe89a563"
+   },
+   {
+      "pk" : "28be8a10-07ee-497b-a568-438ee65c2d47",
+      "fields" : {
+         "db_object_symbol" : "Miro_27",
+         "start" : 15072,
+         "end" : 16108,
+         "strand" : -1,
+         "db_object_name" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_27",
+         "db_object_synonym" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "28ffef2e-680d-4335-a49e-943bac5bdc01",
+      "model" : "base.gene",
+      "fields" : {
+         "end" : 81376,
+         "start" : 81075,
+         "db_object_symbol" : "Miro_140",
+         "db_object_name" : "",
+         "strand" : -1,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_140",
+         "alternate_name" : null
+      }
+   },
+   {
+      "fields" : {
+         "db_object_symbol" : "Miro_209",
+         "end" : 126369,
+         "start" : 125859,
+         "strand" : 1,
+         "db_object_name" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_209",
+         "alternate_name" : null,
+         "db_object_synonym" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "29786578-926f-4d15-943a-01541b076051"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : 1,
+         "start" : 53645,
+         "end" : 53921,
+         "db_object_symbol" : "Miro_91",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_91",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c"
+      },
+      "pk" : "2be8c775-542c-4dba-97ed-04e096691528"
+   },
+   {
+      "pk" : "2d1e0340-1cca-4215-bb6b-305af0df88b9",
+      "fields" : {
+         "db_object_id" : "Miro_97",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_97",
+         "end" : 57382,
+         "start" : 57192
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "2f52f69f-906b-457c-bfdf-d88acf2e34cf",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : 1,
+         "start" : 162016,
+         "end" : 165803,
+         "db_object_symbol" : "Miro_262",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_262",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c"
+      }
+   },
+   {
+      "pk" : "2f558b15-68a8-4986-b1d4-f1744680c875",
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_201",
+         "start" : 116734,
+         "end" : 117608,
+         "db_object_symbol" : "Miro_201",
+         "db_object_name" : "",
+         "strand" : 1
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "2f7a250d-a691-4b84-9e9c-78a00ba214c1",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : 1,
+         "start" : 125035,
+         "end" : 125872,
+         "db_object_symbol" : "Miro_208",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_208",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "305a3037-ac9a-4e4f-bd14-b97177785723",
+      "fields" : {
+         "start" : 10085,
+         "end" : 10361,
+         "db_object_symbol" : "Miro_14",
+         "db_object_name" : "",
+         "strand" : -1,
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_14"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "3343d699-b6f9-4fe0-9789-31de753cd902",
+      "model" : "base.gene",
+      "fields" : {
+         "end" : 120090,
+         "start" : 119411,
+         "db_object_symbol" : "Miro_203",
+         "db_object_name" : "",
+         "strand" : 1,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_203",
+         "alternate_name" : null
+      }
+   },
+   {
+      "pk" : "371a9ce2-a4d8-4361-a46e-7be35322dc33",
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_174",
+         "end" : 96891,
+         "start" : 95965,
+         "db_object_id" : "Miro_174",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_225",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_225",
+         "start" : 141103,
+         "end" : 141738,
+         "strand" : 1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "37ed9eb6-d3ea-42b4-8a5a-2bd6b6dc8550"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_230",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : 1,
+         "start" : 143603,
+         "end" : 144131,
+         "db_object_symbol" : "Miro_230"
+      },
+      "pk" : "390b86b6-28c7-487b-bc1a-3735d4119c40"
+   },
+   {
+      "pk" : "3b9efa2f-6626-4a33-b3e9-325bd77aeb4c",
+      "fields" : {
+         "alternate_name" : null,
+         "db_object_id" : "Miro_68",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_68",
+         "start" : 44215,
+         "end" : 44594
+      },
+      "model" : "base.gene"
+   },
+   {
+      "fields" : {
+         "db_object_symbol" : "Miro_199",
+         "end" : 115742,
+         "start" : 112644,
+         "strand" : 1,
+         "db_object_name" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_199",
+         "alternate_name" : null,
+         "db_object_synonym" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "3bd2bc40-27c9-40b2-9aaa-b4136e6dfb1b"
+   },
+   {
+      "pk" : "3be975a0-6395-41f8-80ff-9a799722b276",
+      "fields" : {
+         "end" : 49634,
+         "start" : 49266,
+         "db_object_symbol" : "Miro_79",
+         "db_object_name" : "",
+         "strand" : 1,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_79",
+         "alternate_name" : null
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "3d0165c8-f126-4e77-846f-c0ce5d7d5bb1",
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_11",
+         "alternate_name" : null,
+         "end" : 9370,
+         "start" : 8762,
+         "db_object_symbol" : "Miro_11",
+         "db_object_name" : "",
+         "strand" : -1
+      },
+      "model" : "base.gene"
+   },
+   {
+      "fields" : {
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_212",
+         "end" : 130731,
+         "start" : 130234,
+         "db_object_id" : "Miro_212",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene",
+      "pk" : "3e34d20c-9a61-4d67-a8c1-54741dbf89cc"
+   },
+   {
+      "pk" : "3e7c61c6-2e62-412a-b843-c1736efe974e",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_127",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 74818,
+         "end" : 75206,
+         "db_object_symbol" : "Miro_127"
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 94532,
+         "end" : 95117,
+         "db_object_symbol" : "Miro_170",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_170",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c"
+      },
+      "pk" : "40083cc2-3626-495a-b8c6-b6a1edb974a1"
+   },
+   {
+      "pk" : "403c41b5-a411-4497-b90b-beaf5a2fa100",
+      "fields" : {
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_105",
+         "start" : 62125,
+         "end" : 63210,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_105",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 80867,
+         "end" : 81097,
+         "db_object_symbol" : "Miro_139",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_139",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c"
+      },
+      "pk" : "411ab57a-4b0d-4e58-973e-30d7ba855d32"
+   },
+   {
+      "pk" : "460ef88e-e671-47e3-a650-1897d2e795e5",
+      "fields" : {
+         "db_object_id" : "Miro_54",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_54",
+         "end" : 33134,
+         "start" : 32796
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "47ce3b99-1cad-40c4-9fa6-d82a3f4845d5",
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_119",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 71033,
+         "end" : 71561,
+         "db_object_symbol" : "Miro_119"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_229",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_229",
+         "end" : 143599,
+         "start" : 143313,
+         "strand" : 1,
+         "db_object_name" : ""
+      },
+      "pk" : "48cf434e-fabe-4fc5-8383-6a1d593141ac"
+   },
+   {
+      "pk" : "4a329dba-d249-446c-9aab-60f5002de2bc",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : 1,
+         "end" : 166927,
+         "start" : 165792,
+         "db_object_symbol" : "Miro_263",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_263",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      }
+   },
+   {
+      "pk" : "4a3f7b98-6bf3-434a-b1b3-ae2ff07dac1b",
+      "fields" : {
+         "db_object_id" : "Miro_84",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_84",
+         "end" : 51903,
+         "start" : 51530
+      },
+      "model" : "base.gene"
+   },
+   {
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_175",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 96876,
+         "end" : 97416,
+         "db_object_symbol" : "Miro_175"
+      },
+      "model" : "base.gene",
+      "pk" : "4afba3c4-e324-47b7-af34-1dac57c01c5e"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_134",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 79317,
+         "start" : 78885,
+         "db_object_symbol" : "Miro_134"
+      },
+      "pk" : "4b3cbc67-9443-4746-b8e7-c74a411c06be"
+   },
+   {
+      "pk" : "4b76a052-d3b7-45d7-bd9b-695341ea9250",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 76498,
+         "start" : 76293,
+         "db_object_symbol" : "Miro_131",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_131",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      }
+   },
+   {
+      "pk" : "4de57c97-302e-474e-8da7-85a5c3ff348e",
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_113",
+         "start" : 66878,
+         "end" : 67172,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_113",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "alternate_name" : null,
+         "db_object_id" : "Miro_138",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_138",
+         "start" : 80677,
+         "end" : 80889
+      },
+      "pk" : "4e07dabf-9334-4482-b351-f032ba1e7fde"
+   },
+   {
+      "fields" : {
+         "start" : 85192,
+         "end" : 86549,
+         "db_object_symbol" : "Miro_150",
+         "db_object_name" : "",
+         "strand" : -1,
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_150"
+      },
+      "model" : "base.gene",
+      "pk" : "4e9b9048-94c5-4cbb-9793-1aa1229d0309"
+   },
+   {
+      "pk" : "4ee13e9e-9f61-4228-84ce-695dbfbcc8b9",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_240",
+         "start" : 149228,
+         "end" : 149828,
+         "db_object_symbol" : "Miro_240",
+         "db_object_name" : "",
+         "strand" : 1
+      }
+   },
+   {
+      "pk" : "50648aeb-0282-4383-921e-2df1d9ff3f5a",
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_39",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_39",
+         "start" : 22237,
+         "end" : 24954,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "50b10195-e937-450d-9511-6b6e0f831f40",
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_137",
+         "alternate_name" : null,
+         "end" : 80695,
+         "start" : 80076,
+         "db_object_symbol" : "Miro_137",
+         "db_object_name" : "",
+         "strand" : -1
+      },
+      "model" : "base.gene"
+   },
+   {
+      "fields" : {
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_155",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 88815,
+         "start" : 88481,
+         "db_object_symbol" : "Miro_155"
+      },
+      "model" : "base.gene",
+      "pk" : "51973c75-9b32-47d5-a378-5061be638096"
+   },
+   {
+      "pk" : "5308c475-0509-4ab4-887d-5bdaea9fd99d",
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_187",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_187",
+         "start" : 100921,
+         "end" : 101554,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : 1,
+         "end" : 52172,
+         "start" : 51891,
+         "db_object_symbol" : "Miro_85",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_85",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "53d69b85-8d1a-4bd8-849e-49517f35e49e"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "start" : 132346,
+         "end" : 132603,
+         "db_object_symbol" : "Miro_214",
+         "db_object_name" : "",
+         "strand" : 1,
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_214"
+      },
+      "pk" : "53fffc4f-d8dc-4224-a8f5-c625a43d346f"
+   },
+   {
+      "pk" : "544bf87d-0384-4278-aad6-ad4f1d37acc6",
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_135",
+         "start" : 79279,
+         "end" : 79572,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_135",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "55601c0a-1dd4-46d2-8910-bbceadda4cdc",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_symbol" : "Miro_257",
+         "end" : 159667,
+         "start" : 159165,
+         "strand" : 1,
+         "db_object_name" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_257",
+         "alternate_name" : null,
+         "db_object_synonym" : ""
+      }
+   },
+   {
+      "pk" : "55889720-9b33-45dd-b52c-b81698d847df",
+      "model" : "base.gene",
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_255",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_255",
+         "start" : 158308,
+         "end" : 158511,
+         "strand" : 1,
+         "db_object_name" : ""
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_symbol" : "Miro_192",
+         "end" : 104819,
+         "start" : 104348,
+         "strand" : 1,
+         "db_object_name" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_192",
+         "alternate_name" : null,
+         "db_object_synonym" : ""
+      },
+      "pk" : "56a22bf5-a250-448a-923c-1c28587e7b2c"
+   },
+   {
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_164",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_164",
+         "start" : 92202,
+         "end" : 92938,
+         "strand" : 1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "57943989-b222-4b17-b084-2af57738a6b8"
+   },
+   {
+      "pk" : "58861a45-4217-4e12-b3ea-a0ba96509325",
+      "fields" : {
+         "start" : 144162,
+         "end" : 144638,
+         "db_object_symbol" : "Miro_231",
+         "db_object_name" : "",
+         "strand" : -1,
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_231"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "58dd3af4-4fc2-495c-905d-5934e51936c1",
+      "fields" : {
+         "end" : 27605,
+         "start" : 26597,
+         "db_object_symbol" : "Miro_44",
+         "db_object_name" : "",
+         "strand" : -1,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_44",
+         "alternate_name" : null
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "start" : 84391,
+         "end" : 84959,
+         "db_object_symbol" : "Miro_149",
+         "db_object_name" : "",
+         "strand" : -1,
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_149"
+      },
+      "pk" : "59d4aa7e-75e7-48f2-87d4-7c583c56d50e"
+   },
+   {
+      "pk" : "5a3436a3-a2dc-4e3e-bca9-6165e448b545",
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_213",
+         "start" : 130776,
+         "end" : 132361,
+         "db_object_symbol" : "Miro_213",
+         "db_object_name" : "",
+         "strand" : 1
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_60",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : 1,
+         "start" : 38193,
+         "end" : 38496,
+         "db_object_symbol" : "Miro_60"
+      },
+      "pk" : "5a8b29fc-80bd-4eb4-a7c0-a76ed5c849eb"
+   },
+   {
+      "pk" : "5b3b919f-fb51-4ec6-a544-ba805f470660",
+      "fields" : {
+         "db_object_symbol" : "Miro_165",
+         "end" : 93195,
+         "start" : 92930,
+         "strand" : -1,
+         "db_object_name" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_165",
+         "alternate_name" : null,
+         "db_object_synonym" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "5c8633dd-d69f-49f0-9c3f-8307389da854",
+      "model" : "base.gene",
+      "fields" : {
+         "start" : 160734,
+         "end" : 161413,
+         "db_object_symbol" : "Miro_259",
+         "db_object_name" : "",
+         "strand" : 1,
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_259"
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_218",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : 1,
+         "start" : 134494,
+         "end" : 136075,
+         "db_object_symbol" : "Miro_218"
+      },
+      "pk" : "5d563225-450e-410d-9bd1-f24e3a55dfc4"
+   },
+   {
+      "pk" : "5f15b24d-18a0-4fd3-9790-4849868e49ce",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 10025,
+         "start" : 9787,
+         "db_object_symbol" : "Miro_13",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_13",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      }
+   },
+   {
+      "pk" : "60374abf-f6d3-4d00-b586-8cff98addf99",
+      "model" : "base.gene",
+      "fields" : {
+         "alternate_name" : null,
+         "db_object_id" : "Miro_35",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_35",
+         "start" : 18888,
+         "end" : 19168
+      }
+   },
+   {
+      "pk" : "6080aaba-9b2d-451c-bac0-92e29294882a",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_id" : "Miro_152",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_152",
+         "end" : 87540,
+         "start" : 87072
+      }
+   },
+   {
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_247",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_247",
+         "end" : 154019,
+         "start" : 153740,
+         "strand" : 1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "609823c1-30c3-4eca-ba59-8537aec45632"
+   },
+   {
+      "pk" : "6101ac69-c87f-4bbb-aebd-830d0bd7922e",
+      "model" : "base.gene",
+      "fields" : {
+         "start" : 64102,
+         "end" : 64855,
+         "db_object_symbol" : "Miro_107",
+         "db_object_name" : "",
+         "strand" : 1,
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_107"
+      }
+   },
+   {
+      "pk" : "6135f183-07da-4059-9780-09229d74e609",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_id" : "Miro_251",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_251",
+         "end" : 157287,
+         "start" : 157032
+      }
+   },
+   {
+      "pk" : "616aaa0c-c804-4f5e-9b34-238bdb76591a",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_symbol" : "Miro_73",
+         "end" : 47035,
+         "start" : 46853,
+         "strand" : 1,
+         "db_object_name" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_73",
+         "alternate_name" : null,
+         "db_object_synonym" : ""
+      }
+   },
+   {
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_2",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_2",
+         "end" : 3173,
+         "start" : 899,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "618fa335-4701-4554-a6d1-766d25ebd34f"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_id" : "Miro_4",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_4",
+         "end" : 3979,
+         "start" : 3411
+      },
+      "pk" : "626b25b8-0d53-4bb6-aa77-4391e5a17b87"
+   },
+   {
+      "pk" : "62e15d5c-438c-4e7f-9767-0bce3d954783",
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_123",
+         "start" : 72389,
+         "end" : 73331,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_123",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "633b751e-cfbb-4a28-9122-27e6648e3104",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_symbol" : "Miro_276",
+         "end" : 176021,
+         "start" : 175635,
+         "strand" : -1,
+         "db_object_name" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_276",
+         "alternate_name" : null,
+         "db_object_synonym" : ""
+      }
+   },
+   {
+      "pk" : "643332f1-501a-48cf-b442-c0d983d1ebaa",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_153",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_153",
+         "end" : 87968,
+         "start" : 87562,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 66819,
+         "start" : 66522,
+         "db_object_symbol" : "Miro_112",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_112",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      },
+      "pk" : "64967340-d2bd-44e2-819f-b3047dc817ce"
+   },
+   {
+      "pk" : "658d7a71-d68e-4dfb-932e-4fd6da1200d6",
+      "model" : "base.gene",
+      "fields" : {
+         "start" : 138423,
+         "end" : 138852,
+         "db_object_symbol" : "Miro_221",
+         "db_object_name" : "",
+         "strand" : 1,
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_221"
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_141",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_141",
+         "start" : 81365,
+         "end" : 81851,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "pk" : "667a17b6-aa5e-42e0-babc-38c584341f9d"
+   },
+   {
+      "pk" : "66c65d6c-9278-4ad9-8923-44fbcdaa6c12",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : 1,
+         "end" : 52591,
+         "start" : 52285,
+         "db_object_symbol" : "Miro_86",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_86",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "671538a2-3dbf-409c-b44e-38f4d5660a80",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_id" : "Miro_94",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_94",
+         "end" : 56265,
+         "start" : 54725
+      }
+   },
+   {
+      "pk" : "67b00080-f3b0-434f-be4c-ac9636bf18e9",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_154",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 88439,
+         "start" : 88025,
+         "db_object_symbol" : "Miro_154"
+      }
+   },
+   {
+      "pk" : "69d19775-6ee6-4496-93b9-09c8aaa21bf4",
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_206",
+         "alternate_name" : null,
+         "end" : 124212,
+         "start" : 123275,
+         "db_object_symbol" : "Miro_206",
+         "db_object_name" : "",
+         "strand" : 1
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "6ab8f8c0-a327-4ef2-941b-592084ae1b4a",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : 1,
+         "start" : 54129,
+         "end" : 54755,
+         "db_object_symbol" : "Miro_93",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_93",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "6b0847bb-64ea-4b09-9ec5-417959e595ff",
+      "fields" : {
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_172",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 95705,
+         "start" : 95497,
+         "db_object_symbol" : "Miro_172"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "6d8069dc-070f-41a3-aa71-5b61071316ca",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_121",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_121",
+         "end" : 72037,
+         "start" : 71860,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_51",
+         "alternate_name" : null,
+         "end" : 31781,
+         "start" : 30836,
+         "db_object_symbol" : "Miro_51",
+         "db_object_name" : "",
+         "strand" : -1
+      },
+      "model" : "base.gene",
+      "pk" : "6e82c508-d5e4-4ba5-a3ca-0c1d10d09d2a"
+   },
+   {
+      "pk" : "6e960268-96a2-4ec0-af65-9bf562b2f567",
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_181",
+         "start" : 99058,
+         "end" : 99328,
+         "db_object_symbol" : "Miro_181",
+         "db_object_name" : "",
+         "strand" : -1
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "6e9e4d0b-9652-49fa-9e9a-8519aed02608",
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_17",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_17",
+         "start" : 10964,
+         "end" : 11125,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "708b20e2-bc62-40c1-92d6-427fefa74760",
+      "fields" : {
+         "db_object_symbol" : "Miro_69",
+         "start" : 44559,
+         "end" : 45732,
+         "strand" : 1,
+         "db_object_name" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_69",
+         "db_object_synonym" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "70a4fd16-0036-42e0-aadf-58b75eaa3dfa",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_108",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_108",
+         "end" : 65406,
+         "start" : 64839,
+         "strand" : 1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "7246def8-ebcc-4217-a761-af2ad142bdc2",
+      "fields" : {
+         "db_object_id" : "Miro_63",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_63",
+         "end" : 39552,
+         "start" : 38963
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "7427bbd8-0105-43ba-a2fb-1c1f436cd408",
+      "model" : "base.gene",
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_200",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_200",
+         "start" : 115728,
+         "end" : 116735,
+         "strand" : 1,
+         "db_object_name" : ""
+      }
+   },
+   {
+      "pk" : "75c58a4a-883a-4459-8137-49d3bf176d53",
+      "fields" : {
+         "start" : 166967,
+         "end" : 167645,
+         "db_object_symbol" : "Miro_264",
+         "db_object_name" : "",
+         "strand" : 1,
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_264"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "fields" : {
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_30",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 17132,
+         "start" : 16632,
+         "db_object_symbol" : "Miro_30"
+      },
+      "model" : "base.gene",
+      "pk" : "75eb0b11-4361-447b-8e3e-036d6a6fc94c"
+   },
+   {
+      "pk" : "773b1902-7eac-438c-b53a-c85ea84233c4",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 20978,
+         "start" : 20647,
+         "db_object_symbol" : "Miro_37",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_37",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_43",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 26607,
+         "start" : 26031,
+         "db_object_symbol" : "Miro_43"
+      },
+      "pk" : "7754cc38-e1f6-44c4-8e92-6a7eb4c83d7f"
+   },
+   {
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_125",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_125",
+         "end" : 73827,
+         "start" : 73569,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "776bf4b2-d806-4a97-81aa-439d5d6d1bbe"
+   },
+   {
+      "pk" : "7a2811d8-cd35-4580-b28c-240e410b2065",
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_157",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 89177,
+         "end" : 89447,
+         "db_object_symbol" : "Miro_157"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "fields" : {
+         "db_object_id" : "Miro_48",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_48",
+         "end" : 30330,
+         "start" : 29658
+      },
+      "model" : "base.gene",
+      "pk" : "7a5582e8-f520-479f-a754-7f6a70851bb2"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_36",
+         "start" : 19201,
+         "end" : 20648,
+         "db_object_symbol" : "Miro_36",
+         "db_object_name" : "",
+         "strand" : -1
+      },
+      "pk" : "7af0d2e1-1fa3-4473-a891-4cc23727fce4"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_id" : "Miro_87",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_87",
+         "end" : 52833,
+         "start" : 52584
+      },
+      "pk" : "7caafe96-4479-4fb8-ad69-65555bae06a9"
+   },
+   {
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_26",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 14528,
+         "end" : 15074,
+         "db_object_symbol" : "Miro_26"
+      },
+      "model" : "base.gene",
+      "pk" : "7d540fd8-7134-4f32-8cd1-6a5fe49495c7"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_122",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_122",
+         "start" : 72067,
+         "end" : 72357,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "pk" : "7e10e423-9e4e-4a98-8922-57857ae91f4e"
+   },
+   {
+      "pk" : "81290e74-2e9e-405c-9382-c18ba039ccfd",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 17838,
+         "end" : 18240,
+         "db_object_symbol" : "Miro_32",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_32",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "812a5dca-a909-48ae-9f8f-4ba95b025ac0",
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_6",
+         "start" : 5323,
+         "end" : 7231,
+         "db_object_symbol" : "Miro_6",
+         "db_object_name" : "",
+         "strand" : -1
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_id" : "Miro_184",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_184",
+         "end" : 100090,
+         "start" : 99938
+      },
+      "pk" : "81c7679e-8f4f-48a2-afa6-64d145325ed1"
+   },
+   {
+      "pk" : "821f1304-346e-4a72-85fa-90a7a46372df",
+      "fields" : {
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_99",
+         "start" : 57612,
+         "end" : 57914,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_99",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_211",
+         "alternate_name" : null,
+         "end" : 130197,
+         "start" : 128191,
+         "db_object_symbol" : "Miro_211",
+         "db_object_name" : "",
+         "strand" : 1
+      },
+      "pk" : "829d3803-d83d-4e3c-bdab-14c6bf92636a"
+   },
+   {
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : 1,
+         "end" : 54144,
+         "start" : 53913,
+         "db_object_symbol" : "Miro_92",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_92",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "85031d2c-4d7a-4635-86b3-5d1f802f969b"
+   },
+   {
+      "fields" : {
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_95",
+         "start" : 56330,
+         "end" : 56911,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_95",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene",
+      "pk" : "85e5d7f4-56eb-4691-ad32-9ce8c06782ba"
+   },
+   {
+      "fields" : {
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_115",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 67816,
+         "start" : 67645,
+         "db_object_symbol" : "Miro_115"
+      },
+      "model" : "base.gene",
+      "pk" : "87c17064-51a9-4b52-b206-23b4c0a0369c"
+   },
+   {
+      "pk" : "88d603d7-d9d4-4840-9ab0-062fe4428895",
+      "model" : "base.gene",
+      "fields" : {
+         "alternate_name" : null,
+         "db_object_id" : "Miro_180",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_180",
+         "start" : 98816,
+         "end" : 99074
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_267",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_267",
+         "end" : 172794,
+         "start" : 172134,
+         "strand" : 1,
+         "db_object_name" : ""
+      },
+      "pk" : "8920fcfa-7dac-4343-b534-17cc84e6791e"
+   },
+   {
+      "pk" : "899d93aa-fde9-44e5-8263-2838ea64045c",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_143",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 82086,
+         "start" : 81923,
+         "db_object_symbol" : "Miro_143"
+      }
+   },
+   {
+      "pk" : "8a4d8c6d-49a5-41a2-bc85-0b2f00ea5921",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : 1,
+         "end" : 38146,
+         "start" : 36424,
+         "db_object_symbol" : "Miro_59",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_59",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      }
+   },
+   {
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_237",
+         "alternate_name" : null,
+         "end" : 147710,
+         "start" : 147342,
+         "db_object_symbol" : "Miro_237",
+         "db_object_name" : "",
+         "strand" : 1
+      },
+      "model" : "base.gene",
+      "pk" : "8a7678e2-f362-48d3-aa27-2ee6cd009732"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "end" : 152893,
+         "start" : 152575,
+         "db_object_symbol" : "Miro_245",
+         "db_object_name" : "",
+         "strand" : 1,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_245",
+         "alternate_name" : null
+      },
+      "pk" : "8aee2624-7cb0-4970-8606-a58b41c80c01"
+   },
+   {
+      "pk" : "8b7d4942-2594-4c86-ad35-8f67ec7856db",
+      "model" : "base.gene",
+      "fields" : {
+         "alternate_name" : null,
+         "db_object_id" : "Miro_114",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_114",
+         "start" : 67178,
+         "end" : 67658
+      }
+   },
+   {
+      "pk" : "8c1b6425-0c62-425b-a331-86a21be5e903",
+      "model" : "base.gene",
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_142",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_142",
+         "start" : 81828,
+         "end" : 81940,
+         "strand" : -1,
+         "db_object_name" : ""
+      }
+   },
+   {
+      "pk" : "8c985dd3-15f7-4764-9fbd-20e2b1f42309",
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_219",
+         "alternate_name" : null,
+         "end" : 136806,
+         "start" : 136156,
+         "db_object_symbol" : "Miro_219",
+         "db_object_name" : "",
+         "strand" : 1
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "8ca2ea28-3f87-42f4-8ebe-d46b01b9edea",
+      "fields" : {
+         "db_object_symbol" : "Miro_207",
+         "start" : 124211,
+         "end" : 124968,
+         "strand" : 1,
+         "db_object_name" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_207",
+         "db_object_synonym" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_266",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_266",
+         "start" : 171489,
+         "end" : 172030,
+         "strand" : 1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "8d193c39-8ad7-4c76-889b-d58d8bf2bc4b"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_270",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 173350,
+         "end" : 174160,
+         "db_object_symbol" : "Miro_270"
+      },
+      "pk" : "8d5f689d-ee54-4a91-80c5-0f17713d2657"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 99940,
+         "start" : 99592,
+         "db_object_symbol" : "Miro_183",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_183",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      },
+      "pk" : "8d7fa514-a474-4699-bf68-35583798eeca"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_194",
+         "start" : 105708,
+         "end" : 106188,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_194",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "pk" : "8e50836d-17bc-4fe9-abf6-84c58a1bc98d"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_166",
+         "start" : 93251,
+         "end" : 93463,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_166",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "pk" : "8e6f26e5-9d63-489d-b1e3-0f019f0c1a3f"
+   },
+   {
+      "fields" : {
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_56",
+         "start" : 34190,
+         "end" : 34491,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_56",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene",
+      "pk" : "8f9fbf3c-ab01-4038-a3ff-957354b2c719"
+   },
+   {
+      "pk" : "90a0399e-02bf-435f-a66b-7ed9ca3dd592",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : 1,
+         "end" : 142751,
+         "start" : 142172,
+         "db_object_symbol" : "Miro_227",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_227",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      }
+   },
+   {
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : 1,
+         "start" : 145619,
+         "end" : 146506,
+         "db_object_symbol" : "Miro_233",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_233",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c"
+      },
+      "model" : "base.gene",
+      "pk" : "924f0654-8e83-49f5-b568-6ee18ea678b8"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "alternate_name" : null,
+         "db_object_id" : "Miro_228",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_228",
+         "start" : 142767,
+         "end" : 143313
+      },
+      "pk" : "92a16c22-0bcb-4abb-a808-0d69a357a46c"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_9",
+         "start" : 7916,
+         "end" : 8512,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_9",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "pk" : "92dd68c9-e110-48fe-830d-8204e2e61790"
+   },
+   {
+      "pk" : "9594ec25-3434-464d-9f6b-77a5f6b5a899",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : 1,
+         "start" : 121484,
+         "end" : 123247,
+         "db_object_symbol" : "Miro_205",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_205",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "96079b3c-05ad-446c-a80a-45c4125b9179",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : 1,
+         "start" : 48239,
+         "end" : 48504,
+         "db_object_symbol" : "Miro_76",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_76",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c"
+      }
+   },
+   {
+      "pk" : "966c6044-da12-49e4-920c-78d3246c2c28",
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_254",
+         "end" : 158259,
+         "start" : 157996,
+         "db_object_id" : "Miro_254",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein"
+      }
+   },
+   {
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_151",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_151",
+         "start" : 86548,
+         "end" : 87082,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "97109400-c8d8-4593-9e91-00f8d272d1cd"
+   },
+   {
+      "pk" : "97311957-baee-42c3-b727-bd9ac1510a34",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_66",
+         "alternate_name" : null,
+         "end" : 43933,
+         "start" : 42747,
+         "db_object_symbol" : "Miro_66",
+         "db_object_name" : "",
+         "strand" : 1
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_57",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_57",
+         "end" : 36172,
+         "start" : 34464,
+         "strand" : 1,
+         "db_object_name" : ""
+      },
+      "pk" : "9738c5b8-efa9-463d-b972-02445763fa9b"
+   },
+   {
+      "pk" : "97a1e5f7-1de9-4e3b-9b5d-feeab18d944b",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 145528,
+         "start" : 144676,
+         "db_object_symbol" : "Miro_232",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_232",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_269",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_269",
+         "start" : 173060,
+         "end" : 173361,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "pk" : "9840a040-3391-459c-9d21-5b746bea5f52"
+   },
+   {
+      "pk" : "9a674333-bd37-4101-80ac-769416f0eb5b",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_110",
+         "start" : 65833,
+         "end" : 66298,
+         "db_object_symbol" : "Miro_110",
+         "db_object_name" : "",
+         "strand" : -1
+      }
+   },
+   {
+      "fields" : {
+         "db_object_symbol" : "Miro_234",
+         "end" : 146856,
+         "start" : 146529,
+         "strand" : 1,
+         "db_object_name" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_234",
+         "alternate_name" : null,
+         "db_object_synonym" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "9caaa83b-b22d-4b83-bf97-10775e0f542d"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 16647,
+         "start" : 16417,
+         "db_object_symbol" : "Miro_29",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_29",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      },
+      "pk" : "9cbe8aad-2640-4ace-9069-aaf35cc7e29b"
+   },
+   {
+      "pk" : "9d39ea5a-4a82-486e-9be8-e4a00ff4ab34",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_symbol" : "Miro_98",
+         "end" : 57543,
+         "start" : 57367,
+         "strand" : 1,
+         "db_object_name" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_98",
+         "alternate_name" : null,
+         "db_object_synonym" : ""
+      }
+   },
+   {
+      "pk" : "9dccf6ed-3062-49fc-b8f4-2350f2b380ca",
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_178",
+         "end" : 98410,
+         "start" : 98014,
+         "db_object_id" : "Miro_178",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_12",
+         "alternate_name" : null,
+         "end" : 9740,
+         "start" : 9398,
+         "db_object_symbol" : "Miro_12",
+         "db_object_name" : "",
+         "strand" : -1
+      },
+      "pk" : "9e6de8ae-9886-4aac-a8f6-0cbfbda40549"
+   },
+   {
+      "pk" : "9f7a71cf-1a00-44fb-b66c-59dbd5337410",
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_101",
+         "alternate_name" : null,
+         "end" : 58600,
+         "start" : 58209,
+         "db_object_symbol" : "Miro_101",
+         "db_object_name" : "",
+         "strand" : 1
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "end" : 16375,
+         "start" : 16101,
+         "db_object_symbol" : "Miro_28",
+         "db_object_name" : "",
+         "strand" : -1,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_28",
+         "alternate_name" : null
+      },
+      "pk" : "a229d686-2639-4594-9948-d9209c64e3c2"
+   },
+   {
+      "pk" : "a2d20c5a-f3aa-432e-94c4-afb9f920deb7",
+      "model" : "base.gene",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_74",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_74",
+         "end" : 47916,
+         "start" : 47020,
+         "strand" : 1,
+         "db_object_name" : ""
+      }
+   },
+   {
+      "fields" : {
+         "end" : 29656,
+         "start" : 28671,
+         "db_object_symbol" : "Miro_47",
+         "db_object_name" : "",
+         "strand" : -1,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_47",
+         "alternate_name" : null
+      },
+      "model" : "base.gene",
+      "pk" : "a2e386ee-17a3-44dc-9cb9-673dbc99ccf6"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_id" : "Miro_16",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_16",
+         "end" : 10970,
+         "start" : 10736
+      },
+      "pk" : "a3e301e7-1429-49d6-bc78-a4577920d2ee"
+   },
+   {
+      "fields" : {
+         "db_object_symbol" : "Miro_33",
+         "end" : 18475,
+         "start" : 18227,
+         "strand" : -1,
+         "db_object_name" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_33",
+         "alternate_name" : null,
+         "db_object_synonym" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "a4b45020-0636-4096-8d6c-2622164fbdae"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "alternate_name" : null,
+         "db_object_id" : "Miro_238",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_238",
+         "start" : 147697,
+         "end" : 148234
+      },
+      "pk" : "a4cc7081-0c36-432e-bb92-0ca2ff91ec31"
+   },
+   {
+      "pk" : "a6070783-3e43-47c0-947d-995b6fde7fd6",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_146",
+         "alternate_name" : null,
+         "end" : 83224,
+         "start" : 83065,
+         "db_object_symbol" : "Miro_146",
+         "db_object_name" : "",
+         "strand" : -1
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_8",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_8",
+         "end" : 7906,
+         "start" : 7453,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "pk" : "a63a9ea3-302e-46e0-9c6f-f322205060bf"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "end" : 71871,
+         "start" : 71576,
+         "db_object_symbol" : "Miro_120",
+         "db_object_name" : "",
+         "strand" : -1,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_120",
+         "alternate_name" : null
+      },
+      "pk" : "a777d751-2ed2-4cb6-a1a3-8060ca1ad72c"
+   },
+   {
+      "pk" : "a85a549c-f43d-4ef1-a973-6cfc42bf0d78",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_id" : "Miro_216",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_216",
+         "end" : 133666,
+         "start" : 133006
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "start" : 101596,
+         "end" : 101867,
+         "db_object_symbol" : "Miro_188",
+         "db_object_name" : "",
+         "strand" : -1,
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_188"
+      },
+      "pk" : "a8ab8df9-2ae5-46ba-84a3-328748897ac2"
+   },
+   {
+      "pk" : "a8d10b73-7bb7-4f04-be6a-dfa3847ef6c1",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_193",
+         "start" : 104838,
+         "end" : 105703,
+         "db_object_symbol" : "Miro_193",
+         "db_object_name" : "",
+         "strand" : -1
+      }
+   },
+   {
+      "pk" : "a8ee1e4c-8f20-454e-8abd-bd6aa6a3fe3e",
+      "fields" : {
+         "db_object_symbol" : "Miro_81",
+         "start" : 50202,
+         "end" : 50493,
+         "strand" : 1,
+         "db_object_name" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_81",
+         "db_object_synonym" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_53",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_53",
+         "start" : 32587,
+         "end" : 32815,
+         "strand" : 1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "a9dbc834-1a7d-4cec-8f21-8fe31258e697"
+   },
+   {
+      "pk" : "aa705562-f2fc-4490-97fa-b800f5fbe8b8",
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_25",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 14343,
+         "end" : 14545,
+         "db_object_symbol" : "Miro_25"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_160",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_160",
+         "start" : 90051,
+         "end" : 90410,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "ab1fb225-f214-4155-bf54-d5db8db24bec"
+   },
+   {
+      "pk" : "ac9155a6-34c3-437f-b790-90b21319ce00",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_77",
+         "alternate_name" : null,
+         "end" : 48781,
+         "start" : 48484,
+         "db_object_symbol" : "Miro_77",
+         "db_object_name" : "",
+         "strand" : 1
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_symbol" : "Miro_38",
+         "start" : 21005,
+         "end" : 22174,
+         "strand" : -1,
+         "db_object_name" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_38",
+         "db_object_synonym" : ""
+      },
+      "pk" : "ae1902f5-9069-4388-9eb6-a9661bd1ce60"
+   },
+   {
+      "pk" : "aed25b5e-7f10-4faa-b00d-952e46997843",
+      "fields" : {
+         "start" : 99302,
+         "end" : 99611,
+         "db_object_symbol" : "Miro_182",
+         "db_object_name" : "",
+         "strand" : -1,
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_182"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "af15c5c2-bd53-47e7-ba51-a36555637099",
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_1",
+         "end" : 910,
+         "start" : 0,
+         "db_object_id" : "Miro_1",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein"
+      }
+   },
+   {
+      "pk" : "b10c88ce-4220-4ae5-a2e4-10726882f5e6",
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_265",
+         "start" : 167644,
+         "end" : 171466,
+         "db_object_symbol" : "Miro_265",
+         "db_object_name" : "",
+         "strand" : 1
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "b2c6cb21-c213-42d1-b4b5-278774067e6c",
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_18",
+         "start" : 11177,
+         "end" : 11471,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_18",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_45",
+         "end" : 28329,
+         "start" : 27654,
+         "db_object_id" : "Miro_45",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein"
+      },
+      "pk" : "b32fa9a8-de13-451e-985b-550cff64917f"
+   },
+   {
+      "pk" : "b39372f1-c6b2-4111-8372-33eb00d58d17",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : 1,
+         "end" : 121485,
+         "start" : 120089,
+         "db_object_symbol" : "Miro_204",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_204",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_239",
+         "end" : 149257,
+         "start" : 148227,
+         "db_object_id" : "Miro_239",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein"
+      },
+      "pk" : "b54832b5-e26e-4eb5-8ee5-8cc23054882d"
+   },
+   {
+      "fields" : {
+         "db_object_symbol" : "Miro_176",
+         "end" : 97739,
+         "start" : 97403,
+         "strand" : -1,
+         "db_object_name" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_176",
+         "alternate_name" : null,
+         "db_object_synonym" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "b783ab26-cb47-4ae1-b67a-7be0cd9d8734"
+   },
+   {
+      "fields" : {
+         "start" : 174938,
+         "end" : 175197,
+         "db_object_symbol" : "Miro_274",
+         "db_object_name" : "",
+         "strand" : -1,
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_274"
+      },
+      "model" : "base.gene",
+      "pk" : "b84988ab-59b5-457d-b0e8-c48504833203"
+   },
+   {
+      "pk" : "ba56d50a-27a9-412b-a038-1f9aab8cc751",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_88",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_name" : "",
+         "strand" : 1,
+         "end" : 52988,
+         "start" : 52805,
+         "db_object_symbol" : "Miro_88"
+      }
+   },
+   {
+      "fields" : {
+         "db_object_symbol" : "Miro_109",
+         "end" : 65799,
+         "start" : 65395,
+         "strand" : 1,
+         "db_object_name" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_109",
+         "alternate_name" : null,
+         "db_object_synonym" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "bab7f643-9cf6-4bd5-89f6-e411ac936921"
+   },
+   {
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_136",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 79667,
+         "end" : 80071,
+         "db_object_symbol" : "Miro_136"
+      },
+      "model" : "base.gene",
+      "pk" : "bb15aadb-800e-4d83-8fdc-0839986df79f"
+   },
+   {
+      "pk" : "bc350eac-5c4e-413a-ac29-f942125141fd",
+      "fields" : {
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_78",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_name" : "",
+         "strand" : 1,
+         "end" : 49277,
+         "start" : 48762,
+         "db_object_symbol" : "Miro_78"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "fields" : {
+         "db_object_symbol" : "Miro_23",
+         "end" : 14075,
+         "start" : 12731,
+         "strand" : -1,
+         "db_object_name" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_23",
+         "alternate_name" : null,
+         "db_object_synonym" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "bd806005-7da3-4a2c-888e-450fc69d716a"
+   },
+   {
+      "pk" : "be6d50c3-5fce-4e85-b2de-0f60d9fe49c9",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_147",
+         "start" : 83222,
+         "end" : 83630,
+         "db_object_symbol" : "Miro_147",
+         "db_object_name" : "",
+         "strand" : -1
+      }
+   },
+   {
+      "pk" : "bf58237a-7767-413c-a79b-b929b3f27046",
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_244",
+         "start" : 151159,
+         "end" : 152604,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_244",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      }
+   },
+   {
+      "fields" : {
+         "end" : 36363,
+         "start" : 36161,
+         "db_object_symbol" : "Miro_58",
+         "db_object_name" : "",
+         "strand" : 1,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_58",
+         "alternate_name" : null
+      },
+      "model" : "base.gene",
+      "pk" : "bfaa1852-4726-4c73-9708-84c114a61747"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_42",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 25665,
+         "end" : 26036,
+         "db_object_symbol" : "Miro_42"
+      },
+      "pk" : "c11c252e-ee63-4528-aa82-5d1e3be476fd"
+   },
+   {
+      "pk" : "c1a4bb3c-3aa0-40f0-ab41-fc6c378b3b9f",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_130",
+         "start" : 76024,
+         "end" : 76309,
+         "db_object_symbol" : "Miro_130",
+         "db_object_name" : "",
+         "strand" : -1
+      }
+   },
+   {
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_161",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 90379,
+         "end" : 90770,
+         "db_object_symbol" : "Miro_161"
+      },
+      "model" : "base.gene",
+      "pk" : "c2dc525f-93b4-4fda-982c-46677a7fa127"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_250",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_250",
+         "end" : 156977,
+         "start" : 154843,
+         "strand" : 1,
+         "db_object_name" : ""
+      },
+      "pk" : "c2f971b2-91fc-4819-bf3e-c5c251c53673"
+   },
+   {
+      "pk" : "c42f7ee4-d922-4f5d-b126-a6edca978e40",
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_126",
+         "end" : 74832,
+         "start" : 73811,
+         "db_object_id" : "Miro_126",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein"
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_102",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_102",
+         "end" : 59719,
+         "start" : 58596,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "pk" : "c4697877-303a-4dc6-83c7-46e1506273ed"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_65",
+         "start" : 40458,
+         "end" : 42721,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_65",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "pk" : "c4ba286c-7ac9-4db9-b175-d8e519501984"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "alternate_name" : null,
+         "db_object_id" : "Miro_3",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_3",
+         "start" : 3171,
+         "end" : 3417
+      },
+      "pk" : "c559dfe4-4501-424b-93c3-2b6a7b451f21"
+   },
+   {
+      "fields" : {
+         "db_object_symbol" : "Miro_116",
+         "end" : 68461,
+         "start" : 67800,
+         "strand" : -1,
+         "db_object_name" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_116",
+         "alternate_name" : null,
+         "db_object_synonym" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "c9186273-5b40-4335-8eae-bd2e58ce946a"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 71046,
+         "start" : 70713,
+         "db_object_symbol" : "Miro_118",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_118",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      },
+      "pk" : "ca8f306a-96ac-4404-a0a7-d8aad63e35e4"
+   },
+   {
+      "pk" : "cd26e1c7-0322-4398-8239-d2860af84f56",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_89",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : 1,
+         "start" : 52973,
+         "end" : 53137,
+         "db_object_symbol" : "Miro_89"
+      }
+   },
+   {
+      "pk" : "d0033db1-3fd0-4361-af17-6d28c6b08bd2",
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_148",
+         "start" : 83685,
+         "end" : 84337,
+         "db_object_symbol" : "Miro_148",
+         "db_object_name" : "",
+         "strand" : -1
+      },
+      "model" : "base.gene"
+   },
+   {
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_156",
+         "start" : 88844,
+         "end" : 89119,
+         "db_object_symbol" : "Miro_156",
+         "db_object_name" : "",
+         "strand" : -1
+      },
+      "model" : "base.gene",
+      "pk" : "d1b4bf72-d152-421b-8341-2507a43a162a"
+   },
+   {
+      "pk" : "d57f7386-769a-4c96-a3fb-66761766674b",
+      "fields" : {
+         "db_object_id" : "Miro_185",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_185",
+         "end" : 100320,
+         "start" : 100168
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_195",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_name" : "",
+         "strand" : 1,
+         "end" : 106781,
+         "start" : 106214,
+         "db_object_symbol" : "Miro_195"
+      },
+      "pk" : "d663ec09-8904-4256-abc7-3a80db6343c9"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_symbol" : "Miro_202",
+         "start" : 117594,
+         "end" : 119422,
+         "strand" : 1,
+         "db_object_name" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_202",
+         "db_object_synonym" : ""
+      },
+      "pk" : "d6846e3f-53e4-4338-a646-5abee8868bbd"
+   },
+   {
+      "pk" : "d847ecb9-45f4-4f34-a738-87a6245bfc7e",
+      "model" : "base.gene",
+      "fields" : {
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "db_object_id" : "Miro_128",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_128",
+         "end" : 75434,
+         "start" : 75192,
+         "strand" : -1,
+         "db_object_name" : ""
+      }
+   },
+   {
+      "fields" : {
+         "alternate_name" : null,
+         "db_object_id" : "Miro_271",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_271",
+         "start" : 174228,
+         "end" : 174467
+      },
+      "model" : "base.gene",
+      "pk" : "d95ac4c0-cd04-4a78-8709-b6f85744f85c"
+   },
+   {
+      "pk" : "d999eec2-60c9-4704-9062-003b4935edb8",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : 1,
+         "end" : 64083,
+         "start" : 63209,
+         "db_object_symbol" : "Miro_106",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_106",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      }
+   },
+   {
+      "pk" : "daed8377-5125-4eef-88bf-4610f95c8e21",
+      "fields" : {
+         "db_object_id" : "Miro_167",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_167",
+         "end" : 93607,
+         "start" : 93448
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "dc495f38-1cdf-4351-aa09-29b74ff3fcb9",
+      "fields" : {
+         "db_object_symbol" : "Miro_235",
+         "start" : 146844,
+         "end" : 147029,
+         "strand" : 1,
+         "db_object_name" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_235",
+         "db_object_synonym" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "df983173-ae44-42da-8b81-fa269f34aef8",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_symbol" : "Miro_224",
+         "start" : 139544,
+         "end" : 141056,
+         "strand" : -1,
+         "db_object_name" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_224",
+         "db_object_synonym" : ""
+      }
+   },
+   {
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_252",
+         "start" : 157274,
+         "end" : 157781,
+         "db_object_symbol" : "Miro_252",
+         "db_object_name" : "",
+         "strand" : 1
+      },
+      "model" : "base.gene",
+      "pk" : "e062662d-5707-4570-b4b3-0b04be4d48a1"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "alternate_name" : null,
+         "db_object_id" : "Miro_196",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_196",
+         "start" : 106762,
+         "end" : 108547
+      },
+      "pk" : "e1969b77-88d2-401e-8594-cdf6b01d4f35"
+   },
+   {
+      "pk" : "e1e62cfd-3ec4-4683-bd32-51e5a476fbad",
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_261",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_261",
+         "start" : 161641,
+         "end" : 161950,
+         "strand" : 1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_236",
+         "start" : 147015,
+         "end" : 147352,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_236",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "pk" : "e283eaea-389f-4f2a-bc39-f648a39a8245"
+   },
+   {
+      "fields" : {
+         "db_object_symbol" : "Miro_159",
+         "start" : 89881,
+         "end" : 90064,
+         "strand" : -1,
+         "db_object_name" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_159",
+         "db_object_synonym" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "e381e8ad-00ec-4545-b806-0f23e9a3fbcd"
+   },
+   {
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_158",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 89439,
+         "end" : 89880,
+         "db_object_symbol" : "Miro_158"
+      },
+      "model" : "base.gene",
+      "pk" : "e3a3a98c-0806-4623-a551-c7a12af23720"
+   },
+   {
+      "pk" : "e5150d84-8e52-4607-9a64-372108ae1e62",
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_162",
+         "start" : 90743,
+         "end" : 91055,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_162",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "end" : 60351,
+         "start" : 59766,
+         "db_object_symbol" : "Miro_103",
+         "db_object_name" : "",
+         "strand" : 1,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_103",
+         "alternate_name" : null
+      },
+      "pk" : "e5e855a5-c8d7-451a-989f-bd5f8d206ec9"
+   },
+   {
+      "fields" : {
+         "alternate_name" : null,
+         "db_object_id" : "Miro_82",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_82",
+         "start" : 50494,
+         "end" : 50922
+      },
+      "model" : "base.gene",
+      "pk" : "e62179b6-e2be-48bf-ad12-b311496f3f0a"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_179",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 98408,
+         "end" : 98826,
+         "db_object_symbol" : "Miro_179"
+      },
+      "pk" : "e6715c4f-30d8-4835-9721-1518f8db2b8d"
+   },
+   {
+      "pk" : "e806f163-cbeb-419e-82f5-a8c74c8b6a62",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_132",
+         "start" : 76661,
+         "end" : 77733,
+         "db_object_symbol" : "Miro_132",
+         "db_object_name" : "",
+         "strand" : -1
+      }
+   },
+   {
+      "pk" : "e86b04e7-c688-4033-9df7-3cd9c7ea9fb5",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : -1,
+         "start" : 25309,
+         "end" : 25609,
+         "db_object_symbol" : "Miro_41",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_41",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c"
+      }
+   },
+   {
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : 1,
+         "start" : 46220,
+         "end" : 46569,
+         "db_object_symbol" : "Miro_71",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_71",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c"
+      },
+      "model" : "base.gene",
+      "pk" : "ead4ec54-9994-4eb2-95a3-e86f450ecaad"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_100",
+         "start" : 57933,
+         "end" : 58236,
+         "db_object_symbol" : "Miro_100",
+         "db_object_name" : "",
+         "strand" : 1
+      },
+      "pk" : "eb3b6e01-dd60-48da-beca-07c7a2e8eb93"
+   },
+   {
+      "pk" : "ebb67c71-50a0-4fb5-b876-1a00932c9ac9",
+      "fields" : {
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_260",
+         "start" : 161359,
+         "end" : 161654,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_260",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "ecbf2821-4f55-4a06-b319-2fd685986227",
+      "model" : "base.gene",
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_22",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_22",
+         "start" : 12398,
+         "end" : 12716,
+         "strand" : -1,
+         "db_object_name" : ""
+      }
+   },
+   {
+      "pk" : "ed3e372f-bc1f-4be6-be39-249bfd42877b",
+      "model" : "base.gene",
+      "fields" : {
+         "alternate_name" : null,
+         "db_object_id" : "Miro_40",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_40",
+         "start" : 24983,
+         "end" : 25325
+      }
+   },
+   {
+      "pk" : "f255bc36-dfe5-4c68-9fc5-a1519d12cbbc",
+      "model" : "base.gene",
+      "fields" : {
+         "start" : 103454,
+         "end" : 104255,
+         "db_object_symbol" : "Miro_191",
+         "db_object_name" : "",
+         "strand" : 1,
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_191"
+      }
+   },
+   {
+      "pk" : "f32d00be-e6d5-4daa-8cec-239fe534a25d",
+      "fields" : {
+         "end" : 154534,
+         "start" : 154042,
+         "db_object_symbol" : "Miro_248",
+         "db_object_name" : "",
+         "strand" : 1,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_248",
+         "alternate_name" : null
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_273",
+         "start" : 174759,
+         "end" : 174903,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_273",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "pk" : "f56ec52c-bc12-4c99-8bad-e1cc7899e1ac"
+   },
+   {
+      "fields" : {
+         "end" : 153741,
+         "start" : 153003,
+         "db_object_symbol" : "Miro_246",
+         "db_object_name" : "",
+         "strand" : 1,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_246",
+         "alternate_name" : null
+      },
+      "model" : "base.gene",
+      "pk" : "f5bfeeb3-5dbd-4bfc-82eb-492ffd686aec"
+   },
+   {
+      "pk" : "f621315b-6e13-4fa6-951e-e37691a0c89f",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_83",
+         "alternate_name" : null,
+         "end" : 51530,
+         "start" : 50954,
+         "db_object_symbol" : "Miro_83",
+         "db_object_name" : "",
+         "strand" : 1
+      }
+   },
+   {
+      "pk" : "f6e6ba04-213e-4b77-9383-19fcaec4a927",
+      "fields" : {
+         "end" : 95524,
+         "start" : 95115,
+         "db_object_symbol" : "Miro_171",
+         "db_object_name" : "",
+         "strand" : -1,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_171",
+         "alternate_name" : null
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "f7b38497-e27f-4b3d-aa31-cc009fe08cda",
+      "model" : "base.gene",
+      "fields" : {
+         "alternate_name" : null,
+         "db_object_id" : "Miro_163",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_163",
+         "start" : 91042,
+         "end" : 92201
+      }
+   },
+   {
+      "fields" : {
+         "db_object_id" : "Miro_177",
+         "alternate_name" : null,
+         "db_object_synonym" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_type" : "protein",
+         "strand" : -1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_177",
+         "end" : 98022,
+         "start" : 97755
+      },
+      "model" : "base.gene",
+      "pk" : "f9859fce-3a90-4f53-955d-286f8e9a6c60"
+   },
+   {
+      "fields" : {
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_133",
+         "db_object_synonym" : "",
+         "db_object_symbol" : "Miro_133",
+         "start" : 77899,
+         "end" : 78824,
+         "strand" : -1,
+         "db_object_name" : ""
+      },
+      "model" : "base.gene",
+      "pk" : "f9fc169b-32ba-495e-880e-28091d598942"
+   },
+   {
+      "pk" : "fb172d9c-3757-4b65-a5d1-d76f70f3af62",
+      "fields" : {
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_124",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 73582,
+         "start" : 73312,
+         "db_object_symbol" : "Miro_124"
+      },
+      "model" : "base.gene"
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "strand" : 1,
+         "db_object_name" : "",
+         "db_object_symbol" : "Miro_104",
+         "start" : 60342,
+         "end" : 62126,
+         "alternate_name" : null,
+         "db_object_id" : "Miro_104",
+         "db_object_synonym" : "",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_type" : "protein"
+      },
+      "pk" : "fc9d08f3-406b-46b8-a16e-e05ab9eac8ec"
+   },
+   {
+      "pk" : "fcc3db94-520e-4b29-9824-efc473b0c910",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_80",
+         "start" : 49634,
+         "end" : 49896,
+         "db_object_symbol" : "Miro_80",
+         "db_object_name" : "",
+         "strand" : 1
+      }
+   },
+   {
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "alternate_name" : null,
+         "db_object_id" : "Miro_62",
+         "db_object_type" : "protein",
+         "gene_product_id" : "",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "db_object_name" : "",
+         "strand" : 1,
+         "start" : 38709,
+         "end" : 38977,
+         "db_object_symbol" : "Miro_62"
+      },
+      "pk" : "fcd19401-f5fb-4752-95ab-d149509962e5"
+   },
+   {
+      "pk" : "fd5c9cdd-adb0-45a9-959a-0a42e098dc4c",
+      "fields" : {
+         "db_object_name" : "",
+         "strand" : -1,
+         "end" : 100923,
+         "start" : 100374,
+         "db_object_symbol" : "Miro_186",
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_186",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : ""
+      },
+      "model" : "base.gene"
+   },
+   {
+      "pk" : "fe7d24a0-5d10-42a4-9db0-8d2c6bf52e75",
+      "model" : "base.gene",
+      "fields" : {
+         "db_object_synonym" : "",
+         "db_object_id" : "Miro_55",
+         "alternate_name" : null,
+         "db_object_type" : "protein",
+         "refseq" : "bb0cdd35-674b-4591-83aa-4218d439084c",
+         "gene_product_id" : "",
+         "db_object_name" : "",
+         "strand" : 1,
+         "end" : 34217,
+         "start" : 33172,
+         "db_object_symbol" : "Miro_55"
+      }
+   },
+   {
+      "fields" : {
+         "reason" : "you're wrong",
+         "entry_type" : 0,
+         "original_gaf" : "1bc63e50-9db5-4870-8b30-fe7da50ce265",
+         "date" : "2016-09-15T20:02:38.699Z",
+         "challenge_gaf" : "8364eeb6-6967-4d38-9611-260592e2f9cf"
+      },
+      "model" : "base.challenge",
+      "pk" : "888fb9f6-02c7-4395-b41f-0f676cfab91e"
+   },
+   {
+      "model" : "base.challenge",
+      "fields" : {
+         "entry_type" : 0,
+         "reason" : "No, I'm right",
+         "original_gaf" : "1bc63e50-9db5-4870-8b30-fe7da50ce265",
+         "date" : "2016-09-15T20:03:42.245Z",
+         "challenge_gaf" : "0d8abf40-122b-41f5-b46e-f070e2d41d72"
+      },
+      "pk" : "a0c6ca77-66a9-4430-95e8-346552ecf9b1"
+   },
+   {
+      "model" : "base.challenge",
+      "fields" : {
+         "reason" : "this is better",
+         "entry_type" : 0,
+         "date" : "2016-09-15T20:07:12.382Z",
+         "challenge_gaf" : "efbb13a4-0157-47a1-9f1c-334a837852eb",
+         "original_gaf" : "7e7e16e3-691d-4366-900c-bead4e44051c"
+      },
+      "pk" : "b70289e9-ea2e-4de4-9f03-6209d23972c3"
+   },
+   {
+      "pk" : 1,
+      "fields" : {
+         "content_type" : 1,
+         "name" : "Can add log entry",
+         "codename" : "add_logentry"
+      },
+      "model" : "auth.permission"
+   },
+   {
+      "pk" : 2,
+      "model" : "auth.permission",
+      "fields" : {
+         "codename" : "change_logentry",
+         "name" : "Can change log entry",
+         "content_type" : 1
+      }
+   },
+   {
+      "pk" : 3,
+      "model" : "auth.permission",
+      "fields" : {
+         "content_type" : 1,
+         "name" : "Can delete log entry",
+         "codename" : "delete_logentry"
+      }
+   },
+   {
+      "model" : "auth.permission",
+      "fields" : {
+         "content_type" : 2,
+         "name" : "Can add permission",
+         "codename" : "add_permission"
+      },
+      "pk" : 4
+   },
+   {
+      "model" : "auth.permission",
+      "fields" : {
+         "codename" : "change_permission",
+         "content_type" : 2,
+         "name" : "Can change permission"
+      },
+      "pk" : 5
+   },
+   {
+      "fields" : {
+         "name" : "Can delete permission",
+         "content_type" : 2,
+         "codename" : "delete_permission"
+      },
+      "model" : "auth.permission",
+      "pk" : 6
+   },
+   {
+      "model" : "auth.permission",
+      "fields" : {
+         "name" : "Can add group",
+         "content_type" : 3,
+         "codename" : "add_group"
+      },
+      "pk" : 7
+   },
+   {
+      "fields" : {
+         "codename" : "change_group",
+         "content_type" : 3,
+         "name" : "Can change group"
+      },
+      "model" : "auth.permission",
+      "pk" : 8
+   },
+   {
+      "pk" : 9,
+      "model" : "auth.permission",
+      "fields" : {
+         "name" : "Can delete group",
+         "content_type" : 3,
+         "codename" : "delete_group"
+      }
+   },
+   {
+      "model" : "auth.permission",
+      "fields" : {
+         "codename" : "add_user",
+         "name" : "Can add user",
+         "content_type" : 4
+      },
+      "pk" : 10
+   },
+   {
+      "pk" : 11,
+      "model" : "auth.permission",
+      "fields" : {
+         "name" : "Can change user",
+         "content_type" : 4,
+         "codename" : "change_user"
+      }
+   },
+   {
+      "model" : "auth.permission",
+      "fields" : {
+         "codename" : "delete_user",
+         "content_type" : 4,
+         "name" : "Can delete user"
+      },
+      "pk" : 12
+   },
+   {
+      "model" : "auth.permission",
+      "fields" : {
+         "codename" : "add_contenttype",
+         "content_type" : 5,
+         "name" : "Can add content type"
+      },
+      "pk" : 13
+   },
+   {
+      "model" : "auth.permission",
+      "fields" : {
+         "codename" : "change_contenttype",
+         "name" : "Can change content type",
+         "content_type" : 5
+      },
+      "pk" : 14
+   },
+   {
+      "fields" : {
+         "codename" : "delete_contenttype",
+         "name" : "Can delete content type",
+         "content_type" : 5
+      },
+      "model" : "auth.permission",
+      "pk" : 15
+   },
+   {
+      "fields" : {
+         "name" : "Can add session",
+         "content_type" : 6,
+         "codename" : "add_session"
+      },
+      "model" : "auth.permission",
+      "pk" : 16
+   },
+   {
+      "model" : "auth.permission",
+      "fields" : {
+         "content_type" : 6,
+         "name" : "Can change session",
+         "codename" : "change_session"
+      },
+      "pk" : 17
+   },
+   {
+      "pk" : 18,
+      "model" : "auth.permission",
+      "fields" : {
+         "codename" : "delete_session",
+         "name" : "Can delete session",
+         "content_type" : 6
+      }
+   },
+   {
+      "pk" : 19,
+      "model" : "auth.permission",
+      "fields" : {
+         "codename" : "add_organism",
+         "content_type" : 7,
+         "name" : "Can add organism"
+      }
+   },
+   {
+      "pk" : 20,
+      "model" : "auth.permission",
+      "fields" : {
+         "content_type" : 7,
+         "name" : "Can change organism",
+         "codename" : "change_organism"
+      }
+   },
+   {
+      "pk" : 21,
+      "model" : "auth.permission",
+      "fields" : {
+         "codename" : "delete_organism",
+         "content_type" : 7,
+         "name" : "Can delete organism"
+      }
+   },
+   {
+      "pk" : 22,
+      "fields" : {
+         "content_type" : 8,
+         "name" : "Can add ref seq",
+         "codename" : "add_refseq"
+      },
+      "model" : "auth.permission"
+   },
+   {
+      "model" : "auth.permission",
+      "fields" : {
+         "content_type" : 8,
+         "name" : "Can change ref seq",
+         "codename" : "change_refseq"
+      },
+      "pk" : 23
+   },
+   {
+      "fields" : {
+         "content_type" : 8,
+         "name" : "Can delete ref seq",
+         "codename" : "delete_refseq"
+      },
+      "model" : "auth.permission",
+      "pk" : 24
+   },
+   {
+      "pk" : 25,
+      "model" : "auth.permission",
+      "fields" : {
+         "name" : "Can add gene",
+         "content_type" : 9,
+         "codename" : "add_gene"
+      }
+   },
+   {
+      "pk" : 26,
+      "fields" : {
+         "content_type" : 9,
+         "name" : "Can change gene",
+         "codename" : "change_gene"
+      },
+      "model" : "auth.permission"
+   },
+   {
+      "fields" : {
+         "name" : "Can delete gene",
+         "content_type" : 9,
+         "codename" : "delete_gene"
+      },
+      "model" : "auth.permission",
+      "pk" : 27
+   },
+   {
+      "pk" : 28,
+      "model" : "auth.permission",
+      "fields" : {
+         "content_type" : 10,
+         "name" : "Can add gaf",
+         "codename" : "add_gaf"
+      }
+   },
+   {
+      "pk" : 29,
+      "model" : "auth.permission",
+      "fields" : {
+         "content_type" : 10,
+         "name" : "Can change gaf",
+         "codename" : "change_gaf"
+      }
+   },
+   {
+      "pk" : 30,
+      "fields" : {
+         "codename" : "delete_gaf",
+         "content_type" : 10,
+         "name" : "Can delete gaf"
+      },
+      "model" : "auth.permission"
+   },
+   {
+      "fields" : {
+         "codename" : "add_challenge",
+         "content_type" : 11,
+         "name" : "Can add challenge"
+      },
+      "model" : "auth.permission",
+      "pk" : 31
+   },
+   {
+      "model" : "auth.permission",
+      "fields" : {
+         "content_type" : 11,
+         "name" : "Can change challenge",
+         "codename" : "change_challenge"
+      },
+      "pk" : 32
+   },
+   {
+      "fields" : {
+         "content_type" : 11,
+         "name" : "Can delete challenge",
+         "codename" : "delete_challenge"
+      },
+      "model" : "auth.permission",
+      "pk" : 33
+   },
+   {
+      "pk" : 34,
+      "fields" : {
+         "name" : "Can add assessment",
+         "content_type" : 12,
+         "codename" : "add_assessment"
+      },
+      "model" : "auth.permission"
+   },
+   {
+      "fields" : {
+         "codename" : "change_assessment",
+         "content_type" : 12,
+         "name" : "Can change assessment"
+      },
+      "model" : "auth.permission",
+      "pk" : 35
+   },
+   {
+      "fields" : {
+         "content_type" : 12,
+         "name" : "Can delete assessment",
+         "codename" : "delete_assessment"
+      },
+      "model" : "auth.permission",
+      "pk" : 36
+   },
+   {
+      "pk" : 37,
+      "model" : "auth.permission",
+      "fields" : {
+         "content_type" : 13,
+         "name" : "Can add paper",
+         "codename" : "add_paper"
+      }
+   },
+   {
+      "pk" : 38,
+      "model" : "auth.permission",
+      "fields" : {
+         "name" : "Can change paper",
+         "content_type" : 13,
+         "codename" : "change_paper"
+      }
+   },
+   {
+      "pk" : 39,
+      "model" : "auth.permission",
+      "fields" : {
+         "codename" : "delete_paper",
+         "content_type" : 13,
+         "name" : "Can delete paper"
+      }
+   },
+   {
+      "fields" : {
+         "codename" : "add_message",
+         "content_type" : 14,
+         "name" : "Can add message"
+      },
+      "model" : "auth.permission",
+      "pk" : 40
+   },
+   {
+      "fields" : {
+         "codename" : "change_message",
+         "content_type" : 14,
+         "name" : "Can change message"
+      },
+      "model" : "auth.permission",
+      "pk" : 41
+   },
+   {
+      "fields" : {
+         "codename" : "delete_message",
+         "name" : "Can delete message",
+         "content_type" : 14
+      },
+      "model" : "auth.permission",
+      "pk" : 42
+   },
+   {
+      "pk" : 43,
+      "model" : "auth.permission",
+      "fields" : {
+         "codename" : "add_messagearchive",
+         "content_type" : 15,
+         "name" : "Can add message archive"
+      }
+   },
+   {
+      "fields" : {
+         "name" : "Can change message archive",
+         "content_type" : 15,
+         "codename" : "change_messagearchive"
+      },
+      "model" : "auth.permission",
+      "pk" : 44
+   },
+   {
+      "fields" : {
+         "content_type" : 15,
+         "name" : "Can delete message archive",
+         "codename" : "delete_messagearchive"
+      },
+      "model" : "auth.permission",
+      "pk" : 45
+   },
+   {
+      "model" : "auth.permission",
+      "fields" : {
+         "name" : "Can add inbox",
+         "content_type" : 16,
+         "codename" : "add_inbox"
+      },
+      "pk" : 46
+   },
+   {
+      "pk" : 47,
+      "fields" : {
+         "name" : "Can change inbox",
+         "content_type" : 16,
+         "codename" : "change_inbox"
+      },
+      "model" : "auth.permission"
+   },
+   {
+      "pk" : 48,
+      "fields" : {
+         "codename" : "delete_inbox",
+         "name" : "Can delete inbox",
+         "content_type" : 16
+      },
+      "model" : "auth.permission"
+   },
+   {
+      "pk" : 49,
+      "model" : "auth.permission",
+      "fields" : {
+         "codename" : "add_corsmodel",
+         "name" : "Can add cors model",
+         "content_type" : 17
+      }
+   },
+   {
+      "model" : "auth.permission",
+      "fields" : {
+         "content_type" : 17,
+         "name" : "Can change cors model",
+         "codename" : "change_corsmodel"
+      },
+      "pk" : 50
+   },
+   {
+      "fields" : {
+         "codename" : "delete_corsmodel",
+         "name" : "Can delete cors model",
+         "content_type" : 17
+      },
+      "model" : "auth.permission",
+      "pk" : 51
+   },
+   {
+      "pk" : 4,
+      "fields" : {
+         "permissions" : [],
+         "name" : "Team 1"
+      },
+      "model" : "auth.group"
+   },
+   {
+      "pk" : 5,
+      "fields" : {
+         "permissions" : [],
+         "name" : "Team 2"
+      },
+      "model" : "auth.group"
+   },
+   {
+      "pk" : 6,
+      "model" : "auth.group",
+      "fields" : {
+         "permissions" : [],
+         "name" : "Team 3"
+      }
+   },
+   {
+      "fields" : {
+         "is_superuser" : true,
+         "is_staff" : true,
+         "email" : "teacher1@example.com",
+         "password" : "pbkdf2_sha256$24000$03okbTGtl9DK$m2EAptK1MegKcO4exF+YKxP0fxNkJk0R7HwTc/kYziI=",
+         "user_permissions" : [],
+         "last_login" : "2016-09-30T19:02:22.401Z",
+         "first_name" : "",
+         "groups" : [
+            4
+         ],
+         "last_name" : "",
+         "date_joined" : "2016-03-10T02:37:19Z",
+         "is_active" : true,
+         "username" : "Teacher_1"
+      },
+      "model" : "auth.user",
+      "pk" : 1
+   },
+   {
+      "pk" : 2,
+      "fields" : {
+         "username" : "user_3",
+         "is_active" : true,
+         "date_joined" : "2016-03-25T20:45:26Z",
+         "last_name" : "",
+         "groups" : [
+            4
+         ],
+         "first_name" : "",
+         "last_login" : null,
+         "user_permissions" : [],
+         "is_superuser" : false,
+         "password" : "pbkdf2_sha256$24000$ApWEka6ToHim$iqs49kCw9EU7mgpVADou47kLEl/Vq0y8TMJOtSI497o=",
+         "email" : "user3@example.com",
+         "is_staff" : false
+      },
+      "model" : "auth.user"
+   },
+   {
+      "pk" : 3,
+      "fields" : {
+         "username" : "user_4",
+         "is_active" : true,
+         "date_joined" : "2016-03-25T20:51:29Z",
+         "last_name" : "",
+         "groups" : [
+            4
+         ],
+         "first_name" : "",
+         "last_login" : null,
+         "user_permissions" : [],
+         "email" : "user4@example.com",
+         "is_superuser" : false,
+         "is_staff" : false,
+         "password" : "pbkdf2_sha256$24000$zEcv34P4RXTw$4R5EeE+l00bFsxmnSSrC72ZYm0G2Y91N8pWmNku+x8k="
+      },
+      "model" : "auth.user"
+   },
+   {
+      "pk" : 4,
+      "fields" : {
+         "last_login" : null,
+         "user_permissions" : [],
+         "password" : "pbkdf2_sha256$24000$DWXAr1rqljgJ$VqVxYIO91yQdwVzOrnTdRvJLXwkbbgCR6GESBo15Sns=",
+         "email" : "user5@example.com",
+         "is_staff" : false,
+         "is_superuser" : false,
+         "is_active" : true,
+         "username" : "user_5",
+         "last_name" : "",
+         "date_joined" : "2016-03-25T20:51:47Z",
+         "groups" : [
+            4
+         ],
+         "first_name" : ""
+      },
+      "model" : "auth.user"
+   },
+   {
+      "pk" : 5,
+      "fields" : {
+         "last_login" : null,
+         "is_superuser" : false,
+         "password" : "pbkdf2_sha256$24000$Njh6tRt4AB9E$MabTrYYPOmjmMKnEH5X8fXXkR9cmGZiKmuqAy5yxnRQ=",
+         "email" : "user1@example.com",
+         "is_staff" : false,
+         "user_permissions" : [],
+         "date_joined" : "2016-03-25T20:51:58Z",
+         "last_name" : "",
+         "is_active" : true,
+         "username" : "user_1",
+         "first_name" : "",
+         "groups" : [
+            5
+         ]
+      },
+      "model" : "auth.user"
+   },
+   {
+      "model" : "auth.user",
+      "fields" : {
+         "user_permissions" : [],
+         "password" : "pbkdf2_sha256$24000$CKJyWQ8znRGN$B9/+yI6/0EDtAc9ndDMOLMqo9WdtYE/JX+KEspkwJ/Y=",
+         "is_superuser" : false,
+         "email" : "user6@example.com",
+         "is_staff" : false,
+         "last_login" : null,
+         "groups" : [
+            5
+         ],
+         "first_name" : "",
+         "is_active" : true,
+         "username" : "user_6",
+         "date_joined" : "2016-03-25T20:52:10Z",
+         "last_name" : ""
+      },
+      "pk" : 6
+   },
+   {
+      "model" : "auth.user",
+      "fields" : {
+         "is_active" : true,
+         "username" : "user_2",
+         "date_joined" : "2016-03-25T20:52:17Z",
+         "last_name" : "",
+         "groups" : [
+            5
+         ],
+         "first_name" : "",
+         "last_login" : null,
+         "user_permissions" : [],
+         "email" : "user2@example.com",
+         "is_superuser" : false,
+         "password" : "pbkdf2_sha256$24000$QNhz3ZIx0ENl$9lSyTnhyCboEHa94wV9oOkWzDk83Jx3NKm0u8Cm6BwE=",
+         "is_staff" : false
+      },
+      "pk" : 7
+   },
+   {
+      "fields" : {
+         "last_login" : null,
+         "password" : "pbkdf2_sha256$24000$ZInbRgP1quYB$k2lLdCskfpZq/6fgw+5q2pksxRBLfIpVlf7yfHkexPs=",
+         "is_staff" : false,
+         "email" : "user7@example.com",
+         "is_superuser" : false,
+         "user_permissions" : [],
+         "last_name" : "",
+         "date_joined" : "2016-03-25T20:52:26Z",
+         "is_active" : true,
+         "username" : "user_7",
+         "first_name" : "",
+         "groups" : [
+            6
+         ]
+      },
+      "model" : "auth.user",
+      "pk" : 8
+   },
+   {
+      "fields" : {
+         "groups" : [
+            6
+         ],
+         "first_name" : "",
+         "username" : "user_8",
+         "is_active" : true,
+         "last_name" : "",
+         "date_joined" : "2016-03-25T20:52:34Z",
+         "user_permissions" : [],
+         "is_staff" : false,
+         "password" : "pbkdf2_sha256$24000$mcMBfOe3nev4$MOpJmu2BYFxhwSpmc58SUKNTYJnqVFZKSckUqAUmRwQ=",
+         "email" : "user8@example.com",
+         "is_superuser" : false,
+         "last_login" : null
+      },
+      "model" : "auth.user",
+      "pk" : 9
+   },
+   {
+      "model" : "auth.user",
+      "fields" : {
+         "last_login" : null,
+         "is_superuser" : false,
+         "password" : "pbkdf2_sha256$24000$ncvdlsq2Rofb$lyGSR5n3OC2C59cGS0+/CxeOjqInZ48HA1hvcPuADG8=",
+         "email" : "user9@example.com",
+         "is_staff" : false,
+         "user_permissions" : [],
+         "last_name" : "",
+         "date_joined" : "2016-03-25T20:52:43Z",
+         "username" : "user_9",
+         "is_active" : true,
+         "first_name" : "",
+         "groups" : [
+            6
+         ]
+      },
+      "pk" : 10
+   },
+   {
+      "fields" : {
+         "aspect" : "P",
+         "notes" : "try again",
+         "annotation_extension" : "",
+         "date" : "2016-09-15T20:08:13.104Z",
+         "with_or_from" : "",
+         "review_state" : 1,
+         "db" : "UniProtKB",
+         "superseded" : null,
+         "assigned_by" : "CPT",
+         "qualifier" : "NOT",
+         "evidence_code" : "IMP",
+         "gene" : "812a5dca-a909-48ae-9f8f-4ba95b025ac0",
+         "go_id" : "GO:0000001",
+         "owner" : 5,
+         "db_reference" : "PMID:80"
+      },
+      "model" : "base.gaf",
+      "pk" : "0171b637-dd8a-414e-841c-a35b9c12cb20"
+   },
+   {
+      "model" : "base.gaf",
+      "fields" : {
+         "db_reference" : "PMID:1",
+         "owner" : 7,
+         "go_id" : "GO:0000001",
+         "gene" : "1bb68ae3-9d29-43a5-830f-26243acea91a",
+         "evidence_code" : "IDA",
+         "qualifier" : "NOT",
+         "superseded" : null,
+         "assigned_by" : "CPT",
+         "db" : "UniProtKB",
+         "review_state" : 1,
+         "with_or_from" : "",
+         "date" : "2016-09-01T19:52:31Z",
+         "annotation_extension" : "",
+         "notes" : "asdfasdf",
+         "aspect" : "P"
+      },
+      "pk" : "095c6f59-17a7-4e0e-92d9-5d339bb2432b"
+   },
+   {
+      "model" : "base.gaf",
+      "fields" : {
+         "aspect" : "P",
+         "annotation_extension" : "",
+         "notes" : "figure 3 evidence",
+         "with_or_from" : "",
+         "date" : "2016-09-15T20:03:42Z",
+         "db" : "UniProtKB",
+         "review_state" : 2,
+         "qualifier" : "contributes_to",
+         "evidence_code" : "IMP",
+         "assigned_by" : "CPT",
+         "superseded" : null,
+         "gene" : "618fa335-4701-4554-a6d1-766d25ebd34f",
+         "go_id" : "GO:0000001",
+         "db_reference" : "PMID:20",
+         "owner" : 2
+      },
+      "pk" : "0d8abf40-122b-41f5-b46e-f070e2d41d72"
+   },
+   {
+      "model" : "base.gaf",
+      "fields" : {
+         "db" : "UniProtKB",
+         "review_state" : 3,
+         "date" : "2016-09-05T15:21:06Z",
+         "with_or_from" : "",
+         "notes" : "asdf",
+         "annotation_extension" : "",
+         "aspect" : "P",
+         "owner" : 8,
+         "db_reference" : "PMID:23",
+         "go_id" : "GO:0000001",
+         "gene" : "618fa335-4701-4554-a6d1-766d25ebd34f",
+         "assigned_by" : "CPT",
+         "superseded" : "0d8abf40-122b-41f5-b46e-f070e2d41d72",
+         "evidence_code" : "IMP",
+         "qualifier" : ""
+      },
+      "pk" : "1bc63e50-9db5-4870-8b30-fe7da50ce265"
+   },
+   {
+      "pk" : "792ef5be-301a-42a2-8ffa-bfa063e5c381",
+      "fields" : {
+         "aspect" : "F",
+         "annotation_extension" : "",
+         "notes" : "evidence",
+         "with_or_from" : "",
+         "date" : "2016-09-15T20:00:51Z",
+         "review_state" : 1,
+         "db" : "UniProtKB",
+         "qualifier" : "NOT",
+         "evidence_code" : "IDA",
+         "superseded" : null,
+         "assigned_by" : "CPT",
+         "gene" : "1aa4d7b3-25b1-4583-a30d-107b626000ae",
+         "go_id" : "GO:0000005",
+         "db_reference" : "PMID:5",
+         "owner" : 5
+      },
+      "model" : "base.gaf"
+   },
+   {
+      "fields" : {
+         "review_state" : 1,
+         "db" : "UniProtKB",
+         "date" : "2016-09-02T17:16:07Z",
+         "with_or_from" : "",
+         "notes" : "alksjadjksf",
+         "annotation_extension" : "",
+         "aspect" : "P",
+         "owner" : 4,
+         "db_reference" : "PMID:2",
+         "go_id" : "GO:0000002",
+         "gene" : "1ffbd31d-b3e0-41f6-bc2f-5842d8b12b4c",
+         "assigned_by" : "CPT",
+         "superseded" : "efbb13a4-0157-47a1-9f1c-334a837852eb",
+         "evidence_code" : "IDA",
+         "qualifier" : ""
+      },
+      "model" : "base.gaf",
+      "pk" : "7e7e16e3-691d-4366-900c-bead4e44051c"
+   },
+   {
+      "pk" : "8364eeb6-6967-4d38-9611-260592e2f9cf",
+      "model" : "base.gaf",
+      "fields" : {
+         "evidence_code" : "IMP",
+         "qualifier" : "contributes_to",
+         "superseded" : null,
+         "assigned_by" : "CPT",
+         "go_id" : "GO:0000001",
+         "gene" : "618fa335-4701-4554-a6d1-766d25ebd34f",
+         "db_reference" : "PMID:24",
+         "owner" : 5,
+         "aspect" : "P",
+         "annotation_extension" : "",
+         "notes" : "figure 1",
+         "with_or_from" : "",
+         "date" : "2016-09-15T20:02:38Z",
+         "review_state" : 3,
+         "db" : "UniProtKB"
+      }
+   },
+   {
+      "fields" : {
+         "aspect" : "F",
+         "notes" : "test",
+         "annotation_extension" : "",
+         "date" : "2016-09-30T18:45:45Z",
+         "with_or_from" : "",
+         "db" : "UniProtKB",
+         "review_state" : 2,
+         "superseded" : null,
+         "assigned_by" : "CPT",
+         "evidence_code" : "IMP",
+         "qualifier" : "contributes_to",
+         "gene" : "c559dfe4-4501-424b-93c3-2b6a7b451f21",
+         "go_id" : "GO:0000009",
+         "owner" : 5,
+         "db_reference" : "PMID:1234"
+      },
+      "model" : "base.gaf",
+      "pk" : "e7d17502-6236-4ff5-8f88-b48c86691f20"
+   },
+   {
+      "pk" : "efbb13a4-0157-47a1-9f1c-334a837852eb",
+      "model" : "base.gaf",
+      "fields" : {
+         "annotation_extension" : "",
+         "notes" : "evidence from fig 4",
+         "aspect" : "P",
+         "review_state" : 1,
+         "db" : "UniProtKB",
+         "with_or_from" : "",
+         "date" : "2016-09-15T20:07:12Z",
+         "go_id" : "GO:0000002",
+         "gene" : "1ffbd31d-b3e0-41f6-bc2f-5842d8b12b4c",
+         "qualifier" : "",
+         "evidence_code" : "IDA",
+         "superseded" : null,
+         "assigned_by" : "CPT",
+         "db_reference" : "PMID:19",
+         "owner" : 2
+      }
+   },
+   {
+      "pk" : "f03a3b3c-82fe-422e-b953-fc93092b353a",
+      "fields" : {
+         "aspect" : "F",
+         "notes" : "evidence",
+         "annotation_extension" : "",
+         "date" : "2016-09-15T20:38:51Z",
+         "with_or_from" : "",
+         "db" : "UniProtKB",
+         "review_state" : 1,
+         "superseded" : null,
+         "assigned_by" : "CPT",
+         "evidence_code" : "IDA",
+         "qualifier" : "NOT",
+         "go_id" : "GO:0000007",
+         "gene" : "1aa4d7b3-25b1-4583-a30d-107b626000ae",
+         "owner" : 9,
+         "db_reference" : "PMID:26430050"
+      },
+      "model" : "base.gaf"
+   },
+   {
+      "pk" : "f615ac40-b61e-4ae6-81af-93c449922593",
+      "model" : "base.gaf",
+      "fields" : {
+         "db_reference" : "PMID:100",
+         "owner" : 2,
+         "evidence_code" : "IMP",
+         "qualifier" : "NOT",
+         "assigned_by" : "CPT",
+         "superseded" : null,
+         "go_id" : "GO:0000001",
+         "gene" : "626b25b8-0d53-4bb6-aa77-4391e5a17b87",
+         "with_or_from" : "",
+         "date" : "2016-09-15T20:06:14Z",
+         "db" : "UniProtKB",
+         "review_state" : 2,
+         "aspect" : "P",
+         "annotation_extension" : "",
+         "notes" : "evidence"
+      }
+   },
+   {
+      "model" : "base.assessment",
+      "fields" : {
+         "gaf" : "8364eeb6-6967-4d38-9611-260592e2f9cf",
+         "date" : "2016-09-30T18:51:37.348Z",
+         "flagged" : "Publication,Notes",
+         "owner" : 1,
+         "notes" : "wrong",
+         "challenge" : "888fb9f6-02c7-4395-b41f-0f676cfab91e"
+      },
+      "pk" : "3b84c226-e973-4c9f-8f80-10593364beb2"
+   },
+   {
+      "model" : "base.assessment",
+      "fields" : {
+         "flagged" : "",
+         "gaf" : "0d8abf40-122b-41f5-b46e-f070e2d41d72",
+         "date" : "2016-09-30T18:51:37.328Z",
+         "owner" : 1,
+         "challenge" : "a0c6ca77-66a9-4430-95e8-346552ecf9b1",
+         "notes" : "Valid Annotation"
+      },
+      "pk" : "3f10262f-d6b7-4783-b598-8e1b89d08079"
+   },
+   {
+      "pk" : "a27d76f1-e983-4548-a75a-90d5c020ffc7",
+      "fields" : {
+         "gaf" : "e7d17502-6236-4ff5-8f88-b48c86691f20",
+         "date" : "2016-09-30T18:50:07.421Z",
+         "flagged" : "",
+         "owner" : 1,
+         "notes" : "Valid Annotation",
+         "challenge" : null
+      },
+      "model" : "base.assessment"
+   },
+   {
+      "pk" : "daea79b0-f11d-4f08-bd00-753bb2c84a60",
+      "model" : "base.assessment",
+      "fields" : {
+         "notes" : "Valid Annotation",
+         "challenge" : null,
+         "gaf" : "f615ac40-b61e-4ae6-81af-93c449922593",
+         "date" : "2016-09-30T18:52:28.539Z",
+         "flagged" : "",
+         "owner" : 1
+      }
+   }
+]

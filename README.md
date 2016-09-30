@@ -5,20 +5,20 @@ with Ontologies. The current MediaWiki + php API is very complex for these DB
 models, so we reduced CACAO to a simpler API and web app.
 
 ## Usage
-### Set up a virtual environment and install requirements
+#### Set up a virtual environment and install requirements
 ```console
 $ virtualenv venv
 $ . venv/bin/activate
 $ pip install -r requirements.txt
 ```
-### Migrate
+#### Migrate
 ```console
 $ python manage.py migrate
 ```
-### Load fixtures
+#### Load fixtures
 We've created some sample data:
 ```console
-$ python manage.py loaddata fixtures/
+$ python manage.py loaddata fixtures/quickstart.json
 ```
 #### Run
 ```console

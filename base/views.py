@@ -71,11 +71,17 @@ class GAFViewSet(viewsets.ModelViewSet):
     ordering = ('date')
 
     def perform_create(self, serializer):
+        """
+        Save creater of GAF as owner on create.
+        """
         gene = Gene.objects.get(id=self.request.data['gene']['id'])
         serializer.save(owner=self.request.user, gene=gene)
         stored_messages.api.add_message_for([self.request.user], stored_messages.STORED_INFO, 'yay you did it')
 
     def put(self, request):
+        """
+        Review state of GAF will change when assessed.
+        """
         return self.update(request)
 
 class ChallengeViewSet(viewsets.ModelViewSet):
@@ -98,6 +104,9 @@ class PaperViewSet(viewsets.ModelViewSet):
     serializer_class = PaperSerializer
 
     def retrieve(self, request, pk=None):
+        """
+        Logic for parsing paper info from PubMed using efetch
+        """
         try:
             paper = Paper.objects.get(pmid=pk)
         except Paper.DoesNotExist:

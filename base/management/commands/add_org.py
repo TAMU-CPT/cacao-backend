@@ -5,6 +5,10 @@ from Bio import SeqIO
 from BCBio import GFF
 
 class Command(BaseCommand):
+    """
+    A manage.py command that creates an organism, refseq, and genes
+    based on input data.
+    """
     help = 'Adds new organism and its features'
 
     def add_arguments(self, parser):

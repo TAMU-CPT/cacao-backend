@@ -11,6 +11,9 @@ from rest_framework.test import force_authenticate
 
 
 class ApiPermissionsTestCase(TestCase):
+    """
+    TODO: fix to represent new data structures
+    """
 
     def setUp(self):
         self.superuser = User.objects.create_superuser('jane', 'j.doe@tamu.edu', 'password')

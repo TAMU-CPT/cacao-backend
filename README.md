@@ -1,10 +1,10 @@
 # CACAO Backend
 
-[![Build Status](https://travis-ci.org/TAMU-CPT/cacao-backend.svg?branch=master)](https://travis-ci.org/TAMU-CPT/cacao-backend
+[![Build Status](https://travis-ci.org/TAMU-CPT/cacao-backend.svg?branch=master)](https://travis-ci.org/TAMU-CPT/cacao-backend)
 
-This is the backend for CACAO, or Community Annotation of Community Assessment
-with Ontologies. The current MediaWiki + php API is very complex for these DB
-models, so we reduced CACAO to a simpler API and web app.
+This is the backend for the CPT's implementation of GONUTS (GO normal usage
+tracking system) for CACAO, or Community Annotation of Community Assessment
+with Ontologies.
 
 ## Usage
 #### Set up a virtual environment and install requirements

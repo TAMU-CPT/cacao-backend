@@ -18,7 +18,8 @@ EXPOSE 8000
 
 ENV DJANGO_SETTINGS_MODULE=cacao.production \
 	ALLOWED_HOSTS="*" \
-	CORS_ORIGINS="localhost:10000"
+	CORS_ORIGINS="localhost:10000" \
+	DB_HOSTNAME="db"
 
 USER django
 ENTRYPOINT ["/app/docker/docker-entrypoint.sh"]

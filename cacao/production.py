@@ -115,7 +115,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'db',
+        'HOST': os.environ.get('DB_HOSTNAME', 'db'),
         'PORT': '5432',
     }
 }

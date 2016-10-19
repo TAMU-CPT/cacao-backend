@@ -2,16 +2,16 @@ version: '2'
 
 services:
   postgres:
-    image: postgres
+    image: postgres:9.4
     volumes:
       - /var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: postgres
 
   django:
-    build: .
+    image: quay.io/tamu_cpt/cacao-backend
     links:
-      - postgres
+      - postgres:db
     volumes:
       - /app/static/
 
@@ -20,7 +20,7 @@ services:
     links:
       - django
     ports:
-        - "8000:80"
+      - "8000:80"
     volumes_from:
       - "django:ro"
     volumes:

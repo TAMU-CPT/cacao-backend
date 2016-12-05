@@ -9,7 +9,6 @@ def feature_data(request, name=None):
     """
     Gets all the annotations for an organism between a start and end location.
     """
-    print '*************'
     q_org = request.GET.get('organism')
     q_start = request.GET.get('start')
     q_end = request.GET.get('end')

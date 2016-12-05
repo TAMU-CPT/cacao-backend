@@ -8,3 +8,4 @@ biopython
 django-filter
 django-stored-messages
 bcbio-gff
+raven==5.32.0

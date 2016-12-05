@@ -4,7 +4,7 @@ from django.contrib.auth.models import User, Group
 from rest_framework import viewsets, permissions, filters
 from base.serializers import UserSerializer, GroupSerializer, GAFSerializer, ChallengeSerializer, AssessmentSerializer, PaperSerializer, OrganismSerializer, GeneSerializer, RefSeqSerializer
 from base.models import GAF, Challenge, Assessment, Paper, Gene, Organism, RefSeq
-from permissions import OwnerOrAdmin
+from .permissions import OwnerOrAdmin
 from rest_framework.response import Response
 import django_filters
 from django.http import JsonResponse

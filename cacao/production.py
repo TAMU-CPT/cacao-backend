@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 if not os.path.exists('/tmp/django_secret'):
     with open('/tmp/django_secret', 'w') as handle:
-        handle.write("".join([random.SystemRandom().choice(string.digits + string.letters + string.punctuation) for i in range(100)]))
+        handle.write("".join([random.SystemRandom().choice(string.digits + string.punctuation) for i in range(100)]))
 
 with open('/tmp/django_secret', 'r') as handle:
     SECRET_KEY = handle.read()
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'raven.contrib.django.raven_compat',
     'multiselectfield',
     'base',
     'stored_messages',
@@ -84,6 +85,17 @@ MIDDLEWARE_CLASSES = [
 ]
 
 CORS_ORIGIN_WHITELIST = os.environ.get('CORS_ORIGINS', '').split(',')
+
+
+import os
+import raven
+
+RAVEN_CONFIG = {
+    'dsn': 'https://b077efa7e30e463ca4f0192a0da83565:94d4a2cfb733410783cd8520ecce353a@cptgnome.tamu.edu/7',
+    # If you are using git, you can also automatically configure the
+    # release based on the git info.
+    'release': raven.fetch_git_sha(os.path.dirname(os.pardir)),
+}
 
 ROOT_URLCONF = 'cacao.urls'
 

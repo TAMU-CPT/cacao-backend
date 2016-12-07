@@ -198,3 +198,10 @@ class ObtainAuthToken(APIView):
         Token.objects.filter(user=request.user).delete()
         token, created = Token.objects.get_or_create(user=request.user)
         return Response({'token': token.key})
+
+class WhoAmI(APIView):
+    renderer_classes = (renderers.JSONRenderer,)
+    permission_classes = (permissions.IsAuthenticated,)
+
+    def get(self, request, *args, **kwargs):
+        return Response(UserSerializer(request.user).data)

@@ -178,3 +178,23 @@ def mark_all_read(request):
     backend = stored_messages_settings.STORAGE_BACKEND()
     backend.inbox_purge(request.user)
     return Response({"message": "All messages read"})
+
+
+
+from rest_framework import renderers
+from rest_framework.authtoken.models import Token
+from rest_framework.views import APIView
+
+
+class ObtainAuthToken(APIView):
+    renderer_classes = (renderers.JSONRenderer,)
+    permission_classes = (permissions.IsAuthenticated,)
+
+    def get(self, request, *args, **kwargs):
+        token, created = Token.objects.get_or_create(user=request.user)
+        return Response({'token': token.key})
+
+    def post(self, request, *args, **kwargs):
+        Token.objects.filter(user=request.user).delete()
+        token, created = Token.objects.get_or_create(user=request.user)
+        return Response({'token': token.key})

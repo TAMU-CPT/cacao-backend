@@ -46,8 +46,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'raven.contrib.django.raven_compat',
+    'rest_framework.authtoken',
+
     'multiselectfield',
     'base',
+    'jbrowse',
     'stored_messages',
     'rest_framework',
     'corsheaders',
@@ -60,16 +63,18 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        # 'rest_framework.authentication.SessionAuthentication',
-        # 'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     ),
-    'PAGE_SIZE': 5,
+    'PAGE_SIZE': 10,
     'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',)
 }
 
 JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=7),
+	'JWT_PAYLOAD_HANDLER': 'cacao.utils.custom_jwt_payload_handler',
 }
 
 MIDDLEWARE_CLASSES = [

@@ -15,12 +15,12 @@ def feature_data(request, name=None):
     try:
         org = Organism.objects.get(common_name=q_org)
     except Organism.DoesNotExist:
-        return JsonResponse({})
+        return JsonResponse({'error': 'No such organism'})
 
     try:
         refseq = RefSeq.objects.get(name=name, organism=org)
-    except Organism.DoesNotExist:
-        return JsonResponse({})
+    except RefSeq.DoesNotExist:
+        return JsonResponse({'error': 'No such refseq'})
 
     genes = Gene.objects.filter(refseq=refseq, start__lte=q_end, end__gte=q_start)
     data = {'features':[]}

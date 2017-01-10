@@ -48,6 +48,13 @@ class RefSeqViewSet(viewsets.ModelViewSet):
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = ('id',)
 
+    # def perform_create(self, serializer):
+        # print(serializer)
+        # if serializer.is_valid():
+            # serializer.save(
+                # owner=self.request.user,
+            # )
+
 class OrganismViewSet(viewsets.ModelViewSet):
     queryset = Organism.objects.all()
     serializer_class = OrganismSerializer

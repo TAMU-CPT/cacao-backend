@@ -70,17 +70,21 @@ class OrganismSerializer(serializers.ModelSerializer):
         model = Organism
         fields = ('id', 'common_name', 'taxon', 'ebi_id')
 
+
 class RefSeqSerializer(serializers.ModelSerializer):
-    organism = OrganismSerializer(read_only=True)
+
     class Meta:
         model = RefSeq
-        fields = ('id', 'name', 'organism')
+        fields = ('id', 'name', 'organism', 'length')
+
+    # def create(self, validated_data):
+        # print(validated_data)
 
 class GeneSerializer(serializers.ModelSerializer):
-    refseq = RefSeqSerializer(read_only=True)
+
     class Meta:
         model = Gene
-        fields = ('id', 'start', 'end', 'refseq', 'db_object_id', 'db_object_symbol', 'db_object_name', 'db_object_synonym', 'db_object_type', 'gene_product_id', 'alternate_name')
+        fields = ('id', 'start', 'end', 'strand', 'refseq', 'db_object_id', 'db_object_symbol', 'db_object_name', 'db_object_synonym', 'db_object_type', 'gene_product_id', 'alternate_name')
 
 class GAFSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.SerializerMethodField()

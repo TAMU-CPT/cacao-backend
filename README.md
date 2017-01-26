@@ -1,5 +1,4 @@
-# CACAO Backend
-
+# CACAO Backend [![Docker Repository on Quay](https://quay.io/repository/tamu_cpt/cacao-backend/status "Docker Repository on Quay")](https://quay.io/repository/tamu_cpt/cacao-backend)
 [![Build Status](https://travis-ci.org/TAMU-CPT/cacao-backend.svg?branch=master)](https://travis-ci.org/TAMU-CPT/cacao-backend)
 
 This is the backend for the CPT's implementation of GONUTS (GO normal usage

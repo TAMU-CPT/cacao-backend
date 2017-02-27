@@ -21,7 +21,7 @@ REVIEW_STATE = (
 
 class Organism(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    common_name = models.CharField(max_length=128)
+    common_name = models.CharField(max_length=128, unique=True)
     taxon = models.CharField(max_length=64)
     ebi_id = models.CharField(max_length=64)
 
@@ -33,6 +33,10 @@ class RefSeq(models.Model):
     name = models.CharField(max_length=64)
     length = models.IntegerField()
     organism = models.ForeignKey(Organism)
+
+    class Meta:
+        unique_together = ('name', 'organism',)
+
 
 class Gene(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)

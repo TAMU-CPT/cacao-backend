@@ -21,7 +21,8 @@ class GrouplessUserSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('id', 'username', 'email')
 
     def get_email(self, obj):
-        return hashlib.md5(obj.email.lower()).hexdigest()
+        email = obj.email.lower().encode('utf-8')
+        return hashlib.md5(email).hexdigest()
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     users = serializers.SerializerMethodField()

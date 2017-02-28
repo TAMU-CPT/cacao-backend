@@ -1,7 +1,7 @@
 Django==1.10.5
 PyJWT==1.4.1
+bcbio-gff
 biopython==1.67
-contextlib2==0.5.4
 django-cors-headers==1.1.0
 django-filter==0.13.0
 django-multiselectfield==0.1.3

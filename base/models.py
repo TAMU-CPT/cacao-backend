@@ -67,7 +67,7 @@ class GAF(models.Model):
     db_reference = models.CharField(max_length=64)
     evidence_code = models.CharField(max_length=64)
     with_or_from = models.CharField(default = '', blank=True, max_length=64)
-    aspect = models.CharField(max_length=64)
+    aspect = models.CharField(blank=True, max_length=64)
     date = models.DateTimeField(default=timezone.now)
     assigned_by = models.CharField(max_length=64)
     annotation_extension = models.CharField(default = '', blank=True, null=True, max_length=64)

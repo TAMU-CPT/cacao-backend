@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from base.models import GAF, Challenge, Assessment, Paper, Gene, Organism, RefSeq
+from django.db import IntegrityError
 import hashlib
 
 class UserSerializer(serializers.ModelSerializer):
@@ -48,7 +49,7 @@ class AssessmentSerializer(serializers.HyperlinkedModelSerializer):
 
 class ChallengeSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.SerializerMethodField()
-    assessment=AssessmentSerializer(read_only=True, allow_null=True)
+    assessment = AssessmentSerializer(read_only=True, allow_null=True)
     class Meta:
         model = Challenge
         fields = ('owner', 'id', 'challenge_gaf', 'original_gaf', 'entry_type', 'date', 'reason', 'assessment')
@@ -85,6 +86,14 @@ class GeneSerializer(serializers.ModelSerializer):
     class Meta:
         model = Gene
         fields = ('id', 'start', 'end', 'strand', 'refseq', 'db_object_id', 'db_object_symbol', 'db_object_name', 'db_object_synonym', 'db_object_type', 'gene_product_id', 'alternate_name')
+
+    def create(self, vd):
+        vd['id'] = vd['db_object_id']
+        try:
+            obj = super(GeneSerializer, self).create(vd)
+            return obj
+        except IntegrityError:
+            return Gene.objects.get(id=vd['id'])
 
 class GAFSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.SerializerMethodField()

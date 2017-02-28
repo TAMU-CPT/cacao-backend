@@ -46,7 +46,7 @@ class RefSeqViewSet(viewsets.ModelViewSet):
     queryset = RefSeq.objects.all()
     serializer_class = RefSeqSerializer
     filter_backends = (filters.DjangoFilterBackend,)
-    filter_fields = ('id',)
+    filter_fields = ('id', 'name', 'organism')
 
     # def perform_create(self, serializer):
         # print(serializer)

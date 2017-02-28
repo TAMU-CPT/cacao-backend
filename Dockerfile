@@ -1,25 +1,18 @@
-FROM python:2.7-alpine
+# https://github.com/TAMU-CPT/docker-recipes/blob/master/django/Dockerfile.inherit
+FROM quay.io/tamu_cpt/django
 
-# Update the default application repository sources list
-RUN apk update && \
-	apk add postgresql-dev gcc python3-dev musl-dev
+# Add our project to the /app/ folder
+ADD . /app/
+# Install dependencies
+RUN pip install -r /app/requirements-prod.txt
+# Set current working directory to /app
+WORKDIR /app/
 
-ADD requirements-prod.txt /app/requirements-prod.txt
-WORKDIR /app
-RUN pip --no-cache-dir install -r requirements-prod.txt && \
-	addgroup -S django && \
-	adduser -S -G django django
-ADD . /app
-RUN chown -R django /app && \
-	apk add bash && \
-	python manage.py collectstatic --noinput
-# Port to expose
-EXPOSE 8000
+ENV DJANGO_WSGI_MODULE=cacao.wsgi \
+	DJANGO_SETTINGS_MODULE=cacao.production
+# Fix permissions on folder while still root, and collect static files for use
+# if need be.
+RUN chown -R django /app
 
-ENV DJANGO_SETTINGS_MODULE=cacao.production \
-	ALLOWED_HOSTS="*" \
-	CORS_ORIGINS="localhost:10000" \
-	DB_HOSTNAME="db"
-
+# Drop permissions
 USER django
-ENTRYPOINT ["/app/docker/docker-entrypoint.sh"]

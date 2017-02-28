@@ -2,8 +2,10 @@
 from django.http import JsonResponse
 from base.models import GAF, Gene, Organism, RefSeq
 
+
 def global_stats(request):
-    return JsonResponse({ "featureDensity": 0.02 })
+    return JsonResponse({"featureDensity": 0.02})
+
 
 def feature_data(request, name=None):
     """

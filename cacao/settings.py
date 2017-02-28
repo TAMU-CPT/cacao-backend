@@ -1,6 +1,6 @@
 """Local settings module
 """
-from base_settings import *  # noqa
+from cacao.base_settings import *  # noqa
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'xg(y!bwb^r%)+oq32li@-9*qr%nt&k&d7v-&l-0lfl4&bw=nfv'

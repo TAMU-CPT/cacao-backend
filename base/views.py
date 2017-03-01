@@ -1,4 +1,5 @@
 # from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import api_view
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets, permissions, filters
@@ -42,18 +43,19 @@ class GeneViewSet(viewsets.ModelViewSet):
     ordering_fields = ('start', 'id')
     filter_class = GeneFilter
 
+
+class RefSeqFilter(django_filters.rest_framework.FilterSet):
+    class Meta:
+        model = RefSeq
+        fields = ['id', 'name', 'organism__common_name']
+
+
 class RefSeqViewSet(viewsets.ModelViewSet):
     queryset = RefSeq.objects.all()
     serializer_class = RefSeqSerializer
+    filter_class = RefSeqFilter
     filter_backends = (filters.DjangoFilterBackend,)
-    filter_fields = ('id', 'name', 'organism')
 
-    # def perform_create(self, serializer):
-        # print(serializer)
-        # if serializer.is_valid():
-            # serializer.save(
-                # owner=self.request.user,
-            # )
 
 class OrganismViewSet(viewsets.ModelViewSet):
     queryset = Organism.objects.all()
@@ -61,12 +63,14 @@ class OrganismViewSet(viewsets.ModelViewSet):
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = ('id', 'common_name')
 
+
 class GAFFilter(filters.FilterSet):
     team = django_filters.CharFilter(name="owner__groups")
 
     class Meta:
         model = GAF
         fields = ('review_state', 'id', 'gene__db_object_id', 'go_id', 'db_reference', 'team', 'owner', 'gene__refseq__organism__taxon')
+
 
 class GAFViewSet(viewsets.ModelViewSet):
     queryset = GAF.objects.all()
@@ -91,12 +95,14 @@ class GAFViewSet(viewsets.ModelViewSet):
         """
         return self.update(request)
 
+
 class ChallengeViewSet(viewsets.ModelViewSet):
     queryset = Challenge.objects.all().order_by('date')
     serializer_class = ChallengeSerializer
     permission_classes = (OwnerOrAdmin,)
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = ('id',)
+
 
 class AssessmentViewSet(viewsets.ModelViewSet):
     queryset = Assessment.objects.all().order_by('date')
@@ -105,6 +111,7 @@ class AssessmentViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+
 
 class PaperViewSet(viewsets.ModelViewSet):
     queryset = Paper.objects.all()
@@ -197,10 +204,12 @@ class ObtainAuthToken(APIView):
     renderer_classes = (renderers.JSONRenderer,)
     permission_classes = (permissions.IsAuthenticated,)
 
+    @csrf_exempt
     def get(self, request, *args, **kwargs):
         token, created = Token.objects.get_or_create(user=request.user)
         return Response({'token': token.key})
 
+    @csrf_exempt
     def post(self, request, *args, **kwargs):
         Token.objects.filter(user=request.user).delete()
         token, created = Token.objects.get_or_create(user=request.user)
@@ -210,5 +219,6 @@ class WhoAmI(APIView):
     renderer_classes = (renderers.JSONRenderer,)
     permission_classes = (permissions.IsAuthenticated,)
 
+    @csrf_exempt
     def get(self, request, *args, **kwargs):
         return Response(UserSerializer(request.user).data)

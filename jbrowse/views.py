@@ -1,6 +1,10 @@
 # from django.shortcuts import render
 from django.http import JsonResponse
 from base.models import GAF, Gene, Organism, RefSeq
+import requests
+
+
+GOCACHE = {}
 
 
 def global_stats(request):
@@ -28,7 +32,14 @@ def feature_data(request, name=None):
     data = {'features':[]}
     for gene in genes:
         for gaf in GAF.objects.filter(gene=gene):
-            data['features'].append({
+            if gaf.go_id not in GOCACHE:
+                try:
+                    r = requests.get('https://cpt.tamu.edu/onto_api/%s.json' % gaf.go_id)
+                    GOCACHE[gaf.go_id] = r.json()
+                except Exception, e:
+                    print(e)
+
+            responseData = {
                 "uniqueID": gaf.id,
                 'start': gene.start,
                 'end': gene.end,
@@ -37,5 +48,10 @@ def feature_data(request, name=None):
                 'go': gaf.go_id,
                 'pmid': gaf.db_reference,
                 'state': gaf.review_state,
-            })
+            }
+
+            for (key, value) in GOCACHE.get(gaf.go_id, {}).items():
+                responseData['GO_%s' % key] = value
+
+            data['features'].append(responseData)
     return JsonResponse(data)

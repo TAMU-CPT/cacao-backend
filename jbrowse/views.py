@@ -44,7 +44,7 @@ def feature_data(request, name=None):
                 'start': gene.start,
                 'end': gene.end,
                 'strand': gene.strand,
-                'name': 'Cacao Annotation ' + gaf.go_id,
+                'name': '[%s] %s' % (gaf.go_id, GOCACHE[gaf.go_id].get('name', 'Cacao Annotation')),
                 'go': gaf.go_id,
                 'pmid': gaf.db_reference,
                 'state': gaf.review_state,

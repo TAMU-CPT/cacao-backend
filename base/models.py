@@ -75,7 +75,7 @@ class GAF(models.Model):
     superseded = models.ForeignKey('GAF', null=True, blank=True)
 
     class Meta:
-        unique_together = ('db', 'go_id', 'db_reference', 'evidence_code')
+        unique_together = ('db', 'go_id', 'notes', 'evidence_code', 'gene')
 
     def __str__(self):
         return str(self.id)

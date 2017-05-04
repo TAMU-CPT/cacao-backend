@@ -37,6 +37,9 @@ class RefSeq(models.Model):
     class Meta:
         unique_together = ('name', 'organism',)
 
+    def __str__(self):
+        return '%s:%s' % (self.organism.common_name, self.name)
+
 
 class Gene(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)

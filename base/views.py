@@ -69,7 +69,7 @@ class GAFFilter(filters.FilterSet):
 
     class Meta:
         model = GAF
-        fields = ('review_state', 'id', 'gene__db_object_id', 'go_id', 'db_reference', 'team', 'owner', 'gene__refseq__organism__taxon')
+        fields = ('review_state', 'id', 'gene__db_object_id', 'go_id', 'db_reference', 'team', 'owner', 'gene__refseq__organism__taxon', 'gene__refseq_id')
 
 
 class GAFViewSet(viewsets.ModelViewSet):

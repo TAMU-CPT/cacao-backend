@@ -1,5 +1,5 @@
 # https://github.com/TAMU-CPT/docker-recipes/blob/master/django/Dockerfile.inherit
-FROM quay.io/tamu_cpt/django
+FROM quay.io/tamu_cpt/django:master
 
 # Add our project to the /app/ folder
 ADD . /app/

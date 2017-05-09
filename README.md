@@ -48,4 +48,5 @@ trackList.json file and point it at your backend url.
 ```
 
 ## License
+
 This software is licensed under AGPL-3.0.

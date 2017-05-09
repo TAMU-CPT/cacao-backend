@@ -34,19 +34,26 @@ def feature_data(request, name=None):
     data = {'features':[]}
     for gene in genes:
         for gaf in GAF.objects.filter(gene=gene):
-            if gaf.go_id not in GOCACHE:
+            if gaf.go_id not in GOCACHE and ('CPT:' in gaf.go_id or 'GO:' in gaf.go_id):
                 try:
                     r = requests.get('https://cpt.tamu.edu/onto_api/%s.json' % gaf.go_id)
                     GOCACHE[gaf.go_id] = r.json()
                 except Exception, e:
                     print(e)
 
+            pretty_printed_label = ""
+            if 'CPT:' in gaf.go_id or 'GO:' in gaf.go_id:
+                pretty_printed_label += "[%s] " % gaf.go_id
+                pretty_printed_label += GOCACHE.get(gaf.go_id, {'name': 'GO Annotation'}).get('name', 'GO Annotation')
+            else:
+                pretty_printed_label = gaf.go_id
+
             responseData = {
                 "uniqueID": gaf.id,
                 'start': gene.start,
                 'end': gene.end,
                 'strand': gene.strand,
-                'name': '[%s] %s' % (gaf.go_id, GOCACHE[gaf.go_id].get('name', 'Cacao Annotation')),
+                'name': pretty_printed_label,
                 'go': gaf.go_id,
                 'pmid': gaf.db_reference,
                 'state': gaf.review_state,

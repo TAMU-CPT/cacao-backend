@@ -39,7 +39,7 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
 
 JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=30),
-	'JWT_PAYLOAD_HANDLER': 'cacao.utils.custom_jwt_payload_handler',
+    'JWT_PAYLOAD_HANDLER': 'cacao.utils.custom_jwt_payload_handler',
 }
 
 CORS_ORIGIN_WHITELIST = os.environ.get('CORS_ORIGINS', '').split(',')
